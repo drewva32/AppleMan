@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96e8f998ccd1f7a4d97092dad02db500, type: 3}
+  m_Name: PlayerWallGrabState
+  m_EditorClassIdentifier: 
+  animBoolName: wallGrab
+  wallJumpState: {fileID: 11400000, guid: 5f92ff42f0ccb38489bbd31f11f364d0, type: 2}
+  idleState: {fileID: 11400000, guid: c2026f960a267d644aa93f9e16c66e42, type: 2}
+  inAirState: {fileID: 11400000, guid: 9efc6574f8efe084e861f6b85a028ca7, type: 2}
+  jumpState: {fileID: 11400000, guid: aba401870abdd9c42ab0ce0009a27064, type: 2}
+  wallClimbState: {fileID: 11400000, guid: 707ef5b448171fd40a770c0357ff3197, type: 2}
+  wallSlideState: {fileID: 11400000, guid: 873a6200760fd144d862fa86b4daa2f0, type: 2}

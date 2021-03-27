@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6add4b5ee6a3da34fa5f3bd893fd2fed, type: 3}
+  m_Name: PlayerIdleState
+  m_EditorClassIdentifier: 
+  animBoolName: idle
+  jumpState: {fileID: 11400000, guid: aba401870abdd9c42ab0ce0009a27064, type: 2}
+  wallGrabState: {fileID: 11400000, guid: a2e5cc70bd7468d479d330e63f69d0d3, type: 2}
+  inAirState: {fileID: 11400000, guid: 9efc6574f8efe084e861f6b85a028ca7, type: 2}
+  dashState: {fileID: 11400000, guid: df95e68634be75f49bf94f9bc00f295c, type: 2}
+  punchState: {fileID: 11400000, guid: 43945981d951d254cb0a2d5c9c03b294, type: 2}
+  groundSlideState: {fileID: 11400000, guid: db12bda804279e543b3dd8e046584b2b, type: 2}
+  moveState: {fileID: 11400000, guid: ce9e907d85c8d864daf23a1b6f83a319, type: 2}
+  crouchIdleState: {fileID: 11400000, guid: 3e8fba2b66008e74f80352e0d7beb101, type: 2}

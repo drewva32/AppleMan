@@ -1,0 +1,1757 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1987068188876086}
+  m_IsPrefabAsset: 1
+--- !u!1 &1012381257984380
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4524739908595724}
+  m_Layer: 1
+  m_Name: Frame.15
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1053819403470036
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4892129467644102}
+  m_Layer: 1
+  m_Name: Frame.3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1070015076544868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4707626460739720}
+  - component: {fileID: 61697109849909658}
+  - component: {fileID: 50690460874576988}
+  - component: {fileID: 114724259670562300}
+  m_Layer: 2
+  m_Name: HitBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1125025295521438
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4871304067732958}
+  m_Layer: 1
+  m_Name: Frame.17
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1140767705211324
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4982380103931478}
+  m_Layer: 1
+  m_Name: PickupObjectFramePositions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1147121383590672
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4585543802482868}
+  m_Layer: 1
+  m_Name: Frame.18
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1253170853318256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4366235259905116}
+  m_Layer: 1
+  m_Name: ThrowObjectFramePositions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1294566322680074
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4449485998825382}
+  m_Layer: 1
+  m_Name: Frame.19
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1333107440479340
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4890436308379706}
+  - component: {fileID: 61009259977034900}
+  - component: {fileID: 50285509800019354}
+  - component: {fileID: 114055101463191120}
+  m_Layer: 2
+  m_Name: PunchCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1435852148495832
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4192289698831040}
+  m_Layer: 1
+  m_Name: Frame.2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1692779387979650
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4455394510842394}
+  m_Layer: 1
+  m_Name: Frame.20
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1738365724983972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4728367393640534}
+  - component: {fileID: 212114557381338598}
+  - component: {fileID: 114327371131269502}
+  m_Layer: 1
+  m_Name: Sprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1987068188876086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4097217268820522}
+  - component: {fileID: 61196481073918398}
+  - component: {fileID: 114672767662830502}
+  - component: {fileID: 114647562679036886}
+  - component: {fileID: 114431667457021396}
+  - component: {fileID: 114823677201290764}
+  - component: {fileID: 50572385144752316}
+  m_Layer: 1
+  m_Name: Player
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1987810576949210
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4096136758539530}
+  m_Layer: 1
+  m_Name: Frame.16
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4096136758539530
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1987810576949210}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.1875, y: 0.84375, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4982380103931478}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4097217268820522
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1987068188876086}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.84375, y: -2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4728367393640534}
+  - {fileID: 4707626460739720}
+  - {fileID: 4890436308379706}
+  - {fileID: 4982380103931478}
+  - {fileID: 4366235259905116}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4192289698831040
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1435852148495832}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.21875, y: 0.8125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4366235259905116}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4366235259905116
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1253170853318256}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4192289698831040}
+  - {fileID: 4892129467644102}
+  m_Father: {fileID: 4097217268820522}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4449485998825382
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1294566322680074}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.59375, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4982380103931478}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4455394510842394
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1692779387979650}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.65625, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4982380103931478}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4524739908595724
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1012381257984380}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.3125, y: 0.125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4982380103931478}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4585543802482868
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1147121383590672}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.65625, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4982380103931478}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4707626460739720
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1070015076544868}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4097217268820522}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4728367393640534
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1738365724983972}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4097217268820522}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4871304067732958
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1125025295521438}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.125, y: 0.8125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4982380103931478}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4890436308379706
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1333107440479340}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.594, y: 0.25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4097217268820522}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4892129467644102
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1053819403470036}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.25, y: 0.8125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4366235259905116}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4982380103931478
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1140767705211324}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4524739908595724}
+  - {fileID: 4096136758539530}
+  - {fileID: 4871304067732958}
+  - {fileID: 4585543802482868}
+  - {fileID: 4449485998825382}
+  - {fileID: 4455394510842394}
+  m_Father: {fileID: 4097217268820522}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50285509800019354
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1333107440479340}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
+--- !u!50 &50572385144752316
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1987068188876086}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
+--- !u!50 &50690460874576988
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1070015076544868}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
+--- !u!61 &61009259977034900
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1333107440479340}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.5}
+  m_EdgeRadius: 0
+--- !u!61 &61196481073918398
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1987068188876086}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.25}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
+--- !u!61 &61697109849909658
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1070015076544868}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.25}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
+--- !u!114 &114055101463191120
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1333107440479340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c8768f236aa408a83c756bac08a936, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 0
+  damageAmount: 1
+--- !u!114 &114327371131269502
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1738365724983972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88fb3ea51bb752b49abd5037a4f40f6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_paused: 0
+  spriteRenderer: {fileID: 212114557381338598}
+  list:
+  - animationName: death
+    animation:
+      speedRatio: 1
+      loop: 1
+      frameToLoop: 0
+      frameDatas:
+      - sprite: {fileID: 21300000, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300002, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300004, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300006, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300008, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300010, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300012, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300014, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300016, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300018, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300020, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300022, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300024, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300026, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300028, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300030, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300032, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300034, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300036, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300038, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300040, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300042, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300044, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300046, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300048, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300050, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300052, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300054, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300056, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300058, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300060, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300062, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300064, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300066, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300068, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300070, guid: e4477d30d1f9340419e170bd0da12e21, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      name: death
+      selectedIndex: 0
+      newFramesTime: 0.05
+      setFramesTime: 0.1
+    file: {fileID: 11400000, guid: 1bc1845aa06f844c6b9d2b3a98fad6f1, type: 2}
+  - animationName: pick-up
+    animation:
+      speedRatio: 1
+      loop: 1
+      frameToLoop: 0
+      frameDatas:
+      - sprite: {fileID: 21300000, guid: 90b45da0dafb94c0bb5fd1dae0cde13f, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300002, guid: 90b45da0dafb94c0bb5fd1dae0cde13f, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300004, guid: 90b45da0dafb94c0bb5fd1dae0cde13f, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300006, guid: 90b45da0dafb94c0bb5fd1dae0cde13f, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300008, guid: 90b45da0dafb94c0bb5fd1dae0cde13f, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300010, guid: 90b45da0dafb94c0bb5fd1dae0cde13f, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300012, guid: 90b45da0dafb94c0bb5fd1dae0cde13f, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300014, guid: 90b45da0dafb94c0bb5fd1dae0cde13f, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300016, guid: 90b45da0dafb94c0bb5fd1dae0cde13f, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300018, guid: 90b45da0dafb94c0bb5fd1dae0cde13f, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300020, guid: 90b45da0dafb94c0bb5fd1dae0cde13f, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300022, guid: 90b45da0dafb94c0bb5fd1dae0cde13f, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300024, guid: 90b45da0dafb94c0bb5fd1dae0cde13f, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300026, guid: 90b45da0dafb94c0bb5fd1dae0cde13f, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300028, guid: 90b45da0dafb94c0bb5fd1dae0cde13f, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300030, guid: 90b45da0dafb94c0bb5fd1dae0cde13f, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300032, guid: 90b45da0dafb94c0bb5fd1dae0cde13f, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300034, guid: 90b45da0dafb94c0bb5fd1dae0cde13f, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300036, guid: 90b45da0dafb94c0bb5fd1dae0cde13f, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300038, guid: 90b45da0dafb94c0bb5fd1dae0cde13f, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300040, guid: 90b45da0dafb94c0bb5fd1dae0cde13f, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      name: pick-up
+      selectedIndex: 16
+      newFramesTime: 0.05
+      setFramesTime: 0.1
+    file: {fileID: 11400000, guid: 1bc1845aa06f844c6b9d2b3a98fad6f1, type: 2}
+  - animationName: run
+    animation:
+      speedRatio: 1
+      loop: 1
+      frameToLoop: 0
+      frameDatas:
+      - sprite: {fileID: 21300000, guid: e058df41405714a77b5a0732c793ac0c, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300002, guid: e058df41405714a77b5a0732c793ac0c, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300004, guid: e058df41405714a77b5a0732c793ac0c, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300006, guid: e058df41405714a77b5a0732c793ac0c, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300008, guid: e058df41405714a77b5a0732c793ac0c, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300010, guid: e058df41405714a77b5a0732c793ac0c, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300012, guid: e058df41405714a77b5a0732c793ac0c, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300014, guid: e058df41405714a77b5a0732c793ac0c, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300016, guid: e058df41405714a77b5a0732c793ac0c, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300018, guid: e058df41405714a77b5a0732c793ac0c, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      name: run
+      selectedIndex: 0
+      newFramesTime: 0.05
+      setFramesTime: 0.1
+    file: {fileID: 11400000, guid: 1bc1845aa06f844c6b9d2b3a98fad6f1, type: 2}
+  - animationName: damaged
+    animation:
+      speedRatio: 1
+      loop: 1
+      frameToLoop: 0
+      frameDatas:
+      - sprite: {fileID: 21300000, guid: a51d63a135420452fb18c5f222e2c686, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300002, guid: a51d63a135420452fb18c5f222e2c686, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300004, guid: a51d63a135420452fb18c5f222e2c686, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300006, guid: a51d63a135420452fb18c5f222e2c686, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300008, guid: a51d63a135420452fb18c5f222e2c686, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300010, guid: a51d63a135420452fb18c5f222e2c686, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300012, guid: a51d63a135420452fb18c5f222e2c686, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300014, guid: a51d63a135420452fb18c5f222e2c686, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      name: damaged
+      selectedIndex: 0
+      newFramesTime: 0.05
+      setFramesTime: 0.1
+    file: {fileID: 11400000, guid: 1bc1845aa06f844c6b9d2b3a98fad6f1, type: 2}
+  - animationName: idle
+    animation:
+      speedRatio: 1
+      loop: 1
+      frameToLoop: 0
+      frameDatas:
+      - sprite: {fileID: 21300000, guid: 5152b5f4edccd4e4b86fe999177a03a0, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300002, guid: 5152b5f4edccd4e4b86fe999177a03a0, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300004, guid: 5152b5f4edccd4e4b86fe999177a03a0, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300006, guid: 5152b5f4edccd4e4b86fe999177a03a0, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300008, guid: 5152b5f4edccd4e4b86fe999177a03a0, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300010, guid: 5152b5f4edccd4e4b86fe999177a03a0, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300012, guid: 5152b5f4edccd4e4b86fe999177a03a0, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300014, guid: 5152b5f4edccd4e4b86fe999177a03a0, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300016, guid: 5152b5f4edccd4e4b86fe999177a03a0, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300018, guid: 5152b5f4edccd4e4b86fe999177a03a0, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300020, guid: 5152b5f4edccd4e4b86fe999177a03a0, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300022, guid: 5152b5f4edccd4e4b86fe999177a03a0, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300024, guid: 5152b5f4edccd4e4b86fe999177a03a0, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300026, guid: 5152b5f4edccd4e4b86fe999177a03a0, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300028, guid: 5152b5f4edccd4e4b86fe999177a03a0, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300030, guid: 5152b5f4edccd4e4b86fe999177a03a0, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300032, guid: 5152b5f4edccd4e4b86fe999177a03a0, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300034, guid: 5152b5f4edccd4e4b86fe999177a03a0, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300036, guid: 5152b5f4edccd4e4b86fe999177a03a0, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300038, guid: 5152b5f4edccd4e4b86fe999177a03a0, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300040, guid: 5152b5f4edccd4e4b86fe999177a03a0, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300042, guid: 5152b5f4edccd4e4b86fe999177a03a0, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300044, guid: 5152b5f4edccd4e4b86fe999177a03a0, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300046, guid: 5152b5f4edccd4e4b86fe999177a03a0, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      name: idle
+      selectedIndex: 0
+      newFramesTime: 0.05
+      setFramesTime: 0.1
+    file: {fileID: 11400000, guid: 1bc1845aa06f844c6b9d2b3a98fad6f1, type: 2}
+  - animationName: double-jump
+    animation:
+      speedRatio: 1
+      loop: 1
+      frameToLoop: 0
+      frameDatas:
+      - sprite: {fileID: 21300022, guid: 0b942305eb1634c70909a61d436d2e71, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300024, guid: 0b942305eb1634c70909a61d436d2e71, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300026, guid: 0b942305eb1634c70909a61d436d2e71, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300028, guid: 0b942305eb1634c70909a61d436d2e71, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300030, guid: 0b942305eb1634c70909a61d436d2e71, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      name: double-jump
+      selectedIndex: 4
+      newFramesTime: 0.05
+      setFramesTime: 0.06
+    file: {fileID: 11400000, guid: 1bc1845aa06f844c6b9d2b3a98fad6f1, type: 2}
+  - animationName: idle-with-item
+    animation:
+      speedRatio: 1
+      loop: 1
+      frameToLoop: 0
+      frameDatas:
+      - sprite: {fileID: 21300000, guid: 84372207ab0604de69cf4bed391c85b4, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300002, guid: 84372207ab0604de69cf4bed391c85b4, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300004, guid: 84372207ab0604de69cf4bed391c85b4, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300006, guid: 84372207ab0604de69cf4bed391c85b4, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300008, guid: 84372207ab0604de69cf4bed391c85b4, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300010, guid: 84372207ab0604de69cf4bed391c85b4, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300012, guid: 84372207ab0604de69cf4bed391c85b4, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300014, guid: 84372207ab0604de69cf4bed391c85b4, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300016, guid: 84372207ab0604de69cf4bed391c85b4, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300018, guid: 84372207ab0604de69cf4bed391c85b4, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300020, guid: 84372207ab0604de69cf4bed391c85b4, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300022, guid: 84372207ab0604de69cf4bed391c85b4, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300024, guid: 84372207ab0604de69cf4bed391c85b4, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300026, guid: 84372207ab0604de69cf4bed391c85b4, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300028, guid: 84372207ab0604de69cf4bed391c85b4, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300030, guid: 84372207ab0604de69cf4bed391c85b4, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300032, guid: 84372207ab0604de69cf4bed391c85b4, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300034, guid: 84372207ab0604de69cf4bed391c85b4, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300036, guid: 84372207ab0604de69cf4bed391c85b4, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300038, guid: 84372207ab0604de69cf4bed391c85b4, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300040, guid: 84372207ab0604de69cf4bed391c85b4, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300042, guid: 84372207ab0604de69cf4bed391c85b4, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300044, guid: 84372207ab0604de69cf4bed391c85b4, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300046, guid: 84372207ab0604de69cf4bed391c85b4, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      name: idle-with-item
+      selectedIndex: 0
+      newFramesTime: 0.05
+      setFramesTime: 0.1
+    file: {fileID: 11400000, guid: 1bc1845aa06f844c6b9d2b3a98fad6f1, type: 2}
+  - animationName: jump-with-item
+    animation:
+      speedRatio: 1
+      loop: 0
+      frameToLoop: 0
+      frameDatas:
+      - sprite: {fileID: 21300008, guid: 9a00db785fb8141c58198ce79911a0da, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      name: jump-with-item
+      selectedIndex: 0
+      newFramesTime: 0.05
+      setFramesTime: 0.1
+    file: {fileID: 11400000, guid: 1bc1845aa06f844c6b9d2b3a98fad6f1, type: 2}
+  - animationName: climb
+    animation:
+      speedRatio: 1
+      loop: 1
+      frameToLoop: 0
+      frameDatas:
+      - sprite: {fileID: 21300000, guid: 4a70dba8f9bd0470d953dc65d52a1893, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300002, guid: 4a70dba8f9bd0470d953dc65d52a1893, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300004, guid: 4a70dba8f9bd0470d953dc65d52a1893, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300006, guid: 4a70dba8f9bd0470d953dc65d52a1893, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300008, guid: 4a70dba8f9bd0470d953dc65d52a1893, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300010, guid: 4a70dba8f9bd0470d953dc65d52a1893, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300012, guid: 4a70dba8f9bd0470d953dc65d52a1893, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300014, guid: 4a70dba8f9bd0470d953dc65d52a1893, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300016, guid: 4a70dba8f9bd0470d953dc65d52a1893, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300018, guid: 4a70dba8f9bd0470d953dc65d52a1893, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300020, guid: 4a70dba8f9bd0470d953dc65d52a1893, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300022, guid: 4a70dba8f9bd0470d953dc65d52a1893, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      name: climb
+      selectedIndex: 0
+      newFramesTime: 0.05
+      setFramesTime: 0.1
+    file: {fileID: 11400000, guid: 1bc1845aa06f844c6b9d2b3a98fad6f1, type: 2}
+  - animationName: slide
+    animation:
+      speedRatio: 1
+      loop: 1
+      frameToLoop: 0
+      frameDatas:
+      - sprite: {fileID: 21300000, guid: 57de74399546441cd895c281441b6038, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300002, guid: 57de74399546441cd895c281441b6038, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300004, guid: 57de74399546441cd895c281441b6038, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300006, guid: 57de74399546441cd895c281441b6038, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300008, guid: 57de74399546441cd895c281441b6038, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300010, guid: 57de74399546441cd895c281441b6038, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300012, guid: 57de74399546441cd895c281441b6038, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300014, guid: 57de74399546441cd895c281441b6038, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300016, guid: 57de74399546441cd895c281441b6038, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300018, guid: 57de74399546441cd895c281441b6038, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      name: slide
+      selectedIndex: 0
+      newFramesTime: 0.05
+      setFramesTime: 0.1
+    file: {fileID: 11400000, guid: 1bc1845aa06f844c6b9d2b3a98fad6f1, type: 2}
+  - animationName: jump
+    animation:
+      speedRatio: 1
+      loop: 0
+      frameToLoop: 0
+      frameDatas:
+      - sprite: {fileID: 21300008, guid: ba591a59cf055467aa07842a034a62d8, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      name: jump
+      selectedIndex: 0
+      newFramesTime: 0.05
+      setFramesTime: 0.1
+    file: {fileID: 11400000, guid: 1bc1845aa06f844c6b9d2b3a98fad6f1, type: 2}
+  - animationName: run-with-item
+    animation:
+      speedRatio: 1
+      loop: 1
+      frameToLoop: 0
+      frameDatas:
+      - sprite: {fileID: 21300000, guid: 3ecfa62ab12b546268f36d53e17a1cdd, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300002, guid: 3ecfa62ab12b546268f36d53e17a1cdd, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300004, guid: 3ecfa62ab12b546268f36d53e17a1cdd, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300006, guid: 3ecfa62ab12b546268f36d53e17a1cdd, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300008, guid: 3ecfa62ab12b546268f36d53e17a1cdd, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300010, guid: 3ecfa62ab12b546268f36d53e17a1cdd, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300012, guid: 3ecfa62ab12b546268f36d53e17a1cdd, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300014, guid: 3ecfa62ab12b546268f36d53e17a1cdd, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300016, guid: 3ecfa62ab12b546268f36d53e17a1cdd, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300018, guid: 3ecfa62ab12b546268f36d53e17a1cdd, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      name: run-with-item
+      selectedIndex: 0
+      newFramesTime: 0.05
+      setFramesTime: 0.1
+    file: {fileID: 11400000, guid: 1bc1845aa06f844c6b9d2b3a98fad6f1, type: 2}
+  - animationName: throw
+    animation:
+      speedRatio: 1
+      loop: 1
+      frameToLoop: 0
+      frameDatas:
+      - sprite: {fileID: 21300000, guid: 2933e71b401304f12bf911c20583adf7, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300002, guid: 2933e71b401304f12bf911c20583adf7, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300004, guid: 2933e71b401304f12bf911c20583adf7, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300006, guid: 2933e71b401304f12bf911c20583adf7, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300008, guid: 2933e71b401304f12bf911c20583adf7, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300010, guid: 2933e71b401304f12bf911c20583adf7, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300012, guid: 2933e71b401304f12bf911c20583adf7, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300014, guid: 2933e71b401304f12bf911c20583adf7, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300016, guid: 2933e71b401304f12bf911c20583adf7, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300018, guid: 2933e71b401304f12bf911c20583adf7, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300020, guid: 2933e71b401304f12bf911c20583adf7, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300022, guid: 2933e71b401304f12bf911c20583adf7, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      name: throw
+      selectedIndex: 0
+      newFramesTime: 0.05
+      setFramesTime: 0.1
+    file: {fileID: 11400000, guid: 1bc1845aa06f844c6b9d2b3a98fad6f1, type: 2}
+  - animationName: attack
+    animation:
+      speedRatio: 1
+      loop: 1
+      frameToLoop: 0
+      frameDatas:
+      - sprite: {fileID: 21300000, guid: 0ffdcbfb3f54b4610939d0189b5fce8d, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300002, guid: 0ffdcbfb3f54b4610939d0189b5fce8d, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300004, guid: 0ffdcbfb3f54b4610939d0189b5fce8d, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300006, guid: 0ffdcbfb3f54b4610939d0189b5fce8d, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300008, guid: 0ffdcbfb3f54b4610939d0189b5fce8d, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300010, guid: 0ffdcbfb3f54b4610939d0189b5fce8d, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300012, guid: 0ffdcbfb3f54b4610939d0189b5fce8d, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300014, guid: 0ffdcbfb3f54b4610939d0189b5fce8d, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      name: attack
+      selectedIndex: 0
+      newFramesTime: 0.05
+      setFramesTime: 0.1
+    file: {fileID: 11400000, guid: 1bc1845aa06f844c6b9d2b3a98fad6f1, type: 2}
+  - animationName: wall-slide
+    animation:
+      speedRatio: 1
+      loop: 1
+      frameToLoop: 0
+      frameDatas:
+      - sprite: {fileID: 21300000, guid: f7bf7e9dbd7b441e981fee361bf4fa75, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300002, guid: f7bf7e9dbd7b441e981fee361bf4fa75, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300004, guid: f7bf7e9dbd7b441e981fee361bf4fa75, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300006, guid: f7bf7e9dbd7b441e981fee361bf4fa75, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300008, guid: f7bf7e9dbd7b441e981fee361bf4fa75, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300010, guid: f7bf7e9dbd7b441e981fee361bf4fa75, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      name: wall-slide
+      selectedIndex: 5
+      newFramesTime: 0.05
+      setFramesTime: 0.1
+    file: {fileID: 11400000, guid: 1bc1845aa06f844c6b9d2b3a98fad6f1, type: 2}
+  - animationName: jump-apex
+    animation:
+      speedRatio: 1
+      loop: 0
+      frameToLoop: 0
+      frameDatas:
+      - sprite: {fileID: 21300014, guid: ba591a59cf055467aa07842a034a62d8, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      name: jump-apex
+      selectedIndex: 0
+      newFramesTime: 0.08
+      setFramesTime: 0.06
+    file: {fileID: 11400000, guid: 1bc1845aa06f844c6b9d2b3a98fad6f1, type: 2}
+  - animationName: fall
+    animation:
+      speedRatio: 1
+      loop: 1
+      frameToLoop: 0
+      frameDatas:
+      - sprite: {fileID: 21300016, guid: ba591a59cf055467aa07842a034a62d8, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300018, guid: ba591a59cf055467aa07842a034a62d8, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300020, guid: ba591a59cf055467aa07842a034a62d8, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      name: fall
+      selectedIndex: 1
+      newFramesTime: 0.08
+      setFramesTime: 0.06
+    file: {fileID: 11400000, guid: 1bc1845aa06f844c6b9d2b3a98fad6f1, type: 2}
+  - animationName: land
+    animation:
+      speedRatio: 1
+      loop: 0
+      frameToLoop: 0
+      frameDatas:
+      - sprite: {fileID: 21300022, guid: ba591a59cf055467aa07842a034a62d8, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      name: land
+      selectedIndex: 0
+      newFramesTime: 0.08
+      setFramesTime: 0.06
+    file: {fileID: 11400000, guid: 1bc1845aa06f844c6b9d2b3a98fad6f1, type: 2}
+  - animationName: jump-apex-with-item
+    animation:
+      speedRatio: 1
+      loop: 0
+      frameToLoop: 0
+      frameDatas:
+      - sprite: {fileID: 21300014, guid: 9a00db785fb8141c58198ce79911a0da, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      name: jump-apex-with-item
+      selectedIndex: 0
+      newFramesTime: 0.08
+      setFramesTime: 0.06
+    file: {fileID: 11400000, guid: 1bc1845aa06f844c6b9d2b3a98fad6f1, type: 2}
+  - animationName: fall-with-item
+    animation:
+      speedRatio: 1
+      loop: 1
+      frameToLoop: 0
+      frameDatas:
+      - sprite: {fileID: 21300016, guid: 9a00db785fb8141c58198ce79911a0da, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300018, guid: 9a00db785fb8141c58198ce79911a0da, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      - sprite: {fileID: 21300020, guid: 9a00db785fb8141c58198ce79911a0da, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      name: fall-with-item
+      selectedIndex: 2
+      newFramesTime: 0.08
+      setFramesTime: 0.06
+    file: {fileID: 11400000, guid: 1bc1845aa06f844c6b9d2b3a98fad6f1, type: 2}
+  - animationName: land-with-item
+    animation:
+      speedRatio: 1
+      loop: 0
+      frameToLoop: 0
+      frameDatas:
+      - sprite: {fileID: 21300022, guid: 9a00db785fb8141c58198ce79911a0da, type: 3}
+        time: 0.06
+        eventEnabled: 0
+        eventName: 
+      name: land-with-item
+      selectedIndex: 0
+      newFramesTime: 0.08
+      setFramesTime: 0.06
+    file: {fileID: 11400000, guid: 1bc1845aa06f844c6b9d2b3a98fad6f1, type: 2}
+  assets:
+  - {fileID: 11400000, guid: 1bc1845aa06f844c6b9d2b3a98fad6f1, type: 2}
+  mode: 0
+  animIdx: -1
+  speedRatio: 1
+  minPlayFrom: 0
+  maxPlayFrom: 0
+  overrideTimeScale: 0
+  timeScaleOverride: 0
+  playFrom: 0
+  autoStart: 0
+--- !u!114 &114431667457021396
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1987068188876086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6f092a5607de41ac930412fb9795b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114647562679036886
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1987068188876086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 203116c9849e947efac0abea5e14bedb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 4
+  timeToJumpApex: 0.25
+  maxJumpHeight: 2
+  minJumpHeight: 1
+  wallJumpClimb: {x: 3.75, y: 12}
+  wallJumpOff: {x: 4.25, y: 3.5}
+  wallLeap: {x: 4, y: 14}
+  wallSlideSpeed: 1
+  wallStickTime: 0.25
+  throwPower: 5
+  liftObjectFramePositions: {fileID: 4982380103931478}
+  throwObjectFramePositions: {fileID: 4366235259905116}
+  punchHurtBox: {fileID: 114055101463191120}
+  jumpOnEnemyHeadLayer:
+    serializedVersion: 2
+    m_Bits: 16
+  jumpOnEnemyHeadDistanceBelow: 0.25
+  extraJumpMultiplier: 1.5
+  extraJumpButtonLeniency: 0.25
+--- !u!114 &114672767662830502
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1987068188876086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 829830c6258e9404f847f16404e4ed7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 1
+  jumpThroughTag: Respawn
+--- !u!114 &114724259670562300
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1070015076544868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52eeba4dd6ddd45009aa29c00a53a83d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 0
+--- !u!114 &114823677201290764
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1987068188876086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c87385b1a6ae480cae5fc491244ed9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxValue: 5
+  flickerWhenInvincibile: 1
+  invincibilityTime: 1
+  currentValue: 0
+--- !u!212 &212114557381338598
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1738365724983972}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: 16d4c1639a872424488106bca9fbf4e1, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 4
+  m_Sprite: {fileID: 21300000, guid: 5152b5f4edccd4e4b86fe999177a03a0, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 2, y: 2}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
