@@ -11,7 +11,7 @@ public class StateMachine
         CurrentState.OnExit();
         CurrentState = newState;
         CurrentState.OnEnter();
-        Debug.Log(CurrentState);
+        //Debug.Log(CurrentState);
     }
 
     public void Init(IState defaultState)
