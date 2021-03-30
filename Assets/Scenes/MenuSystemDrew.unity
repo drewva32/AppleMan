@@ -21472,7 +21472,7 @@ Transform:
   - {fileID: 916303843}
   - {fileID: 196819814}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1403313898
 GameObject:
@@ -23356,7 +23356,7 @@ GameObject:
   - component: {fileID: 1440625833}
   - component: {fileID: 1440625835}
   m_Layer: 4
-  m_Name: LevelManager
+  m_Name: RoomManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23391,7 +23391,7 @@ Transform:
   - {fileID: 515438565}
   - {fileID: 1169096447}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1440625835
 MonoBehaviour:
