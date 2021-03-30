@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EnemyWalkState : IState
 {
-    private CarrotStateController _StateController;
+    private EnemyStateController _StateController;
     public string AnimationName => "walk";
 
-    public EnemyWalkState(CarrotStateController controller)
+    public EnemyWalkState(EnemyStateController controller)
     {
         _StateController = controller;
     }

@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof (Animator))]
-public class CarrotStateController : MonoBehaviour
+[RequireComponent(typeof(Animator))]
+public class EnemyStateController : MonoBehaviour
 {
     public EnemyAttackState EnemyAttackState { get; private set; }
     public EnemyTakeHitState EnemyTakeHitState { get; private set; }
@@ -31,7 +29,7 @@ public class CarrotStateController : MonoBehaviour
         StateMachine = new StateMachine();
 
         _animator = GetComponent<Animator>();
-        _walkingController = GetComponent<WalkingController>();
+        _walkingController = GetComponentInParent<WalkingController>();
 
     }
     // Start is called before the first frame update

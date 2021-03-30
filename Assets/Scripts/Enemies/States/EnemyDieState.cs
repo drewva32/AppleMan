@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EnemyDieState : IState
 {
-    private CarrotStateController _StateController;
+    private EnemyStateController _StateController;
     public string AnimationName => "die";
 
-    public EnemyDieState(CarrotStateController controller)
+    public EnemyDieState(EnemyStateController controller)
     {
         _StateController = controller;
     }

@@ -7,9 +7,10 @@ public class WalkingController : MonoBehaviour
 {
     [SerializeField]
     private float _chaseDistatnce = 0;
-    // speed here
     [SerializeField]
     private float _speed = 2.0f;
+    [SerializeField]
+    private float _chaseSpeed = 4.0f;
     [SerializeField]
     private Transform _wallCheck;
     [SerializeField]
@@ -19,7 +20,7 @@ public class WalkingController : MonoBehaviour
 
 
     public Transform WallCheck => _wallCheck;
-    public float Speed => _speed;
+    public float Speed => _currentSpeed;
     public float ChaseDistance => _chaseDistatnce;
 
 
@@ -27,11 +28,14 @@ public class WalkingController : MonoBehaviour
     private bool _timeToTurn = false;
     private bool _onPlatform = true;
     private bool _isFacingRight = false;
+    private float _currentSpeed;
     private Rigidbody2D _rb;
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+
+        _currentSpeed = _speed;
     }
 
     public void Walk()
@@ -51,11 +55,19 @@ public class WalkingController : MonoBehaviour
     {
         // Raycast to look for wall
         _timeToTurn = Physics2D.OverlapCircle(_wallCheck.position,  _wallCheckRadius, turnLayerMask);
-        _onPlatform = Physics2D.Raycast(_wallCheck.position, Vector3.down, platformRayDistance);
+        _onPlatform = Physics2D.Raycast(_wallCheck.position, Vector3.down, platformRayDistance, turnLayerMask);
         if(_timeToTurn || !_onPlatform)
         {
             Flip();
         }
+    }
+
+    public void ChangeSpeed()
+    {
+        if (_currentSpeed == _speed)
+            _currentSpeed = _chaseSpeed;
+        else
+            _currentSpeed = _speed;
     }
 
     private void OnDrawGizmos()

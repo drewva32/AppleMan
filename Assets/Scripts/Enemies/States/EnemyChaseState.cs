@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EnemyChaseState : IState
 {
-    private CarrotStateController _StateController;
+    private EnemyStateController _StateController;
     public string AnimationName => "chase";
 
-    public EnemyChaseState(CarrotStateController controller)
+    public EnemyChaseState(EnemyStateController controller)
     {
         _StateController = controller;
     }
@@ -25,12 +25,13 @@ public class EnemyChaseState : IState
     public void OnEnter()
     {
         _StateController.Animator.SetBool(AnimationName, true);
+        _StateController.Walkingcontorller.ChangeSpeed();
         throw new System.NotImplementedException();
     }
 
     public void OnExit()
     {
         _StateController.Animator.SetBool(AnimationName, false);
-        throw new System.NotImplementedException();
+        _StateController.Walkingcontorller.ChangeSpeed();
     }
 }
