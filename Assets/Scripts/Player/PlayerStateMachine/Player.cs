@@ -225,6 +225,11 @@ public class Player : MonoBehaviour
         transform.Rotate(0.0f, 180.0f, 0.0f);
     }
 
+    public void GetSprung(float power)
+    {
+        SetVelocityY(power);
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
