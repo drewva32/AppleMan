@@ -20,9 +20,7 @@ public class AppleGameManager : MonoBehaviour
         if(_instance != null)
             Destroy(gameObject);
         else
-        {
             _instance = this;
-        }
     }
     private void OnDestroy() => _instance = null;
 

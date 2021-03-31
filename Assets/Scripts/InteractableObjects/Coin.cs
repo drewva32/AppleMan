@@ -24,6 +24,7 @@ public class Coin : MonoBehaviour, IHaveAnimationEndEvent
         if (player && !_isPickedUp)
         {
             AppleGameManager.Instance.AddCoin();
+            AudioManager.Instance.CoinAudio.PlayCollectSound();
             _animator.SetTrigger(Pickup);
             _isPickedUp = true;
         }
