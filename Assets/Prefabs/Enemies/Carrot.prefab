@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 2252435108867543755}
   - component: {fileID: 3284031475605993041}
   - component: {fileID: 1510566026}
-  m_Layer: 0
+  - component: {fileID: 2927710251258879894}
+  m_Layer: 6
   m_Name: Carrot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,14 +69,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4834a55dba65d9146b2cb4a7e42ad536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _chaseDistatnce: 0
+  _chaseDistatnce: 2
   _speed: 2
-  _chaseSpeed: 4
+  _chaseSpeed: 10
   _wallCheck: {fileID: 1336312997976556538}
-  turnLayerMask:
+  _turnLayerMask:
     serializedVersion: 2
     m_Bits: 16
+  _playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 8
   platformRayDistance: 0.45
+  _wallCheckDistance: 0.2
+  _player: {fileID: 0}
 --- !u!61 &1510566026
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -102,6 +108,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6539726, y: 0.90830755}
   m_EdgeRadius: 0
+--- !u!114 &2927710251258879894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3069113182142511462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9724abfe0dba2e240b0aa80cdb29d796, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 0}
 --- !u!1 &3743366958020128149
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,8 +132,8 @@ GameObject:
   - component: {fileID: 8131203849092998756}
   - component: {fileID: 8557228441703513957}
   - component: {fileID: 3977909757484799581}
-  - component: {fileID: 5098873948729305405}
-  m_Layer: 0
+  - component: {fileID: 557654072}
+  m_Layer: 6
   m_Name: Carrot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +224,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5098873948729305405
+--- !u!114 &557654072
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -214,10 +233,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3743366958020128149}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9724abfe0dba2e240b0aa80cdb29d796, type: 3}
+  m_Script: {fileID: 11500000, guid: e984730111f213b43a9de4eff9b6581c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 0}
 --- !u!1 &8205480332308224891
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,7 +245,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1336312997976556538}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}

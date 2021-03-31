@@ -1,10 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyChaseState : IState
 {
     private EnemyStateController _StateController;
+    private bool _hasTakenDamage;
+
     public string AnimationName => "chase";
 
     public EnemyChaseState(EnemyStateController controller)
@@ -14,24 +14,36 @@ public class EnemyChaseState : IState
 
     public void FixedLogicUpdate()
     {
-        throw new System.NotImplementedException();
+        _StateController.Walkingcontorller.Walk();
     }
 
     public void LogicUpdate()
     {
-        throw new System.NotImplementedException();
+        if (Vector3.Distance(_StateController.transform.position, _StateController.Player.position) > _StateController.Walkingcontorller.ChaseDistance)
+        {
+            _StateController.StateMachine.ChangeState(_StateController.EnemyWalkState);
+        }
+        _StateController.Walkingcontorller.CheckDirection();
     }
 
     public void OnEnter()
     {
         _StateController.Animator.SetBool(AnimationName, true);
         _StateController.Walkingcontorller.ChangeSpeed();
-        throw new System.NotImplementedException();
     }
 
     public void OnExit()
     {
         _StateController.Animator.SetBool(AnimationName, false);
-        _StateController.Walkingcontorller.ChangeSpeed();
+    }
+
+    public void OnAnimationEnd()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void TakeHit()
+    {
+        _hasTakenDamage = true;
     }
 }

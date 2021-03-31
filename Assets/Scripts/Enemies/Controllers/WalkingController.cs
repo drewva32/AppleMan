@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -14,22 +12,28 @@ public class WalkingController : MonoBehaviour
     [SerializeField]
     private Transform _wallCheck;
     [SerializeField]
-    private LayerMask turnLayerMask;
+    private LayerMask _turnLayerMask;
+    [SerializeField]
+    private LayerMask _playerLayerMask;
     [SerializeField]
     private float platformRayDistance = 0.1f;
+    [SerializeField]
+    private float _wallCheckDistance = 0.2f;
 
 
     public Transform WallCheck => _wallCheck;
     public float Speed => _currentSpeed;
     public float ChaseDistance => _chaseDistatnce;
+    public LayerMask PlayerLayer => _playerLayerMask;
+    public Rigidbody2D RB => _rb;
 
-
-    private float _wallCheckRadius = 0.2f;
+    
     private bool _timeToTurn = false;
     private bool _onPlatform = true;
     private bool _isFacingRight = false;
     private float _currentSpeed;
     private Rigidbody2D _rb;
+    public Transform _player;
 
     private void Awake()
     {
@@ -40,7 +44,6 @@ public class WalkingController : MonoBehaviour
 
     public void Walk()
     {
-        // Walk functionality here
         if (_isFacingRight)
         {
             _rb.velocity = new Vector2(_speed, _rb.velocity.y);
@@ -54,12 +57,10 @@ public class WalkingController : MonoBehaviour
     public void CheckDirection ()
     {
         // Raycast to look for wall
-        _timeToTurn = Physics2D.OverlapCircle(_wallCheck.position,  _wallCheckRadius, turnLayerMask);
-        _onPlatform = Physics2D.Raycast(_wallCheck.position, Vector3.down, platformRayDistance, turnLayerMask);
+        _timeToTurn = Physics2D.Raycast(_wallCheck.position, Vector3.forward, _wallCheckDistance, _turnLayerMask);
+        _onPlatform = Physics2D.Raycast(_wallCheck.position, Vector3.down, platformRayDistance, _turnLayerMask);
         if(_timeToTurn || !_onPlatform)
-        {
             Flip();
-        }
     }
 
     public void ChangeSpeed()
@@ -72,10 +73,15 @@ public class WalkingController : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        // Draw ray for vision
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawRay(WallCheck.position, new Vector3(-transform.localScale.x * _chaseDistatnce, 0, 0));
+        // Draw ray to ground to check for platform turning
         Gizmos.color = Color.blue;
         Gizmos.DrawRay(_wallCheck.position, new Vector3(0, -platformRayDistance, 0));
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(_wallCheck.position, _wallCheckRadius);
+        // Draw wall sphere to check for turning
+        Gizmos.color = Color.black;
+        Gizmos.DrawRay(_wallCheck.position, new Vector3(-_wallCheckDistance, 0, 0));
     }
 
     private void Flip()
