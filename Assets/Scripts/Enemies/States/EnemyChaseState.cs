@@ -3,6 +3,8 @@ using UnityEngine;
 public class EnemyChaseState : IState
 {
     private EnemyStateController _StateController;
+    private bool _hasTakenDamage;
+
     public string AnimationName => "chase";
 
     public EnemyChaseState(EnemyStateController controller)
@@ -33,5 +35,15 @@ public class EnemyChaseState : IState
     public void OnExit()
     {
         _StateController.Animator.SetBool(AnimationName, false);
+    }
+
+    public void OnAnimationEnd()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void TakeHit()
+    {
+        _hasTakenDamage = true;
     }
 }

@@ -10,4 +10,6 @@ public interface IState
     void OnExit();
     void LogicUpdate();
     void FixedLogicUpdate();
+    public void OnAnimationEnd();
+    void TakeHit();
 }

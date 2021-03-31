@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyAttackState : IState
 {
     private EnemyStateController _StateController;
+    private bool _hasTakenDamage;
+
     public string AnimationName => "attack";
 
     public EnemyAttackState(EnemyStateController controller)
@@ -32,5 +34,15 @@ public class EnemyAttackState : IState
     {
         _StateController.Animator.SetBool(AnimationName, false);
         throw new System.NotImplementedException();
+    }
+
+    public void OnAnimationEnd()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void TakeHit()
+    {
+        _hasTakenDamage = true;
     }
 }

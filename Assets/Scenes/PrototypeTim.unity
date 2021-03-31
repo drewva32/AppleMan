@@ -4779,6 +4779,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2927710251258879894, guid: 151df538d3bafcb45886bce6c8a207ca, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 1201843181}
     - target: {fileID: 3069113182142511462, guid: 151df538d3bafcb45886bce6c8a207ca, type: 3}
       propertyPath: m_Name
       value: Carrot (1)
@@ -28290,22 +28294,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2927710251258879894, guid: 151df538d3bafcb45886bce6c8a207ca, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 1201843181}
     - target: {fileID: 3069113182142511462, guid: 151df538d3bafcb45886bce6c8a207ca, type: 3}
       propertyPath: m_Name
       value: Carrot
       objectReference: {fileID: 0}
-    - target: {fileID: 3069113182142511462, guid: 151df538d3bafcb45886bce6c8a207ca, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3284031475605993041, guid: 151df538d3bafcb45886bce6c8a207ca, type: 3}
-      propertyPath: _chaseDistatnce
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5098873948729305405, guid: 151df538d3bafcb45886bce6c8a207ca, type: 3}
-      propertyPath: _player
-      value: 
-      objectReference: {fileID: 1201843181}
     - target: {fileID: 8223032578478923825, guid: 151df538d3bafcb45886bce6c8a207ca, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -28359,17 +28355,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3838956025494450307, guid: 88912293fa80a1641aa453b49ed14953, type: 3}
-      propertyPath: _chaseDistatnce
-      value: 1.5
-      objectReference: {fileID: 0}
     - target: {fileID: 3838956025494450316, guid: 88912293fa80a1641aa453b49ed14953, type: 3}
       propertyPath: m_Name
       value: Mushroom
-      objectReference: {fileID: 0}
-    - target: {fileID: 3838956025494450316, guid: 88912293fa80a1641aa453b49ed14953, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3838956025494450319, guid: 88912293fa80a1641aa453b49ed14953, type: 3}
       propertyPath: m_RootOrder
@@ -28415,7 +28403,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3838956025701830389, guid: 88912293fa80a1641aa453b49ed14953, type: 3}
+    - target: {fileID: 8005737675608845793, guid: 88912293fa80a1641aa453b49ed14953, type: 3}
       propertyPath: _player
       value: 
       objectReference: {fileID: 1201843181}

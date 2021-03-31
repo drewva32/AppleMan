@@ -31,6 +31,12 @@ public class EnemyDieState : IState
     public void OnExit()
     {
         _StateController.Animator.SetBool(AnimationName, false);
-        throw new System.NotImplementedException();
     }
+
+    public void OnAnimationEnd()
+    {
+    }
+
+    public void TakeHit()
+    { }
 }

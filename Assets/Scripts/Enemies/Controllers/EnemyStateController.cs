@@ -1,7 +1,6 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Animator))]
-public class EnemyStateController : MonoBehaviour
+public class EnemyStateController : MonoBehaviour, IPlayerInteractions
 {
     public EnemyAttackState EnemyAttackState { get; private set; }
     public EnemyTakeHitState EnemyTakeHitState { get; private set; }
@@ -28,8 +27,8 @@ public class EnemyStateController : MonoBehaviour
         EnemyWalkState = new EnemyWalkState(this);
         StateMachine = new StateMachine();
 
-        _animator = GetComponent<Animator>();
-        _walkingController = GetComponentInParent<WalkingController>();
+        _animator = GetComponentInChildren<Animator>();
+        _walkingController = GetComponent<WalkingController>();
 
     }
     // Start is called before the first frame update
@@ -48,4 +47,48 @@ public class EnemyStateController : MonoBehaviour
     {
         StateMachine.CurrentState.FixedLogicUpdate();
     }
+
+    public void AnimationTrigger()
+    {
+        StateMachine.CurrentState.OnAnimationEnd();
+    }
+
+    public void TakeHit()
+    {
+        StateMachine.CurrentState.TakeHit();
+    }
+
+    public void TakePunch(int damageAmount)
+    {
+        _walkingController.RB.velocity = Vector2.zero;
+        Vector3 playerLocation = (_walkingController._player.position - _walkingController.transform.position);
+        Debug.Log(playerLocation.normalized);
+        // Apply damage
+        _walkingController.RB.AddForce(new Vector2(-playerLocation.x * 1000, 25f));
+        StateMachine.CurrentState.TakeHit();
+    }
+
+    public void TakeSlide(int damageAmount, Vector3 directionToPlayer)
+    {
+        // Apply Damage
+        _walkingController.RB.AddForce(new Vector2(-directionToPlayer.x * 200, 0));
+        StateMachine.CurrentState.TakeHit();
+    }
 }
+
+
+/* This came from the TakePunch Method and I am not sure we need it the current way the code is setup.
+
+bool playerOnLeft;
+playerOnLeft = (Vector3.Dot(directionToPlayer.normalized, Vector3.right) > 1) ? true : false;
+Debug.Log(playerOnLeft);
+_walkingController.RB.velocity = Vector2.zero;
+if (playerOnLeft)
+{
+    _walkingController.RB.AddForce(new Vector2(directionToPlayer.x * 500, 25f));
+}
+else
+{
+    _walkingController.RB.AddForce(new Vector2(-directionToPlayer.x * 500, 25f));
+}
+*/
