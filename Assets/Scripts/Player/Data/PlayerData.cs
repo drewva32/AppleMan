@@ -39,7 +39,11 @@ public class PlayerData : ScriptableObject
 
     [Header("GroundSlide State")] public float maxGroundSlideTime = .75f;
     public float slideCooldown = 1f;
+    public int groundSlideDamage = 1;
     public float groundSlideVelocity = 12f;
+    public float slideHitRadius = 0.5f;
+    public LayerMask slideHitLayers;
+    
 
     [Header("Crouch States")] public float crouchMovementVelocity = 4f;
     public Vector2 crouchColliderOffset = new Vector2(0,0.8f);

@@ -179,7 +179,13 @@ public class Player : MonoBehaviour
 
     public void Kick()
     {
-        
+        Collider2D slideHit = Physics2D
+            .OverlapCircle(groundSlideHitCheck.position, playerData.slideHitRadius, playerData.slideHitLayers);
+        if (slideHit)
+        {
+            var directionToPlayer = (transform.position - slideHit.transform.position).normalized;
+            slideHit.GetComponent<IPlayerInteractions>().TakeSlide(playerData.groundSlideDamage, directionToPlayer);
+        }
     }
 
    

@@ -39,10 +39,15 @@ MonoBehaviour:
   punchHitRadius: 0.5
   punchableLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
   maxGroundSlideTime: 0.25
   slideCooldown: 0.35
+  groundSlideDamage: 1
   groundSlideVelocity: 10
+  slideHitRadius: 0.5
+  slideHitLayers:
+    serializedVersion: 2
+    m_Bits: 192
   crouchMovementVelocity: 3
   crouchColliderOffset: {x: 0, y: 0.8}
   crouchColliderSize: {x: 0.8, y: 0.35}
