@@ -4,13 +4,13 @@ using UnityEngine;
 public class WalkingController : MonoBehaviour
 {
     [SerializeField]
-    private float _chaseDistatnce = 0;
+    private float _visionDistatnce = 0;
     [SerializeField]
     private float _speed = 2.0f;
     [SerializeField]
     private float _chaseSpeed = 4.0f;
     [SerializeField]
-    private Transform _wallCheck;
+    private Transform _surfaceChecker;
     [SerializeField]
     private LayerMask _turnLayerMask;
     [SerializeField]
@@ -19,20 +19,24 @@ public class WalkingController : MonoBehaviour
     private float platformRayDistance = 0.1f;
     [SerializeField]
     private float _wallCheckDistance = 0.2f;
+    [SerializeField] [Tooltip("1 if character is facing right; -1 otjerwise")]
+    private int _facingDirection = 1;
 
 
-    public Transform WallCheck => _wallCheck;
+    public Transform WallCheck => _surfaceChecker;
     public float Speed => _currentSpeed;
-    public float ChaseDistance => _chaseDistatnce;
+    public float ChaseDistance => _visionDistatnce;
     public LayerMask PlayerLayer => _playerLayerMask;
     public Rigidbody2D RB => _rb;
 
     
     private bool _timeToTurn = false;
     private bool _onPlatform = true;
-    private bool _isFacingRight = false;
     private float _currentSpeed;
     private Rigidbody2D _rb;
+    private Vector3 vectorFacingDirection;
+
+
     public Transform _player;
 
     private void Awake()
@@ -40,11 +44,12 @@ public class WalkingController : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
 
         _currentSpeed = _speed;
+        vectorFacingDirection = new Vector3(_facingDirection, 0, 0);
     }
 
     public void Walk()
     {
-        if (_isFacingRight)
+        if (_facingDirection == 1)
         {
             _rb.velocity = new Vector2(_speed, _rb.velocity.y);
         }
@@ -57,8 +62,8 @@ public class WalkingController : MonoBehaviour
     public void CheckDirection ()
     {
         // Raycast to look for wall
-        _timeToTurn = Physics2D.Raycast(_wallCheck.position, Vector3.forward, _wallCheckDistance, _turnLayerMask);
-        _onPlatform = Physics2D.Raycast(_wallCheck.position, Vector3.down, platformRayDistance, _turnLayerMask);
+        _timeToTurn = Physics2D.Raycast(_surfaceChecker.position, vectorFacingDirection, _wallCheckDistance, _turnLayerMask);
+        _onPlatform = Physics2D.Raycast(_surfaceChecker.position, Vector3.down, platformRayDistance, _turnLayerMask);
         if(_timeToTurn || !_onPlatform)
             Flip();
     }
@@ -75,23 +80,20 @@ public class WalkingController : MonoBehaviour
     {
         // Draw ray for vision
         Gizmos.color = Color.cyan;
-        Gizmos.DrawRay(WallCheck.position, new Vector3(-transform.localScale.x * _chaseDistatnce, 0, 0));
+        Gizmos.DrawRay(WallCheck.position, new Vector3(_facingDirection * _visionDistatnce, 0, 0));
         // Draw ray to ground to check for platform turning
         Gizmos.color = Color.blue;
-        Gizmos.DrawRay(_wallCheck.position, new Vector3(0, -platformRayDistance, 0));
-        // Draw wall sphere to check for turning
+        Gizmos.DrawRay(_surfaceChecker.position, new Vector3(0, -platformRayDistance, 0));
+        // Draw ray to check for wall
         Gizmos.color = Color.black;
-        Gizmos.DrawRay(_wallCheck.position, new Vector3(-_wallCheckDistance, 0, 0));
+        Gizmos.DrawRay(_surfaceChecker.position, new Vector3(_facingDirection * _wallCheckDistance, 0, 0));
     }
 
     private void Flip()
     {
         // Switch the way the player is labelled as facing.
-        _isFacingRight = !_isFacingRight;
+        _facingDirection *= -1;
 
-        // Multiply the player's x local scale by -1.
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
+        transform.Rotate(0.0f, 180.0f, 0.0f);
     }
 }
