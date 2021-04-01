@@ -1,7 +1,67 @@
 fileFormatVersion: 2
 guid: b531b159f715d4ddc897b7fa42a0995a
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8790406345508956127
+    second: hit-fx-1@activate_0
+  - first:
+      213: 6405731772357427528
+    second: hit-fx-1@activate_1
+  - first:
+      213: -6873585181314399594
+    second: hit-fx-1@activate_2
+  - first:
+      213: -3690650249388037771
+    second: hit-fx-1@activate_3
+  - first:
+      213: -7464827903384571216
+    second: hit-fx-1@activate_4
+  - first:
+      213: 3333438560345450394
+    second: hit-fx-1@activate_5
+  - first:
+      213: -1537862509765004783
+    second: hit-fx-1@activate_6
+  - first:
+      213: -5783125607823187053
+    second: hit-fx-1@activate_7
+  - first:
+      213: 8644669298801043011
+    second: hit-fx-1@activate_8
+  - first:
+      213: 1476740173856375406
+    second: hit-fx-1@activate_9
+  - first:
+      213: -1326601791256742822
+    second: hit-fx-1@activate_10
+  - first:
+      213: -374873764891928388
+    second: hit-fx-1@activate_11
+  - first:
+      213: -2784744751001396892
+    second: hit-fx-1@activate_12
+  - first:
+      213: 4427944920529971693
+    second: hit-fx-1@activate_13
+  - first:
+      213: 3217098524135399986
+    second: hit-fx-1@activate_14
+  - first:
+      213: 3785092121441322686
+    second: hit-fx-1@activate_15
+  - first:
+      213: 189106789519604506
+    second: hit-fx-1@activate_16
+  - first:
+      213: -8164615892640525024
+    second: hit-fx-1@activate_17
+  - first:
+      213: -1124676948332744366
+    second: hit-fx-1@activate_18
+  - first:
+      213: 1207954642764221292
+    second: hit-fx-1@activate_19
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,12 +101,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -74,10 +134,139 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: hit-fx-1@activate_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd7a6676ffbcdf970800000000000000
+      internalID: 8790406345508956127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hit-fx-1@activate_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8414cc1ab1bb5e850800000000000000
+      internalID: 6405731772357427528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hit-fx-1@activate_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 692cd5602be1c90a0800000000000000
+      internalID: -6873585181314399594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hit-fx-1@activate_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1
+        width: 61
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 1, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 579e40fe62d28ccc0800000000000000
+      internalID: -3690650249388037771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hit-fx-1@activate_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b2b65d729a976890800000000000000
+      internalID: -7464827903384571216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
