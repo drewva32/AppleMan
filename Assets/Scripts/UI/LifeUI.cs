@@ -1,18 +1,17 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class CoinUI : MonoBehaviour
+public class LifeUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI coinText;
     
-    private void Start() => AppleGameManager.Instance.OnCoinsChanged += UpdateCoinUI;
+    private void Start() => AppleGameManager.Instance.OnLivesChanged += UpdateLifeUI;
     // private void OnDisable() => AppleGameManager.Instance.OnCoinsChanged -= UpdateCoinUI;
 
-    private void UpdateCoinUI(int coins)
+    private void UpdateLifeUI(int lives)
     {
-        coinText.text = coins.ToString("N0");
+        coinText.text = lives.ToString("N0");
     }
 }

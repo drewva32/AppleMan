@@ -10,7 +10,7 @@ public class AppleGameManager : MonoBehaviour
 
     private int _coins;
     private int _kills;
-    private int _lives;
+    private int _lives = 3;
     
     public event Action<int> OnLivesChanged;
     public event Action<int> OnCoinsChanged;

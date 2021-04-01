@@ -21,8 +21,11 @@ public class Spring : MonoBehaviour
         if (other.WasHitfromTopSide())
         {
             var player = other.gameObject.GetComponent<Player>();
+            if (!player)
+                return;
             player.GetSprung(springPower);
             _animator.SetTrigger(Spring1);
+            AudioManager.Instance.SpringAudio.PlaySound();
         }
     }
 }
