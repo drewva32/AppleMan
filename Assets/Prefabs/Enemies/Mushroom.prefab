@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3838956025008993284}
   m_Layer: 6
-  m_Name: WallCheck
+  m_Name: SurfaceCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49,7 +49,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3838956025494450319
 Transform:
   m_ObjectHideFlags: 0
@@ -99,10 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4834a55dba65d9146b2cb4a7e42ad536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _chaseDistatnce: 1
+  _visionDistatnce: 0
   _speed: 1.5
   _chaseSpeed: 3
-  _wallCheck: {fileID: 3838956025008993284}
+  _surfaceChecker: {fileID: 3838956025008993284}
   _turnLayerMask:
     serializedVersion: 2
     m_Bits: 16
@@ -110,6 +110,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   platformRayDistance: 0.25
+  _wallCheckDistance: 0.2
+  _facingDirection: -1
+  _player: {fileID: 0}
 --- !u!61 &3838956025494450304
 BoxCollider2D:
   m_ObjectHideFlags: 0
