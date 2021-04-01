@@ -18,6 +18,20 @@ public class PlayerWallSlideState : PlayerTouchingWallState
         }
     }
 
+    public override void Enter()
+    {
+        base.Enter();
+        if (player.HasAudioManager) 
+            AudioManager.Instance.PlayerAudioController.PlayWallSlideSound();
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+        if (player.HasAudioManager) 
+            AudioManager.Instance.PlayerAudioController.CancelLoopingSound();
+    }
+
     public override void LogicUpdate()
     {
         base.LogicUpdate();

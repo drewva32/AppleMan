@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerMoveState : PlayerGroundedState
 {
+    private bool _isLeftFoot;
     [SerializeField] private PlayerIdleState idleState;
     [SerializeField] private PlayerCrouchMoveState crouchMoveState;
     
@@ -23,6 +24,16 @@ public class PlayerMoveState : PlayerGroundedState
                 availableTransitions.Add(transition);
         }
 
+    }
+
+    public override void AnimationTrigger()
+    {
+        base.AnimationTrigger();
+        if(_isLeftFoot)
+            AudioManager.Instance.PlayerAudioController.PlayStepOneSound();
+        else
+            AudioManager.Instance.PlayerAudioController.PlayStepTwoSound();
+        _isLeftFoot = !_isLeftFoot;
     }
 
     public override void Enter()

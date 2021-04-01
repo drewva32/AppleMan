@@ -26,6 +26,9 @@ public class PlayerJumpState : PlayerAbilityState
         DecreaseAmountOfJumpsLeft();
         inAirState.SetIsJumping();
         isAbilityDone = true;
+        
+        if(player.HasAudioManager)
+            AudioManager.Instance.PlayerAudioController.PlayJumpUpSound();
     }
 
     public bool CanJump() => _amountOfJumpsLeft > 0;

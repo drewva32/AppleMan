@@ -24,6 +24,8 @@ public class PlayerLandState : PlayerGroundedState
     {
         
         base.Enter();
+        if(player.HasAudioManager)
+            AudioManager.Instance.PlayerAudioController.PlayLandSound();
     }
 
     public override void LogicUpdate()

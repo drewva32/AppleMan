@@ -36,6 +36,7 @@ public class Player : MonoBehaviour
 
     public Vector2 CurrentVelocity { get; private set; }
     public int FacingDirection { get; private set; }
+    public bool HasAudioManager { get; private set; }
 
     private Vector2 _workSpace;
     private List<PlayerState> _states = new List<PlayerState>();
@@ -83,6 +84,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        HasAudioManager = AudioManager.Instance != null;
         FacingDirection = 1;
         StateMachine.EnterDefaultState(pluggableStates[0]);
     }

@@ -69,6 +69,9 @@ public class PlayerInAirState : PlayerState
         _isTouchingWallBack = false;
         
         StopWallJumpCoyoteTime();
+        
+        if(player.HasAudioManager)
+            AudioManager.Instance.PlayerAudioController.CancelSound();
     }
 
     public override void LogicUpdate()

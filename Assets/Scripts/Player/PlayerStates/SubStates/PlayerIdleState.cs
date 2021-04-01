@@ -22,6 +22,13 @@ public class PlayerIdleState : PlayerGroundedState
         // Debug.Log(availableTransitions.Count);
     }
 
+    public override void AnimationTrigger()
+    {
+        base.AnimationTrigger();
+        if(player.HasAudioManager)
+            AudioManager.Instance.PlayerAudioController.PlayIdleSound();
+    }
+
     public override void Enter()
     {
         base.Enter();
