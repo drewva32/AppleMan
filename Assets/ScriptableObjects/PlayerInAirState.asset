@@ -13,12 +13,10 @@ MonoBehaviour:
   m_Name: PlayerInAirState
   m_EditorClassIdentifier: 
   animBoolName: inAir
+  playerTookDamageState: {fileID: 11400000, guid: 7880d60314e3f614c824cf76f4998056, type: 2}
   landState: {fileID: 11400000, guid: 34256fce41f7d9546b8d4acf3cee0437, type: 2}
   wallJumpState: {fileID: 11400000, guid: 5f92ff42f0ccb38489bbd31f11f364d0, type: 2}
   jumpState: {fileID: 11400000, guid: aba401870abdd9c42ab0ce0009a27064, type: 2}
-  wallGrabState: {fileID: 11400000, guid: a2e5cc70bd7468d479d330e63f69d0d3, type: 2}
   wallSlideState: {fileID: 11400000, guid: 873a6200760fd144d862fa86b4daa2f0, type: 2}
-  ledgeClimbState: {fileID: 11400000, guid: c6aefb7abcfb48444aa65d669667e608, type: 2}
-  dashState: {fileID: 11400000, guid: df95e68634be75f49bf94f9bc00f295c, type: 2}
   groundedState: {fileID: 11400000, guid: ce9e907d85c8d864daf23a1b6f83a319, type: 2}
   punchState: {fileID: 11400000, guid: 43945981d951d254cb0a2d5c9c03b294, type: 2}

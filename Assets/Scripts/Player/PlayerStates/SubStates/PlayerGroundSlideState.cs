@@ -24,6 +24,15 @@ public class PlayerGroundSlideState : PlayerAbilityState
         CanSlide = false;
         player.InputHandler.UseDashInput();
         player.SetColliderHeight(true);
+        
+        if(player.HasAudioManager)
+            AudioManager.Instance.PlayerAudioController.PlayGroundSlideSound();
+    }
+
+    public override void AnimationTrigger()
+    {
+        base.AnimationTrigger();
+        player.Kick();
     }
 
     public override void Exit()

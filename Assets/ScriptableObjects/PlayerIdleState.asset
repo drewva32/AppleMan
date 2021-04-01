@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: PlayerIdleState
   m_EditorClassIdentifier: 
   animBoolName: idle
+  playerTookDamageState: {fileID: 11400000, guid: 7880d60314e3f614c824cf76f4998056, type: 2}
   jumpState: {fileID: 11400000, guid: aba401870abdd9c42ab0ce0009a27064, type: 2}
   wallGrabState: {fileID: 11400000, guid: a2e5cc70bd7468d479d330e63f69d0d3, type: 2}
   inAirState: {fileID: 11400000, guid: 9efc6574f8efe084e861f6b85a028ca7, type: 2}
-  dashState: {fileID: 11400000, guid: df95e68634be75f49bf94f9bc00f295c, type: 2}
   punchState: {fileID: 11400000, guid: 43945981d951d254cb0a2d5c9c03b294, type: 2}
   groundSlideState: {fileID: 11400000, guid: db12bda804279e543b3dd8e046584b2b, type: 2}
   moveState: {fileID: 11400000, guid: ce9e907d85c8d864daf23a1b6f83a319, type: 2}

@@ -25,6 +25,17 @@ public class PlayerPunchState : PlayerAbilityState
         CanPunch = false;
         _lastPunchTime = Time.time;
         player.InputHandler.UsePunchInput();
+
+        if (player.HasAudioManager)
+        {
+            AudioManager.Instance.PlayerAudioController.PlayPunchSound();
+        }
+    }
+
+    public override void AnimationTrigger()
+    {
+        base.AnimationTrigger();
+        player.Punch();
     }
 
     public override void Exit()

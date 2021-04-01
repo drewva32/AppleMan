@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: PlayerWallGrabState
   m_EditorClassIdentifier: 
   animBoolName: wallGrab
+  playerTookDamageState: {fileID: 11400000, guid: 7880d60314e3f614c824cf76f4998056, type: 2}
   wallJumpState: {fileID: 11400000, guid: 5f92ff42f0ccb38489bbd31f11f364d0, type: 2}
   idleState: {fileID: 11400000, guid: c2026f960a267d644aa93f9e16c66e42, type: 2}
   inAirState: {fileID: 11400000, guid: 9efc6574f8efe084e861f6b85a028ca7, type: 2}

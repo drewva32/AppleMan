@@ -33,11 +33,17 @@ public class PlayerData : ScriptableObject
 
     [Header("Punch State")] public float punchCoolDown = 0.3f;
     public float punchTime = 0.25f;
-    public float punchDamage = 2;
+    public int punchDamage = 4;
+    public float punchHitRadius = 0.5f;
+    public LayerMask punchableLayers;
 
     [Header("GroundSlide State")] public float maxGroundSlideTime = .75f;
     public float slideCooldown = 1f;
+    public int groundSlideDamage = 1;
     public float groundSlideVelocity = 12f;
+    public float slideHitRadius = 0.5f;
+    public LayerMask slideHitLayers;
+    
 
     [Header("Crouch States")] public float crouchMovementVelocity = 4f;
     public Vector2 crouchColliderOffset = new Vector2(0,0.8f);
