@@ -29,6 +29,8 @@ public class PlayerMoveState : PlayerGroundedState
     public override void AnimationTrigger()
     {
         base.AnimationTrigger();
+        if (!player.HasAudioManager)
+            return;
         if(_isLeftFoot)
             AudioManager.Instance.PlayerAudioController.PlayStepOneSound();
         else
