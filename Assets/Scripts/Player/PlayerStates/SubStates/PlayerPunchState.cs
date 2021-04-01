@@ -32,6 +32,12 @@ public class PlayerPunchState : PlayerAbilityState
         }
     }
 
+    public override void AnimationTrigger()
+    {
+        base.AnimationTrigger();
+        player.Punch();
+    }
+
     public override void Exit()
     {
         base.Exit();

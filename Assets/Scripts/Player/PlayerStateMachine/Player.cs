@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform wallCheck;
     [SerializeField] private Transform ledgeCheck;
     [SerializeField] private Transform ceilingCheck;
+    [SerializeField] private Transform punchHitCheck;
+    [SerializeField] private Transform groundSlideHitCheck;
     [Header("Pluggable State Machine")]
     [SerializeField] private PlayerState[] pluggableStates;
     
@@ -32,6 +34,7 @@ public class Player : MonoBehaviour
      public Rigidbody2D RB { get; private set; }
      public CapsuleCollider2D MovementCollider { get; private set; }
      public Transform DashDirectionIndicator { get; private set; }
+     public PlayerHealthController PlayerHealthController { get; private set; }
 
 
     public Vector2 CurrentVelocity { get; private set; }
@@ -51,7 +54,8 @@ public class Player : MonoBehaviour
         RB = GetComponent<Rigidbody2D>();
         MovementCollider = GetComponent<CapsuleCollider2D>();
         InputHandler = GetComponent<PlayerInputHandler>();
-        DashDirectionIndicator = transform.Find("DashDirectionIndicator");
+        PlayerHealthController = GetComponent<PlayerHealthController>();
+        // DashDirectionIndicator = transform.Find("DashDirectionIndicator");
         
 
         
@@ -163,6 +167,21 @@ public class Player : MonoBehaviour
             playerData.whatIsGround);
     }
 
+    public void Punch()
+    {
+        Collider2D punchable = Physics2D
+            .OverlapCircle(punchHitCheck.position, playerData.punchHitRadius, playerData.punchableLayers);
+        if (punchable)
+        {
+            punchable.GetComponent<IPlayerInteractions>().TakePunch(playerData.punchDamage);
+        }
+    }
+
+    public void Kick()
+    {
+        
+    }
+
    
     // private void OnDrawGizmos()
     // {
@@ -239,5 +258,7 @@ public class Player : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawRay(wallCheck.position,Vector2.right * FacingDirection* playerData.wallCheckDistance);
         Gizmos.DrawWireSphere(ceilingCheck.position,playerData.groundCheckRadius);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(punchHitCheck.position,playerData.punchHitRadius);
     }
 }

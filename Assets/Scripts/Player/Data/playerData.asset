@@ -35,7 +35,11 @@ MonoBehaviour:
   distanceBetweenAfterImages: 0.5
   punchCoolDown: 0.3
   punchTime: 0.35
-  punchDamage: 2
+  punchDamage: 4
+  punchHitRadius: 0.5
+  punchableLayers:
+    serializedVersion: 2
+    m_Bits: 64
   maxGroundSlideTime: 0.25
   slideCooldown: 0.35
   groundSlideVelocity: 10

@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerState : ScriptableObject
 {
     [SerializeField]private string animBoolName;
+    [SerializeField] private PlayerTakeDamageState playerTookDamageState;
+    
     protected Player player;
     protected PlayerStateMachine stateMachine;
     protected PlayerData playerData;
@@ -14,8 +16,10 @@ public class PlayerState : ScriptableObject
 
     protected bool isAnimationFinished;
     protected bool isExitingState;
+    protected bool tookDamage;
 
     protected float startTime;
+    
     
 
     public virtual void InitializeState(Player player, PlayerStateMachine playerStateMachine, PlayerData playerData, HashSet<PlayerState> pluggedStates)
@@ -23,6 +27,7 @@ public class PlayerState : ScriptableObject
         this.player = player;
         this.stateMachine = playerStateMachine;
         this.playerData = playerData;
+        allTransitions.Add(new StateTransition(this, playerTookDamageState, () => tookDamage));
     }
 
     public virtual void InitializeTransitionList (HashSet<PlayerState> pluggedStates)
@@ -58,7 +63,7 @@ public class PlayerState : ScriptableObject
 
     public virtual void DoChecks()
     {
-        
+        tookDamage = player.PlayerHealthController.TookDamage;
     }
 
     public virtual void AnimationTrigger()

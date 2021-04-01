@@ -33,7 +33,9 @@ public class PlayerData : ScriptableObject
 
     [Header("Punch State")] public float punchCoolDown = 0.3f;
     public float punchTime = 0.25f;
-    public float punchDamage = 2;
+    public int punchDamage = 4;
+    public float punchHitRadius = 0.5f;
+    public LayerMask punchableLayers;
 
     [Header("GroundSlide State")] public float maxGroundSlideTime = .75f;
     public float slideCooldown = 1f;
