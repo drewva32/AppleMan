@@ -57,4 +57,4 @@ MonoBehaviour:
   groundCheckRadius: 0.2
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 16
+    m_Bits: 144

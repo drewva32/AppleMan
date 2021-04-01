@@ -29,6 +29,12 @@ public class PlayerGroundSlideState : PlayerAbilityState
             AudioManager.Instance.PlayerAudioController.PlayGroundSlideSound();
     }
 
+    public override void AnimationTrigger()
+    {
+        base.AnimationTrigger();
+        player.Kick();
+    }
+
     public override void Exit()
     {
         base.Exit();
