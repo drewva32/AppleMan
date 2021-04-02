@@ -7,7 +7,11 @@ public class LifeUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI coinText;
     
-    private void Start() => AppleGameManager.Instance.OnLivesChanged += UpdateLifeUI;
+    private void Start()
+    {
+        if(AppleGameManager.Instance != null)
+            AppleGameManager.Instance.OnLivesChanged += UpdateLifeUI;
+    }
     // private void OnDisable() => AppleGameManager.Instance.OnCoinsChanged -= UpdateCoinUI;
 
     private void UpdateLifeUI(int lives)
