@@ -20,16 +20,21 @@ public class PlayerTakeDamageState : PlayerState
             if(pluggedStates.Contains(transition.To))
                 availableTransitions.Add(transition);
         }
+
+        _isAbilityDone = false;
     }
 
     public override void Enter()
     {
+        Debug.Log("entered damage state");
         base.Enter();
         player.PlayerHealthController.ResetTookDamage();
+        _isGrounded = player.CheckIfGrounded();
     }
 
     public override void Exit()
     {
+        _isAbilityDone = false;
         base.Exit();
     }
 
@@ -38,7 +43,8 @@ public class PlayerTakeDamageState : PlayerState
         base.LogicUpdate();
 
         _isGrounded = player.CheckIfGrounded();
-        
+        if(_isGrounded)
+            player.SetVelocityZero();
         
         if (isExitingState)
             return;

@@ -28,6 +28,7 @@ public class PlayerState : ScriptableObject
         this.stateMachine = playerStateMachine;
         this.playerData = playerData;
         allTransitions.Add(new StateTransition(this, playerTookDamageState, () => tookDamage));
+        tookDamage = false;
     }
 
     public virtual void InitializeTransitionList (HashSet<PlayerState> pluggedStates)
@@ -54,6 +55,7 @@ public class PlayerState : ScriptableObject
     public virtual void LogicUpdate()
     {
         DoChecks();
+
     }
 
     public virtual void PhysicsUpdate()
@@ -64,6 +66,7 @@ public class PlayerState : ScriptableObject
     public virtual void DoChecks()
     {
         tookDamage = player.PlayerHealthController.TookDamage;
+
     }
 
     public virtual void AnimationTrigger()
