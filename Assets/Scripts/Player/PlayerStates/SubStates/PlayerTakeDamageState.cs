@@ -29,7 +29,9 @@ public class PlayerTakeDamageState : PlayerState
         Debug.Log("entered damage state");
         base.Enter();
         player.PlayerHealthController.ResetTookDamage();
-        _isGrounded = player.CheckIfGrounded();
+        
+        if(player.HasAudioManager)
+            AudioManager.Instance.PlayerAudioController.PlayHurtSound();
     }
 
     public override void Exit()
