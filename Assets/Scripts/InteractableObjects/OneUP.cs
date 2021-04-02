@@ -18,8 +18,10 @@ public class OneUP : MonoBehaviour,IHaveAnimationEndEvent
         var player = other.GetComponent<Player>();
         if (player && !_isPickedUp)
         {
-            AppleGameManager.Instance.ChangeLives(true);
-            AudioManager.Instance.OneUpAudio.PlayCollectSound();
+            if(AppleGameManager.Instance != null)
+                AppleGameManager.Instance.ChangeLives(true);
+            if(AudioManager.Instance != null)
+                AudioManager.Instance.OneUpAudio.PlayCollectSound();
             _animator.SetTrigger(Pickup);
             _isPickedUp = true;
         }

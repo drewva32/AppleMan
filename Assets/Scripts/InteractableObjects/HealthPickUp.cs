@@ -17,7 +17,8 @@ public class HealthPickUp : MonoBehaviour,IHaveAnimationEndEvent
         var player = other.GetComponent<Player>();
         if (player && !_isPickedUp)
         {
-            AudioManager.Instance.HealthPickupAudio.PlayCollectSound();
+            if(AudioManager.Instance != null)
+                AudioManager.Instance.HealthPickupAudio.PlayCollectSound();
             //add health
             _animator.SetTrigger(Pickup);
             _isPickedUp = true;

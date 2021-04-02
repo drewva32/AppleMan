@@ -25,7 +25,8 @@ public class Spring : MonoBehaviour
                 return;
             player.GetSprung(springPower);
             _animator.SetTrigger(Spring1);
-            AudioManager.Instance.SpringAudio.PlaySound();
+            if(AudioManager.Instance)
+                AudioManager.Instance.SpringAudio.PlaySound();
         }
     }
 }
