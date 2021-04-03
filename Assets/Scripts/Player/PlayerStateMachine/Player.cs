@@ -169,22 +169,24 @@ public class Player : MonoBehaviour
 
     public void Punch()
     {
-        Collider2D punchable = Physics2D
+        Collider2D collider = Physics2D
             .OverlapCircle(punchHitCheck.position, playerData.punchHitRadius, playerData.punchableLayers);
-        if (punchable)
+        if (collider)
         {
-            punchable.GetComponent<IPlayerInteractions>().TakePunch(playerData.punchDamage);
+            var punchable = collider.GetComponent<IPlayerInteractions>();
+            punchable?.TakePunch(playerData.punchDamage);
         }
     }
 
     public void Kick()
     {
-        Collider2D slideHit = Physics2D
+        Collider2D collider = Physics2D
             .OverlapCircle(groundSlideHitCheck.position, playerData.slideHitRadius, playerData.slideHitLayers);
-        if (slideHit)
+        if (collider)
         {
-            var directionToPlayer = (transform.position - slideHit.transform.position).normalized;
-            slideHit.GetComponent<IPlayerInteractions>().TakeSlide(playerData.groundSlideDamage, directionToPlayer);
+            var directionToPlayer = (transform.position - collider.transform.position).normalized;
+            var slideHit = collider.GetComponent<IPlayerInteractions>();
+            slideHit?.TakeSlide(playerData.groundSlideDamage, directionToPlayer);
         }
     }
 

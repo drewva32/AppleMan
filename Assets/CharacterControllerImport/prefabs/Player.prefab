@@ -362,6 +362,7 @@ GameObject:
   - component: {fileID: 633270566071838319}
   - component: {fileID: 65948186698743099}
   - component: {fileID: 1329653096}
+  - component: {fileID: 678494143}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -613,6 +614,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   takeDamageCooldownTime: 2
+--- !u!114 &678494143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633270566071838306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4243bf4f129f6449b4663427a8d0a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &633270566769359667
 GameObject:
   m_ObjectHideFlags: 0

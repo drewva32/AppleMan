@@ -1,25 +1,19 @@
 fileFormatVersion: 2
-guid: 144cb22ce876240fdbcf692cd92b34a1
+guid: b9dc8ccbd85180641a70d2923fe79c41
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4647158251158160981
-    second: spike-tiles-all@idle_0
+      213: 7658449633313434724
+    second: roots (1)_0
   - first:
-      213: -8493618060604017253
-    second: spike-tiles-all@idle_1
+      213: -7143530307707479135
+    second: roots (1)_1
   - first:
-      213: 7531941132506285417
-    second: spike-tiles-all@idle_2
+      213: -7305063211992955491
+    second: roots (1)_2
   - first:
-      213: 1203118324115235806
-    second: spike-tiles-all@idle_3
-  - first:
-      213: 1106890746431795564
-    second: spike-tiles-all@idle_4
-  - first:
-      213: 6364842804109380393
-    second: spike-tiles-all@idle_5
+      213: -7460609834450644041
+    second: roots (1)_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -79,7 +73,7 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -104,7 +98,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
@@ -116,18 +110,60 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spike-tiles-all@idle_0
+      name: roots (1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46c2ed38d57484a60800000000000000
+      internalID: 7658449633313434724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roots (1)_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1abdbde78051ddc90800000000000000
+      internalID: -7143530307707479135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roots (1)_2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 48
-        height: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba931b8313af18fb0800000000000000
-      internalID: -4647158251158160981
+      spriteID: d95c26b66b33f9a90800000000000000
+      internalID: -7305063211992955491
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spike-tiles-all@idle_1
+      name: roots (1)_3
       rect:
         serializedVersion: 2
-        x: 48
+        x: 16
         y: 0
-        width: 48
-        height: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,92 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b95fadfff5b902a80800000000000000
-      internalID: -8493618060604017253
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spike-tiles-all@idle_2
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 965c038dd84d68860800000000000000
-      internalID: 7531941132506285417
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spike-tiles-all@idle_3
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed3e6abcdb552b010800000000000000
-      internalID: 1203118324115235806
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spike-tiles-all@idle_4
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c61fb32f4477c5f00800000000000000
-      internalID: 1106890746431795564
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spike-tiles-all@idle_5
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 92b0426dec6745850800000000000000
-      internalID: 6364842804109380393
+      spriteID: 7b398c132e6967890800000000000000
+      internalID: -7460609834450644041
       vertices: []
       indices: 
       edges: []
@@ -249,7 +201,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 81868e2e848714d61ab4c0b3d5921fa8
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 

@@ -46,6 +46,17 @@ public class AppleGameManager : MonoBehaviour
             _lives++;
         else
             _lives--;
+        if (_lives < 0)
+        {
+            GameOver();
+            return;
+        }
         OnLivesChanged?.Invoke(_lives);
+        
+    }
+
+    private void GameOver()
+    {
+        //reset the game.
     }
 }

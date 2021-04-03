@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu(fileName = "PlayerTakeDamageState.asset", menuName = "Scriptable Objects/PlayerTakeDamageStateSO")]
@@ -20,16 +19,23 @@ public class PlayerTakeDamageState : PlayerState
             if(pluggedStates.Contains(transition.To))
                 availableTransitions.Add(transition);
         }
+
+        _isAbilityDone = false;
     }
 
     public override void Enter()
     {
+        Debug.Log("entered damage state");
         base.Enter();
         player.PlayerHealthController.ResetTookDamage();
+        
+        if(player.HasAudioManager)
+            AudioManager.Instance.PlayerAudioController.PlayHurtSound();
     }
 
     public override void Exit()
     {
+        _isAbilityDone = false;
         base.Exit();
     }
 
@@ -38,7 +44,8 @@ public class PlayerTakeDamageState : PlayerState
         base.LogicUpdate();
 
         _isGrounded = player.CheckIfGrounded();
-        
+        if(_isGrounded)
+            player.SetVelocityZero();
         
         if (isExitingState)
             return;

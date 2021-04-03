@@ -19,7 +19,7 @@ public class HealthPickUp : MonoBehaviour,IHaveAnimationEndEvent
         {
             if(AudioManager.Instance != null)
                 AudioManager.Instance.HealthPickupAudio.PlayCollectSound();
-            //add health
+            player.PlayerHealthController.Heal();
             _animator.SetTrigger(Pickup);
             _isPickedUp = true;
         }
