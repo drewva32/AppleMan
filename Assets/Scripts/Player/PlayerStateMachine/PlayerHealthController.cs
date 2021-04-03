@@ -47,6 +47,14 @@ public class PlayerHealthController : MonoBehaviour, ITakeSpikeDamage
         }
     }
 
+    public void Heal()
+    {
+        CurrentHealth++;
+        if (CurrentHealth > 5)
+            CurrentHealth = 5;
+        OnHealthChanged?.Invoke(_currentHealth);
+    }
+
     private IEnumerator WaitThenFlashRoutine()
     {
         yield return new WaitForSeconds(7 / 12f);
@@ -57,6 +65,9 @@ public class PlayerHealthController : MonoBehaviour, ITakeSpikeDamage
     {
         Debug.Log("mamma mia!");
         OnDie?.Invoke();
+        AppleGameManager.Instance.ChangeLives(false);
+        CurrentHealth = 5;
+        OnHealthChanged?.Invoke(_currentHealth);
     }
     
 

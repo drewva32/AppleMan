@@ -6,7 +6,7 @@ public class PlayerAbilityState : PlayerState
     [SerializeField] private PlayerIdleState idleState;
     [SerializeField] protected PlayerInAirState inAirState;
     [SerializeField] private PlayerCrouchIdleState crouchIdleState;
-    
+
     protected bool isAbilityDone;
 
     private bool _isGrounded;
@@ -17,13 +17,15 @@ public class PlayerAbilityState : PlayerState
         HashSet<PlayerState> pluggedStates)
     {
         base.InitializeState(player, playerStateMachine, playerData, pluggedStates);
-        
-        allTransitions.Add(new StateTransition(this, crouchIdleState, () => isAbilityDone && _isGrounded && player.CurrentVelocity.y < 0.01f && _isTouchingCeiling));
-        allTransitions.Add(new StateTransition(this, idleState, () => isAbilityDone && _isGrounded && player.CurrentVelocity.y < 0.01f));
-        allTransitions.Add(new StateTransition(this, inAirState, () => true));
+
+        allTransitions.Add(new StateTransition(this, crouchIdleState,
+            () => isAbilityDone && _isGrounded && player.CurrentVelocity.y < 0.01f && _isTouchingCeiling));
+        allTransitions.Add(new StateTransition(this, idleState,
+            () => isAbilityDone && _isGrounded && player.CurrentVelocity.y < 0.01f));
+        allTransitions.Add(new StateTransition(this, inAirState, () => isAbilityDone));
         foreach (var transition in allTransitions)
         {
-            if(pluggedStates.Contains(transition.To))
+            if (pluggedStates.Contains(transition.To))
                 availableTransitions.Add(transition);
         }
     }
@@ -43,19 +45,16 @@ public class PlayerAbilityState : PlayerState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-        
-        if (isAbilityDone)
+
+
+        foreach (var transition in availableTransitions)
         {
-            foreach (var transition in availableTransitions)
+            if (transition.Condition())
             {
-                if (transition.Condition())
-                {
-                    stateMachine.ChangeState(transition.To);
-                    break;
-                }
+                stateMachine.ChangeState(transition.To);
+                break;
             }
         }
-        
     }
 
     public override void PhysicsUpdate()
