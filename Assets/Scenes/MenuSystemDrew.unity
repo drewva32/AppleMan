@@ -27167,6 +27167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  devMode: 0
   _gameLevels: []
 --- !u!1 &1447151007
 GameObject:
