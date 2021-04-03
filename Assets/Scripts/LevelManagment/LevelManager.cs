@@ -96,6 +96,9 @@ public class LevelManager : MonoBehaviour
 
     public int GetLastCheckpointLevelIndex()
     {
-        return _checkpoints.Last(t => t.Passed).LevelIndex;
+        if (_checkpoints.Count > 0)
+            return _checkpoints.Last(t => t.Passed).LevelIndex;
+        else
+            return 0;
     }
 }
