@@ -6,7 +6,8 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] private Player player;
-    
+    [Header("Can activate this when testing a specific part of a level")]
+    [SerializeField] private bool devMode;
     public GameLevel[] _gameLevels;
     private List<Checkpoint> _checkpoints = new List<Checkpoint>();
     
@@ -38,9 +39,10 @@ public class LevelManager : MonoBehaviour
         {
             CheckForCheckPoint(i);
             _gameLevels[i].LevelIndex = i;
-            if (i == 0)
-                continue;
+            // if (i == 0)
+            //     continue;
             _gameLevels[i].gameObject.SetActive(false);
+            LoadLevel(0);
         }
     }
 
@@ -75,6 +77,14 @@ public class LevelManager : MonoBehaviour
         _gameLevels[indexToLoad].gameObject.SetActive(true);
         playerTransform.position = _gameLevels[indexToLoad].GetSpawnPoint(true);
         SetCurrentRoomIndex(indexToLoad);
+    }
+
+    public void LoadLevel(int levelIndex)
+    {
+        _gameLevels[levelIndex].gameObject.SetActive(true);
+        SetCurrentRoomIndex(levelIndex);
+        if(!devMode)
+            player.transform.position = _gameLevels[levelIndex].StartSpawnPoint;
     }
 
     //this function was 

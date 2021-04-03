@@ -6004,15 +6004,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 633270566071838316, guid: 583a813cd908db14dbb9793e1c5d8a3d, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 633270566071838316, guid: 583a813cd908db14dbb9793e1c5d8a3d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.5
+      value: 20.32
       objectReference: {fileID: 0}
     - target: {fileID: 633270566071838316, guid: 583a813cd908db14dbb9793e1c5d8a3d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.76
+      value: -4.44
       objectReference: {fileID: 0}
     - target: {fileID: 633270566071838316, guid: 583a813cd908db14dbb9793e1c5d8a3d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -24937,7 +24937,7 @@ Transform:
   - {fileID: 916303843}
   - {fileID: 196819814}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1335658767
 GameObject:
@@ -27152,7 +27152,7 @@ Transform:
   - {fileID: 515438565}
   - {fileID: 1169096447}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1440625835
 MonoBehaviour:
@@ -34383,7 +34383,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6860020014329326198, guid: 374d800413394674697f20002c69a78e, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6860020014329326198, guid: 374d800413394674697f20002c69a78e, type: 3}
       propertyPath: m_LocalPosition.x
