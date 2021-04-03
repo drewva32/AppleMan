@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteInvulnerableFlash))]
@@ -9,6 +8,7 @@ public class PlayerHealthController : MonoBehaviour, ITakeSpikeDamage
     [SerializeField] private float takeDamageCooldownTime;
 
     public event Action<int> OnHealthChanged;
+    public event Action OnDie;
     public bool TookDamage { get; private set; }
     public int MaxHealth { get; private set; }
     public int CurrentHealth { get => _currentHealth; set => _currentHealth = value; }
@@ -56,7 +56,9 @@ public class PlayerHealthController : MonoBehaviour, ITakeSpikeDamage
     private void Die()
     {
         Debug.Log("mamma mia!");
+        OnDie?.Invoke();
     }
+    
 
     public void TakeSpikeDamage()
     {

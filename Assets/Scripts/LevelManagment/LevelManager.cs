@@ -1,23 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] private Transform playerTransform;
+    [SerializeField] private Player player;
     
     public GameLevel[] _gameLevels;
-
+    private List<Checkpoint> _checkpoints = new List<Checkpoint>();
+    
+    private int _currentRoomIndex;
+    private Transform playerTransform;
     private void Awake()
     {
-        playerTransform = FindObjectOfType<Player>().transform;
+        player = FindObjectOfType<Player>();
+        playerTransform = player.transform;
         InitializeLevels();
+    }
+
+    private void Start()
+    {
+        player.PlayerHealthController.OnDie += LoadAtLastCheckPoint;
+    }
+
+    private void OnDisable()
+    {
+        player.PlayerHealthController.OnDie -= LoadAtLastCheckPoint;
     }
 
     private void InitializeLevels()
     {
         _gameLevels = GetComponentsInChildren<GameLevel>();
         
+        
         for (int i = 0; i < _gameLevels.Length; i++)
         {
+            CheckForCheckPoint(i);
             _gameLevels[i].LevelIndex = i;
             if (i == 0)
                 continue;
@@ -25,14 +44,37 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public void LoadNextLevel(int currentLevelIndex, bool isNextLevel)
+    private void CheckForCheckPoint(int index)
     {
-        _gameLevels[currentLevelIndex].gameObject.SetActive(false);
-        int indexToLoad = isNextLevel == true ? currentLevelIndex + 1 : currentLevelIndex - 1;
+        var checkpoint = _gameLevels[index].Checkpoint;
+        if (checkpoint != null)
+        {
+            _checkpoints.Add(checkpoint);
+            // checkpoint.OnCheckpointPassed += AssignCheckpointIndex;
+        }
+    }
+
+    private void AssignCheckpointIndex(Checkpoint currentCheckpoint)
+    {
+        currentCheckpoint.LevelIndex = _currentRoomIndex;
+    }
+
+    public void LoadNextLevel(int transitioningFromIndex, bool isNextLevel)
+    {
+        _gameLevels[transitioningFromIndex].gameObject.SetActive(false);
+        int indexToLoad = isNextLevel == true ? transitioningFromIndex + 1 : transitioningFromIndex - 1;
         indexToLoad = EnsureValidIndex(indexToLoad);
         _gameLevels[indexToLoad].gameObject.SetActive(true);
         playerTransform.position = _gameLevels[indexToLoad].GetSpawnPoint(isNextLevel);
+    }
 
+    public void LoadAtLastCheckPoint()
+    {
+        int indexToLoad = GetLastCheckpointLevelIndex();
+        _gameLevels[_currentRoomIndex].gameObject.SetActive(false);
+        _gameLevels[indexToLoad].gameObject.SetActive(true);
+        playerTransform.position = _gameLevels[indexToLoad].GetSpawnPoint(true);
+        SetCurrentRoomIndex(indexToLoad);
     }
 
     //this function was 
@@ -45,5 +87,15 @@ public class LevelManager : MonoBehaviour
         else
             indexToLoad %= _gameLevels.Length;
         return indexToLoad;
+    }
+
+    public void SetCurrentRoomIndex(int index)
+    {
+        _currentRoomIndex = index;
+    }
+
+    public int GetLastCheckpointLevelIndex()
+    {
+        return _checkpoints.Last(t => t.Passed).LevelIndex;
     }
 }

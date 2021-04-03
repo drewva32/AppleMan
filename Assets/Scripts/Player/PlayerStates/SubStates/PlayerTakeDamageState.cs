@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu(fileName = "PlayerTakeDamageState.asset", menuName = "Scriptable Objects/PlayerTakeDamageStateSO")]
