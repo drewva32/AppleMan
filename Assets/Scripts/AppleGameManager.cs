@@ -10,7 +10,7 @@ public class AppleGameManager : MonoBehaviour
 
     private int _coins;
     private int _kills;
-    private int _lives = 3;
+    private int _lives = 0;//3
     
     public event Action<int> OnLivesChanged;
     public event Action<int> OnCoinsChanged;
@@ -58,5 +58,11 @@ public class AppleGameManager : MonoBehaviour
     private void GameOver()
     {
         //reset the game.
+        //show game over
+        //destroy currernt game prefab
+        //load in a new one that is paused?
+        //transition from game over to main menu
+        
+        
     }
 }

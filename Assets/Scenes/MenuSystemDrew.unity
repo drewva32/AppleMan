@@ -5994,10 +5994,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 65948187501655619, guid: 583a813cd908db14dbb9793e1c5d8a3d, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 633270566071838306, guid: 583a813cd908db14dbb9793e1c5d8a3d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -12421,23 +12417,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &678494136 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 633270566071838306, guid: 583a813cd908db14dbb9793e1c5d8a3d, type: 3}
-  m_PrefabInstance: {fileID: 354384627}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &678494143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 678494136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4243bf4f129f6449b4663427a8d0a09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &697003382
 GameObject:
   m_ObjectHideFlags: 0
@@ -31913,23 +31892,6 @@ Transform:
   m_Father: {fileID: 708082966}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1561021133 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5008914356546491108, guid: 74c734d7f7a871d47a212d721489e2a0, type: 3}
-  m_PrefabInstance: {fileID: 5008914357971949609}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1561021137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1561021133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 445be3142a3cd224199e261137a2bbe8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1566386926
 GameObject:
   m_ObjectHideFlags: 0
@@ -34139,6 +34101,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2448831553717820987, guid: e03bd14fe401ae149bae2b62d3f4cf22, type: 3}
+      propertyPath: landSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7be91bb94ec377f4e90765e163afd887, type: 3}
     - target: {fileID: 2448831553880934640, guid: e03bd14fe401ae149bae2b62d3f4cf22, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -34257,26 +34223,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5008914356546491110, guid: 74c734d7f7a871d47a212d721489e2a0, type: 3}
-      propertyPath: m_Type
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5008914356546491110, guid: 74c734d7f7a871d47a212d721489e2a0, type: 3}
-      propertyPath: m_FillAmount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5008914356546491110, guid: 74c734d7f7a871d47a212d721489e2a0, type: 3}
-      propertyPath: m_FillMethod
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5008914356546491110, guid: 74c734d7f7a871d47a212d721489e2a0, type: 3}
-      propertyPath: m_FillOrigin
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5008914356546491111, guid: 74c734d7f7a871d47a212d721489e2a0, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 5008914356547053952, guid: 74c734d7f7a871d47a212d721489e2a0, type: 3}
       propertyPath: m_Name
       value: ActiveGameUICanvas
