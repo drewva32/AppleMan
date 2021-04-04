@@ -10,7 +10,7 @@ public class PlayerWallSlideState : PlayerTouchingWallState
         HashSet<PlayerState> pluggedStates)
     {
         base.InitializeState(player, playerStateMachine, playerData, pluggedStates);
-        allTransitions.Add(new StateTransition(this,wallGrabState, () => grabInput && yInput == 0 || (grabInput && isGrounded)));
+        // allTransitions.Add(new StateTransition(this,wallGrabState, () => grabInput && yInput == 0 || (grabInput && isGrounded)));
         foreach (var transition in allTransitions)
         {
             if(pluggedStates.Contains(transition.To))
@@ -39,7 +39,6 @@ public class PlayerWallSlideState : PlayerTouchingWallState
             return;
         
         player.SetVelocityY(-playerData.wallSlideVelocity);
-        
         foreach (var transition in availableTransitions)
         {
             if (transition.Condition())

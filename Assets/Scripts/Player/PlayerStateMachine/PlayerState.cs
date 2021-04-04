@@ -27,13 +27,16 @@ public class PlayerState : ScriptableObject
         this.player = player;
         this.stateMachine = playerStateMachine;
         this.playerData = playerData;
+        ClearPreviousTransitions();
         allTransitions.Add(new StateTransition(this, playerTookDamageState, () => tookDamage));
         tookDamage = false;
+        
     }
 
-    public virtual void InitializeTransitionList (HashSet<PlayerState> pluggedStates)
+    private void ClearPreviousTransitions()
     {
-        
+        allTransitions.Clear();
+        availableTransitions.Clear();
     }
 
     public virtual void Enter()

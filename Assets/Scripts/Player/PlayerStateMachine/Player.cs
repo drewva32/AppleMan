@@ -73,7 +73,8 @@ public class Player : MonoBehaviour
         {
             if (state == null)
                 continue;
-            _pluggedStates.Add(state);
+            if(!_pluggedStates.Contains(state))
+                _pluggedStates.Add(state);
         }
 
         foreach (var state in pluggableStates)
@@ -92,7 +93,7 @@ public class Player : MonoBehaviour
         FacingDirection = 1;
         StateMachine.EnterDefaultState(pluggableStates[0]);
     }
-
+    
     private void Update()
     {
         CurrentVelocity = RB.velocity;

@@ -34,7 +34,6 @@ public class LevelManager : MonoBehaviour
     {
         _gameLevels = GetComponentsInChildren<GameLevel>();
         
-        
         for (int i = 0; i < _gameLevels.Length; i++)
         {
             CheckForCheckPoint(i);
@@ -52,13 +51,8 @@ public class LevelManager : MonoBehaviour
         if (checkpoint != null)
         {
             _checkpoints.Add(checkpoint);
-            // checkpoint.OnCheckpointPassed += AssignCheckpointIndex;
+            //could give checkpoint its index here instead of having the game level do that in start
         }
-    }
-
-    private void AssignCheckpointIndex(Checkpoint currentCheckpoint)
-    {
-        currentCheckpoint.LevelIndex = _currentRoomIndex;
     }
 
     public void LoadNextLevel(int transitioningFromIndex, bool isNextLevel)
