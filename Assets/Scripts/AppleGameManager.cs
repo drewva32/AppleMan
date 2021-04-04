@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 public class AppleGameManager : MonoBehaviour
 {
@@ -33,7 +32,6 @@ public class AppleGameManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        Debug.Log("destroyed");
         _instance = null;
     }
    
