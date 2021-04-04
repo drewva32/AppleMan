@@ -10,8 +10,6 @@ public class AppleGameManager : MonoBehaviour
     private static AppleGameManager _instance;
     public static AppleGameManager Instance => _instance;
     
-    
-    
     private int _coins;
     private int _kills;
     private int _lives;
@@ -28,7 +26,8 @@ public class AppleGameManager : MonoBehaviour
             Destroy(gameObject);
         else
             _instance = this;
-        _levelPosition = GetComponentInChildren<LevelsAndPlayer>().transform.position;
+        
+        TryGetLevelPosition();
         _lives = startingLives;
     }
 
@@ -37,7 +36,7 @@ public class AppleGameManager : MonoBehaviour
         Debug.Log("destroyed");
         _instance = null;
     }
-
+   
     public void AddCoin()
     {
         _coins++;
@@ -62,6 +61,7 @@ public class AppleGameManager : MonoBehaviour
             _lives--;
         if (_lives < 0)
         {
+            _lives = 0;
             GameOver();
             return;
         }
@@ -71,9 +71,10 @@ public class AppleGameManager : MonoBehaviour
 
     private void GameOver()
     {
-        var child = GetComponentInChildren<LevelsAndPlayer>().gameObject;
-        if (child == null)
+        var childLevels = GetComponentInChildren<LevelsAndPlayer>();
+        if (childLevels == null)
             return;
+        var child = childLevels.gameObject;
         //reset the game.
         //show game over
         //destroy currernt game prefab
@@ -104,5 +105,13 @@ public class AppleGameManager : MonoBehaviour
         OnPlayerCloned?.Invoke(_currentPlayer.PlayerHealthController);
     }
     
+    private void TryGetLevelPosition()
+    {
+        var levelAndPlayer = GetComponentInChildren<LevelsAndPlayer>();
+        if (levelAndPlayer != null)
+        {
+            _levelPosition = levelAndPlayer.transform.position;
+        }
+    }
     
 }
