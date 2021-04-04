@@ -14,6 +14,8 @@ public class DoubleJumpPowerUp : MonoBehaviour
     {
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         _spriteRenderer.color = Color.HSVToRGB(1, 1, 1);
+        if(playerData.amountOfJumps ==2)
+            gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
