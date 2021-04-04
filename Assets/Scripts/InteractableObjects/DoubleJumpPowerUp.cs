@@ -22,8 +22,8 @@ public class DoubleJumpPowerUp : MonoBehaviour
         if (player)
         {
             playerData.amountOfJumps = 2;
+            gameObject.SetActive(false);
         }
-        gameObject.SetActive(false);
     }
 
 
