@@ -45,6 +45,8 @@ public class PlayerTouchingWallState : PlayerState
         yInput = player.InputHandler.NormInputY;
         grabInput = player.InputHandler.GrabInput;
         jumpInput = player.InputHandler.JumpInput;
+        if (isExitingState)
+            return;
         
         foreach (var transition in availableTransitions)
         {

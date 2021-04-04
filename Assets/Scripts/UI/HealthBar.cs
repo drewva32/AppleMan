@@ -14,7 +14,19 @@ public class HealthBar : MonoBehaviour
 
     private void Start()
     {
+        RegisterHealthBarUpdateToCurrentPlayer();
+        AppleGameManager.Instance.OnPlayerCloned += RegisterToNewPlayer;
+    }
+
+    private void RegisterHealthBarUpdateToCurrentPlayer()
+    {
         _playerHealthController.OnHealthChanged += UpdateHealthBarFill;
+    }
+
+    private void RegisterToNewPlayer(PlayerHealthController newHealthController)
+    {
+        _playerHealthController = newHealthController;
+        RegisterHealthBarUpdateToCurrentPlayer();
     }
 
     private void UpdateHealthBarFill(int currentHealth)
