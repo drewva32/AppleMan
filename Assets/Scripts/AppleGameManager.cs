@@ -71,12 +71,15 @@ public class AppleGameManager : MonoBehaviour
 
     private void GameOver()
     {
+        var child = GetComponentInChildren<LevelsAndPlayer>().gameObject;
+        if (child == null)
+            return;
         //reset the game.
         //show game over
         //destroy currernt game prefab
         //load in a new one that is paused?
         //transition from game over to main menu
-        var child = GetComponentInChildren<LevelsAndPlayer>().gameObject;
+        
         child.transform.parent = null;
         Destroy(child);
         Debug.Log("Game over");
