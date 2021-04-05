@@ -75,7 +75,7 @@ MonoBehaviour:
   _surfaceChecker: {fileID: 1336312997976556538}
   _turnLayerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 384
   _playerLayerMask:
     serializedVersion: 2
     m_Bits: 8
