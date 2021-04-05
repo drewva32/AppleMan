@@ -99,19 +99,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4834a55dba65d9146b2cb4a7e42ad536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _visionDistatnce: 0
+  _visionDistatnce: 0.55
   _speed: 1.5
   _chaseSpeed: 3
   _surfaceChecker: {fileID: 3838956025008993284}
   _turnLayerMask:
     serializedVersion: 2
-    m_Bits: 16
+    m_Bits: 384
   _playerLayerMask:
     serializedVersion: 2
     m_Bits: 8
   platformRayDistance: 0.25
   _wallCheckDistance: 0.2
   _facingDirection: -1
+  _useAttackState: 1
   _player: {fileID: 0}
 --- !u!61 &3838956025494450304
 BoxCollider2D:

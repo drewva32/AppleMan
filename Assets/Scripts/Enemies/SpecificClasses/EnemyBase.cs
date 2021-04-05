@@ -8,12 +8,19 @@ public class EnemyBase : MonoBehaviour
     private int _maxHealth;
 
     public int CurrentHealth => _currentHealth;
-
+    private AnimationHelper animHelper;
     private int _currentHealth;
 
     private void Start()
     {
+        animHelper = GetComponentInChildren<AnimationHelper>();
+
         _currentHealth = _maxHealth;
+    }
+
+    public void TakeDamage(int amount)
+    {
+        _currentHealth -= amount;
     }
 
     public virtual void LaunchProjectile()
