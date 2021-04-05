@@ -2,24 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyDieState : IState
+public class EnemyProtectState : IState
 {
+    public string AnimationName => "protect";
     private EnemyStateController _StateController;
-    public string AnimationName => "die";
 
-    public EnemyDieState(EnemyStateController controller)
+    public EnemyProtectState(EnemyStateController controller)
     {
         _StateController = controller;
     }
 
     public void FixedLogicUpdate()
     {
-        
     }
 
     public void LogicUpdate()
     {
-        
+    }
+
+    public void OnAnimationEnd()
+    {
     }
 
     public void OnEnter()
@@ -32,10 +34,7 @@ public class EnemyDieState : IState
         _StateController.Animator.SetBool(AnimationName, false);
     }
 
-    public void OnAnimationEnd()
+    public void TakeHit()
     {
     }
-
-    public void TakeHit()
-    { }
 }

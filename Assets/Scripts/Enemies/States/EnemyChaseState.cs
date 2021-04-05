@@ -23,6 +23,10 @@ public class EnemyChaseState : IState
         {
             _StateController.StateMachine.ChangeState(_StateController.EnemyWalkState);
         }
+        else
+        {
+            _StateController.Walkingcontorller.ChaseTarget(_StateController.Player.gameObject);
+        }
         _StateController.Walkingcontorller.CheckDirection();
     }
 
