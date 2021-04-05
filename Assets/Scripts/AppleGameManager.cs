@@ -5,6 +5,7 @@ public class AppleGameManager : MonoBehaviour
 {
     [SerializeField] private GameObject playerAndLevelsPrefab;
     [SerializeField] private int startingLives;
+    [SerializeField] private PlayerData playerData;
     
     private static AppleGameManager _instance;
     public static AppleGameManager Instance => _instance;
@@ -33,6 +34,8 @@ public class AppleGameManager : MonoBehaviour
     private void OnDestroy()
     {
         _instance = null;
+        if(playerData != null) 
+            playerData.amountOfJumps = 1;
     }
    
     public void AddCoin()

@@ -45,3 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerAndLevelsPrefab: {fileID: 0}
   startingLives: 3
+  playerData: {fileID: 11400000, guid: 9f249fc9a679d84429208f00c9847d32, type: 2}
