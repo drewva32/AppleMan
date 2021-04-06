@@ -6,16 +6,22 @@ using UnityEngine;
 
 public class PlayerGroundSlideState : PlayerAbilityState
 {
+    [SerializeField] private PlayerWallSlideState wallSlideState;
+    [SerializeField] private PlayerJumpState jumpState;
+    
     public bool CanSlide { get; private set; }
     private float _lastSlideTime;
+    private bool _touchingWall;
+    private bool _isWallBreakable;
     private int _xInput;
 
     public override void InitializeState(Player player, PlayerStateMachine playerStateMachine, PlayerData playerData,
         HashSet<PlayerState> pluggedStates)
     {
         base.InitializeState(player, playerStateMachine, playerData, pluggedStates);
+        // allTransitions.Add(new StateTransition(this,wallSlideState, () =>  _touchingWall && !_isGrounded));
+
         _lastSlideTime = 0;
-        
     }
 
     public override void Enter()
@@ -27,6 +33,12 @@ public class PlayerGroundSlideState : PlayerAbilityState
         
         if(player.HasAudioManager)
             AudioManager.Instance.PlayerAudioController.PlayGroundSlideSound();
+
+        if (player.StateMachine.PreviousState == wallSlideState)
+        {
+            player.Flip();
+            jumpState.DecreaseAmountOfJumpsLeft();
+        }
     }
 
     public override void AnimationTrigger()
@@ -43,7 +55,14 @@ public class PlayerGroundSlideState : PlayerAbilityState
 
     public override void LogicUpdate()
     {
+        _touchingWall = player.CheckIfTouchingWall();
+        _isWallBreakable = player.CheckIfBreakable();
+        
         base.LogicUpdate();
+        if (_touchingWall && !_isWallBreakable && !_isGrounded)
+        {
+            player.StateMachine.ChangeState(wallSlideState);
+        }
         if (Time.time >= startTime + playerData.maxGroundSlideTime)
         {
             isAbilityDone = true;
@@ -54,7 +73,7 @@ public class PlayerGroundSlideState : PlayerAbilityState
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
-        player.SetVelocity(playerData.groundSlideVelocity, Vector2.right * player.FacingDirection);
+        player.SetVelocity(playerData.groundSlideVelocity, Vector2.right * (player.FacingDirection));
     }
     
     public override void DoChecks()

@@ -155,6 +155,12 @@ public class Player : MonoBehaviour
         return Physics2D.Raycast(wallCheck.position, Vector2.right * FacingDirection, playerData.wallCheckDistance,
             playerData.whatIsGround);
     }
+
+    public bool CheckIfBreakable()
+    {
+        return Physics2D.Raycast(wallCheck.position, Vector2.right * FacingDirection, playerData.wallCheckDistance,
+            playerData.whatIsBreakable);
+    }
     
     public bool CheckIfTouchingWallBack()
     {
@@ -221,12 +227,14 @@ public class Player : MonoBehaviour
             MovementCollider.direction = CapsuleDirection2D.Horizontal;
             MovementCollider.offset = playerData.crouchColliderOffset;
             MovementCollider.size = playerData.crouchColliderSize;
+            wallCheck.localPosition = new Vector3(0, 0.88f, 0);
         }
         else
         {
             MovementCollider.direction = CapsuleDirection2D.Vertical;
             MovementCollider.offset = playerData.normalColliderOffset;
             MovementCollider.size = playerData.normalColliderSize;
+            wallCheck.localPosition = Vector3.up;
         }
         
     }
@@ -249,7 +257,7 @@ public class Player : MonoBehaviour
 
     public void AnimationFinishTrigger() => StateMachine.CurrentState.AnimationFinishTrigger();
 
-    private void Flip()
+    public void Flip()
     {
         FacingDirection *= -1;
         transform.Rotate(0.0f, 180.0f, 0.0f);

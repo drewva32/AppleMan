@@ -5,12 +5,16 @@ using UnityEngine;
 public class PlayerWallSlideState : PlayerTouchingWallState
 {
     [SerializeField] private PlayerWallGrabState wallGrabState;
+    [SerializeField] private PlayerGroundSlideState groundSlideState;
+
+    private bool _dashInput;
 
     public override void InitializeState(Player player, PlayerStateMachine playerStateMachine, PlayerData playerData,
         HashSet<PlayerState> pluggedStates)
     {
         base.InitializeState(player, playerStateMachine, playerData, pluggedStates);
         // allTransitions.Add(new StateTransition(this,wallGrabState, () => grabInput && yInput == 0 || (grabInput && isGrounded)));
+        allTransitions.Add(new StateTransition(this, groundSlideState, () => _dashInput && groundSlideState.CheckIfCanSlide()));
         foreach (var transition in allTransitions)
         {
             if(pluggedStates.Contains(transition.To))
@@ -23,6 +27,9 @@ public class PlayerWallSlideState : PlayerTouchingWallState
         base.Enter();
         if (player.HasAudioManager) 
             AudioManager.Instance.PlayerAudioController.PlayWallSlideSound();
+
+        _dashInput = player.InputHandler.DashInput;
+        groundSlideState.ResetCanSlide();
     }
 
     public override void Exit()
@@ -37,6 +44,8 @@ public class PlayerWallSlideState : PlayerTouchingWallState
         base.LogicUpdate();
         if (isExitingState)
             return;
+
+        _dashInput = player.InputHandler.DashInput;
         
         player.SetVelocityY(-playerData.wallSlideVelocity);
         foreach (var transition in availableTransitions)

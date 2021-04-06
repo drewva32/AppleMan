@@ -19,3 +19,4 @@ MonoBehaviour:
   inAirState: {fileID: 11400000, guid: 9efc6574f8efe084e861f6b85a028ca7, type: 2}
   jumpState: {fileID: 11400000, guid: aba401870abdd9c42ab0ce0009a27064, type: 2}
   wallGrabState: {fileID: 11400000, guid: a2e5cc70bd7468d479d330e63f69d0d3, type: 2}
+  groundSlideState: {fileID: 11400000, guid: db12bda804279e543b3dd8e046584b2b, type: 2}
