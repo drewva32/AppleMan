@@ -95,7 +95,7 @@ public class AppleGameManager : MonoBehaviour
         newGame.transform.parent = transform;
         
         ResetGameState();
-
+        ResetPlayer();
     }
 
     private void ResetGameState()
@@ -110,6 +110,15 @@ public class AppleGameManager : MonoBehaviour
         _currentPlayer = _currentGame.Player;
         _currentPlayerTransform = _currentPlayer.transform;
         OnPlayerCloned?.Invoke(_currentPlayer.PlayerHealthController);
+    }
+
+    private void ResetPlayer()
+    {
+        if (playerAndLevelsPrefab == null)
+        {
+            _currentPlayer = FindObjectOfType<Player>();
+            _currentPlayerTransform = _currentPlayer.transform;
+        }
     }
     
     private void TryGetLevelPosition()
