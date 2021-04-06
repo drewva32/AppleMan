@@ -6,6 +6,7 @@ public class EnemyAttackState : IState
 {
     private EnemyStateController _StateController;
     private bool _hasTakenDamage;
+    private bool _isAnimationDone;
 
     public string AnimationName => "attack";
 
@@ -16,29 +17,29 @@ public class EnemyAttackState : IState
 
     public void FixedLogicUpdate()
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public void LogicUpdate()
     {
-        throw new System.NotImplementedException();
+        if (_isAnimationDone)
+            _StateController.StateMachine.ChangeState(_StateController.EnemyWalkState);
     }
 
     public void OnEnter()
     {
+        _isAnimationDone = false;
         _StateController.Animator.SetBool(AnimationName, true);
-        throw new System.NotImplementedException();
     }
 
     public void OnExit()
     {
         _StateController.Animator.SetBool(AnimationName, false);
-        throw new System.NotImplementedException();
     }
 
     public void OnAnimationEnd()
     {
-        throw new System.NotImplementedException();
+        _isAnimationDone = true;
     }
 
     public void TakeHit()
