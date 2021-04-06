@@ -53,8 +53,11 @@ MonoBehaviour:
   crouchColliderSize: {x: 0.8, y: 0.35}
   normalColliderOffset: {x: 0, y: 1.02}
   normalColliderSize: {x: 0.6, y: 0.76}
-  wallCheckDistance: 0.4
+  wallCheckDistance: 0.5
   groundCheckRadius: 0.2
   whatIsGround:
     serializedVersion: 2
     m_Bits: 400
+  whatIsBreakable:
+    serializedVersion: 2
+    m_Bits: 256

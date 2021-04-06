@@ -10,7 +10,7 @@ public class PlayerAbilityState : PlayerState
 
     protected bool isAbilityDone;
 
-    private bool _isGrounded;
+    protected bool _isGrounded;
     private bool _isTouchingCeiling;
 
 
