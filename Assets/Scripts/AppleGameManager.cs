@@ -9,16 +9,21 @@ public class AppleGameManager : MonoBehaviour
     
     private static AppleGameManager _instance;
     public static AppleGameManager Instance => _instance;
+
+    public event Action<int> OnLivesChanged;
+    public event Action<int> OnCoinsChanged;
+    public event Action<PlayerHealthController> OnPlayerCloned;
+
+    public Transform CurrentPlayerTransform => _currentPlayerTransform;
+    public Player CurrentPlayer => _currentPlayer;
     
     private int _coins;
     private int _kills;
     private int _lives;
+    private Transform _currentPlayerTransform;
     private Vector3 _levelPosition;
     private Player _currentPlayer;
     private LevelsAndPlayer _currentGame;
-    public event Action<int> OnLivesChanged;
-    public event Action<int> OnCoinsChanged;
-    public event Action<PlayerHealthController> OnPlayerCloned;
 
     private void Awake()
     {
@@ -88,7 +93,7 @@ public class AppleGameManager : MonoBehaviour
         var newGame = Instantiate(playerAndLevelsPrefab, _levelPosition, Quaternion.identity);
         newGame.transform.position = _levelPosition;
         newGame.transform.parent = transform;
-
+        
         ResetGameState();
 
     }
@@ -103,6 +108,7 @@ public class AppleGameManager : MonoBehaviour
 
         _currentGame = GetComponentInChildren<LevelsAndPlayer>();
         _currentPlayer = _currentGame.Player;
+        _currentPlayerTransform = _currentPlayer.transform;
         OnPlayerCloned?.Invoke(_currentPlayer.PlayerHealthController);
     }
     
