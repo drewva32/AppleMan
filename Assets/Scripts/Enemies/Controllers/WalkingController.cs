@@ -66,11 +66,11 @@ public class WalkingController : MonoBehaviour
         }
     }
 
-    public void ChaseTarget(GameObject target)
-    {
-        Vector2 targetDirection = target.transform.position - this.transform.position;
-        _rb.velocity = targetDirection * _currentSpeed;
-    }
+    // public void ChaseTarget(GameObject target)
+    // {
+    //     Vector2 targetDirection = target.transform.position - this.transform.position;
+    //     _rb.velocity = targetDirection * _currentSpeed;
+    // }
 
     public void CheckDirection ()
     {
@@ -81,13 +81,13 @@ public class WalkingController : MonoBehaviour
             Flip();
     }
 
-    public void ChangeSpeed()
-    {
-        if (_currentSpeed == _speed)
-            _currentSpeed = _chaseSpeed;
-        else
-            _currentSpeed = _speed;
-    }
+    // public void ChangeSpeed()
+    // {
+    //     if (_currentSpeed == _speed)
+    //         _currentSpeed = _chaseSpeed;
+    //     else
+    //         _currentSpeed = _speed;
+    // }
 
     private void OnDrawGizmos()
     {

@@ -52,7 +52,7 @@ public class EnemyWalkState : IState
     {
         _hasTakenDamage = false;
         _StateController.Animator.SetBool(AnimationName, true);
-        _StateController.Walkingcontorller.ChangeSpeed();
+        // _StateController.Walkingcontorller.ChangeSpeed();
     }
 
     public void OnExit()

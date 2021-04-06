@@ -6,16 +6,18 @@ public class AnimationHelper : MonoBehaviour
 {
     private EnemyStateController _stateController;
     private EnemyBase enemy;
+    private PluggableStateController _pluggableStateController;
 
     private void Awake()
     {
-        _stateController = GetComponentInParent<EnemyStateController>();
+        _pluggableStateController = GetComponentInParent<PluggableStateController>();
+        
         enemy = GetComponentInParent<EnemyBase>();
     }
 
     public void AnimationTriggerFinish()
     {
-        _stateController.AnimationTrigger();
+        _pluggableStateController.OnAnimationEnd();
     }
 
     public void LaunchProjectile()

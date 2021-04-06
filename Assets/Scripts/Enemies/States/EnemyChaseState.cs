@@ -25,7 +25,7 @@ public class EnemyChaseState : IState
         }
         else
         {
-            _StateController.Walkingcontorller.ChaseTarget(_StateController.Player.gameObject);
+            // _StateController.Walkingcontorller.ChaseTarget(_StateController.Player.gameObject);
         }
         _StateController.Walkingcontorller.CheckDirection();
     }
@@ -33,7 +33,7 @@ public class EnemyChaseState : IState
     public void OnEnter()
     {
         _StateController.Animator.SetBool(AnimationName, true);
-        _StateController.Walkingcontorller.ChangeSpeed();
+        // _StateController.Walkingcontorller.ChangeSpeed();
     }
 
     public void OnExit()
