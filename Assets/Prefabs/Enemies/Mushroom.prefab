@@ -100,8 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4834a55dba65d9146b2cb4a7e42ad536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _visionDistatnce: 0.55
-  _protectStartDistance: 0.2
+  _visionDistatnce: 1
+  _protectStartDistance: 0.5
   _meleeDistance: 0.5
   _speed: 1.5
   _surfaceChecker: {fileID: 3838956025008993284}
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de5b584cbb5f607458094d2b28268208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startingState: {fileID: 11400000, guid: e8368a797cc56f945a7fe47658ec7194, type: 2}
+  _startingState: {fileID: 11400000, guid: 524edc0577298f148862f7d11994b186, type: 2}
 --- !u!114 &1099557738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7860e2f715026f14e9a3fe110d4a55cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 2
+  _maxHealth: 10
 --- !u!1 &3838956025701830387
 GameObject:
   m_ObjectHideFlags: 0
