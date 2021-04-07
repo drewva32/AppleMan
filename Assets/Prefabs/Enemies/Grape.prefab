@@ -187,8 +187,8 @@ GameObject:
   - component: {fileID: 9137578742152491300}
   - component: {fileID: 5722318168095987450}
   - component: {fileID: 3909790543233273221}
-  - component: {fileID: 4242691337766524714}
   - component: {fileID: 1028676245}
+  - component: {fileID: 8976378405767163032}
   m_Layer: 6
   m_Name: Grape
   m_TagString: Untagged
@@ -274,7 +274,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _visionDistatnce: 2.5
   _speed: 2
-  _chaseSpeed: 4
   _surfaceChecker: {fileID: 9137578741516946738}
   _turnLayerMask:
     serializedVersion: 2
@@ -282,24 +281,10 @@ MonoBehaviour:
   _playerLayerMask:
     serializedVersion: 2
     m_Bits: 8
-  platformRayDistance: 0.74
+  platformRayDistance: 0.6
   _wallCheckDistance: 0.4
-  _facingDirection: -1
+  _facingDirection: 1
   _useAttackState: 1
-  _player: {fileID: 0}
---- !u!114 &4242691337766524714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9137578742152491320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9724abfe0dba2e240b0aa80cdb29d796, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _player: {fileID: 0}
 --- !u!114 &1028676245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,4 +300,16 @@ MonoBehaviour:
   _maxHealth: 5
   _projectile: {fileID: 4088495348738799551, guid: 51c2bc5f679d5254d9a5cd6528f0ca28, type: 3}
   _throwPosition: {fileID: 715306979}
-  _projectileParent: {fileID: 0}
+--- !u!114 &8976378405767163032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9137578742152491320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de5b584cbb5f607458094d2b28268208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startingState: {fileID: 11400000, guid: 62f879ad3aba5294788a4776dda2a2b5, type: 2}

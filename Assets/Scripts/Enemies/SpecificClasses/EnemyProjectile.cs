@@ -8,7 +8,7 @@ public class EnemyProjectile : MonoBehaviour
     [SerializeField]
     private float _lifeTimer = 2f;
     [SerializeField]
-    private GameObject _grapeSplat;
+    private GameObject explosionEffect;
     private Rigidbody2D _rb;
 
 
@@ -32,7 +32,7 @@ public class EnemyProjectile : MonoBehaviour
             Debug.Log("NOW YOU DIE!!!!");
             pHealth.TakeDamage();
         }
-        GameObject splat = Instantiate(_grapeSplat, this.transform.position, transform.rotation);
+        GameObject splat = Instantiate(explosionEffect, this.transform.position, transform.rotation);
         Destroy(this.gameObject);
     }
 

@@ -8,8 +8,12 @@ public class Grape : EnemyBase
     private GameObject _projectile;
     [SerializeField]
     private Transform _throwPosition;
-    [SerializeField]
     private Transform _projectileParent;
+
+    private void Start()
+    {
+        _projectileParent = GameObject.Find("Projectiles").transform;
+    }
 
     public override void LaunchProjectile()
     {

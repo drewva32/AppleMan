@@ -6,7 +6,7 @@ public class OnSeePlayer_SO : StateDecision
     public override bool Condition(PluggableStateController controller)
     {
         bool canSeePlayer = Physics2D.Raycast(controller.WalkingController.WallCheck.position,
-            controller.WalkingController.vectorDirection, controller.WalkingController.ChaseDistance, controller.WalkingController.PlayerLayer);
+            controller.WalkingController.vectorDirection, controller.WalkingController.VisionDistance, controller.WalkingController.PlayerLayer);
         return canSeePlayer;
     }
 }

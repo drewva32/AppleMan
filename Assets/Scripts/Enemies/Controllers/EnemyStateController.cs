@@ -38,6 +38,8 @@ public class EnemyStateController : MonoBehaviour, IPlayerInteractions
     // Start is called before the first frame update
     void Start()
     {
+        _player = GameObject.FindGameObjectWithTag("Player").transform;
+
         StateMachine.Init(EnemyWalkState);
     }
 
@@ -65,12 +67,12 @@ public class EnemyStateController : MonoBehaviour, IPlayerInteractions
     public void TakePunch(int damageAmount)
     {
         _walkingController.RB.velocity = Vector2.zero;
-        Vector3 playerLocation = (_walkingController._player.position - _walkingController.transform.position);
-        Debug.Log(playerLocation.normalized);
+        //Vector3 playerLocation = (_walkingController._player.position - _walkingController.transform.position);
+        //Debug.Log(playerLocation.normalized);
         // Apply damage
         _enemy.TakeDamage(damageAmount);
         CheckHealth();
-        _walkingController.RB.AddForce(new Vector2(-playerLocation.x * 100, 25f));
+        //_walkingController.RB.AddForce(new Vector2(-playerLocation.x * 100, 25f));
         StateMachine.CurrentState.TakeHit();
     }
 
