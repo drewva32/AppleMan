@@ -6,11 +6,15 @@ public class WalkingController : MonoBehaviour
     [SerializeField]
     private float _visionDistatnce = 0;
     [SerializeField]
+    private float _protectStartDistance = 0.2f;
+    [SerializeField]
+    private float _meleeDistance = 0.5f;
+    [SerializeField]
     private float _speed = 2.0f;
     [SerializeField]
-    private float _chaseSpeed = 4.0f;
-    [SerializeField]
     private Transform _surfaceChecker;
+    [SerializeField]
+    private Transform _meleeVector;
     [SerializeField]
     private LayerMask _turnLayerMask;
     [SerializeField]
@@ -19,28 +23,26 @@ public class WalkingController : MonoBehaviour
     private float platformRayDistance = 0.1f;
     [SerializeField]
     private float _wallCheckDistance = 0.2f;
-    [SerializeField] [Tooltip("1 if character is facing right; -1 otjerwise")]
+    [SerializeField] [Tooltip("1 if character is facing right; -1 otherwise")]
     private int _facingDirection = 1;
-    [Tooltip("Use 1 to transition to the Attack state, 2 to use the Chase state or 3 to use Protect state")]
-    [SerializeField]
-    public int _useAttackState = 1;
 
 
     public Transform WallCheck => _surfaceChecker;
-    //public float Speed => _currentSpeed;
-    public float ChaseDistance => _visionDistatnce;
+    public float VisionDistance => _visionDistatnce;
+    public float ProtectDistance => _protectStartDistance;
+    public float MeleeDistance => _meleeDistance;
+    public Transform MeleeChecker => _meleeVector;
     public LayerMask PlayerLayer => _playerLayerMask;
     public Rigidbody2D RB => _rb;
-    public int UseAttackState => _useAttackState;
+    public Transform Player => _player;
     
     private bool _timeToTurn = false;
     private bool _onPlatform = true;
-    private float _currentSpeed;
     private Rigidbody2D _rb;
     private Vector3 vectorFacingDirection;
+    private Transform _player;
 
     public Vector3 vectorDirection => vectorFacingDirection;
-    public Transform _player;
 
     private void Awake()
     {
@@ -51,26 +53,20 @@ public class WalkingController : MonoBehaviour
 
     private void Start()
     {
-        _currentSpeed = _speed;
+        _player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     public void Walk()
     {
         if (_facingDirection == 1)
         {
-            _rb.velocity = new Vector2(_currentSpeed, _rb.velocity.y);
+            _rb.velocity = new Vector2(_speed, _rb.velocity.y);
         }
         else
         {
-            _rb.velocity = new Vector2(-_currentSpeed, _rb.velocity.y);
+            _rb.velocity = new Vector2(-_speed, _rb.velocity.y);
         }
     }
-
-    // public void ChaseTarget(GameObject target)
-    // {
-    //     Vector2 targetDirection = target.transform.position - this.transform.position;
-    //     _rb.velocity = targetDirection * _currentSpeed;
-    // }
 
     public void CheckDirection ()
     {
@@ -80,14 +76,6 @@ public class WalkingController : MonoBehaviour
         if(_timeToTurn || !_onPlatform)
             Flip();
     }
-
-    // public void ChangeSpeed()
-    // {
-    //     if (_currentSpeed == _speed)
-    //         _currentSpeed = _chaseSpeed;
-    //     else
-    //         _currentSpeed = _speed;
-    // }
 
     private void OnDrawGizmos()
     {
@@ -100,6 +88,10 @@ public class WalkingController : MonoBehaviour
         // Draw ray to check for wall
         Gizmos.color = Color.black;
         Gizmos.DrawRay(_surfaceChecker.position, new Vector3(_facingDirection * _wallCheckDistance, 0, 0));
+        // Draw circle for Melee
+        Gizmos.color = Color.red;
+        if(_meleeVector != null)
+            Gizmos.DrawWireSphere(_meleeVector.position, _meleeDistance);
     }
 
     private void Flip()

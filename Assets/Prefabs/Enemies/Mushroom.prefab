@@ -42,7 +42,8 @@ GameObject:
   - component: {fileID: 3838956025494450306}
   - component: {fileID: 3838956025494450307}
   - component: {fileID: 3838956025494450304}
-  - component: {fileID: 8005737675608845793}
+  - component: {fileID: 1099557733}
+  - component: {fileID: 1099557738}
   m_Layer: 6
   m_Name: Mushroom
   m_TagString: Untagged
@@ -100,9 +101,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _visionDistatnce: 0.55
+  _protectStartDistance: 0.2
+  _meleeDistance: 0.5
   _speed: 1.5
-  _chaseSpeed: 3
   _surfaceChecker: {fileID: 3838956025008993284}
+  _meleeVector: {fileID: 0}
   _turnLayerMask:
     serializedVersion: 2
     m_Bits: 384
@@ -112,8 +115,6 @@ MonoBehaviour:
   platformRayDistance: 0.25
   _wallCheckDistance: 0.2
   _facingDirection: -1
-  _useAttackState: 1
-  _player: {fileID: 0}
 --- !u!61 &3838956025494450304
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -140,7 +141,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.82965183, y: 0.6945689}
   m_EdgeRadius: 0
---- !u!114 &8005737675608845793
+--- !u!114 &1099557733
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,10 +150,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 3838956025494450316}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9724abfe0dba2e240b0aa80cdb29d796, type: 3}
+  m_Script: {fileID: 11500000, guid: de5b584cbb5f607458094d2b28268208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 0}
+  _startingState: {fileID: 11400000, guid: e8368a797cc56f945a7fe47658ec7194, type: 2}
+--- !u!114 &1099557738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3838956025494450316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7860e2f715026f14e9a3fe110d4a55cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 2
 --- !u!1 &3838956025701830387
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,7 +19,7 @@ public class EnemyChaseState : IState
 
     public void LogicUpdate()
     {
-        if (Vector3.Distance(_StateController.transform.position, _StateController.Player.position) > _StateController.Walkingcontorller.ChaseDistance)
+        if (Vector3.Distance(_StateController.transform.position, _StateController.Player.position) > _StateController.Walkingcontorller.VisionDistance)
         {
             _StateController.StateMachine.ChangeState(_StateController.EnemyWalkState);
         }

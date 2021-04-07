@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1102765541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1102765542}
+  m_Layer: 0
+  m_Name: MeleeVector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1102765542
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102765541}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.47, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8995742120084119226}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8995742118099385093
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,9 +186,9 @@ GameObject:
   - component: {fileID: 8995742120084119226}
   - component: {fileID: 8995742120084119227}
   - component: {fileID: 8995742120084119220}
-  - component: {fileID: 8995742120084119221}
   - component: {fileID: 8995742120084119222}
   - component: {fileID: 8995742120084119225}
+  - component: {fileID: 1099398333}
   m_Layer: 6
   m_Name: Cherry
   m_TagString: Untagged
@@ -179,6 +209,7 @@ Transform:
   m_Children:
   - {fileID: 8995742119272049875}
   - {fileID: 8995742118099385092}
+  - {fileID: 1102765542}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -216,9 +247,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _visionDistatnce: 0.69
+  _protectStartDistance: 0.2
+  _meleeDistance: 0.35
   _speed: 2
-  _chaseSpeed: 2
   _surfaceChecker: {fileID: 8995742118099385092}
+  _meleeVector: {fileID: 1102765542}
   _turnLayerMask:
     serializedVersion: 2
     m_Bits: 384
@@ -228,21 +261,6 @@ MonoBehaviour:
   platformRayDistance: 0.55
   _wallCheckDistance: 0.2
   _facingDirection: -1
-  _useAttackState: 1
-  _player: {fileID: 0}
---- !u!114 &8995742120084119221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8995742120084119223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9724abfe0dba2e240b0aa80cdb29d796, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _player: {fileID: 0}
 --- !u!70 &8995742120084119222
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -272,3 +290,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 1
+--- !u!114 &1099398333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8995742120084119223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de5b584cbb5f607458094d2b28268208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startingState: {fileID: 11400000, guid: e8368a797cc56f945a7fe47658ec7194, type: 2}
