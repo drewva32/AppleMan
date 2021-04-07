@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 10
   _lifeTimer: 3
-  _grapeSplat: {fileID: 4921923851486080393, guid: c9fc1e7508b93154dac356c25dd401fb, type: 3}
+  explosionEffect: {fileID: 7114566230810317638, guid: 84342108da67e244a8ccb45efca14388, type: 3}
 --- !u!50 &944492661
 Rigidbody2D:
   serializedVersion: 4

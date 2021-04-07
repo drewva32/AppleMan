@@ -120,7 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 5
   _lifeTimer: 3
-  _grapeSplat: {fileID: 4921923851486080393, guid: c9fc1e7508b93154dac356c25dd401fb, type: 3}
+  explosionEffect: {fileID: 4921923851486080393, guid: c9fc1e7508b93154dac356c25dd401fb, type: 3}
 --- !u!58 &9111164687248328469
 CircleCollider2D:
   m_ObjectHideFlags: 0
