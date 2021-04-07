@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2ca4e31ab44aa440a81c9a4253203b3, type: 3}
-  m_Name: PatrolState_SO
+  m_Name: RangedPatrolState_SO
   m_EditorClassIdentifier: 
   _animBoolName: walk
   _actions:

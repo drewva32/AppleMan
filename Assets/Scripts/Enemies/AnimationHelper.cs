@@ -30,6 +30,11 @@ public class AnimationHelper : MonoBehaviour
         Destroy(this.transform.parent.gameObject);
     }
 
+    public void DestroyGameObjct()
+    {
+        Destroy(this.gameObject);
+    }
+
     public void  Wait(float waitTime)
     {
         StartCoroutine(WaitForSeconds(waitTime));

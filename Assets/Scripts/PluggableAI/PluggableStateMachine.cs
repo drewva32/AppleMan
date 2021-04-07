@@ -23,6 +23,6 @@ public class PluggableStateMachine
      
         newState.OnEnter(_pluggableStateController);
         CurrentState = newState;
-        Debug.Log("Entered " + CurrentState);
+        //Debug.Log("Entered " + CurrentState);
     }
 }
