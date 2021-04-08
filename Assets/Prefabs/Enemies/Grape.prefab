@@ -187,8 +187,8 @@ GameObject:
   - component: {fileID: 9137578742152491300}
   - component: {fileID: 5722318168095987450}
   - component: {fileID: 3909790543233273221}
-  - component: {fileID: 1028676245}
   - component: {fileID: 8976378405767163032}
+  - component: {fileID: 1402218300}
   m_Layer: 6
   m_Name: Grape
   m_TagString: Untagged
@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4834a55dba65d9146b2cb4a7e42ad536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _visionDistatnce: 2.5
+  _visionDistatnce: 5
   _speed: 2
   _surfaceChecker: {fileID: 9137578741516946738}
   _turnLayerMask:
@@ -284,22 +284,6 @@ MonoBehaviour:
   platformRayDistance: 0.6
   _wallCheckDistance: 0.4
   _facingDirection: 1
-  _useAttackState: 1
---- !u!114 &1028676245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9137578742152491320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1227e4f3aa51d4848b8ec9c52b4016db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _maxHealth: 5
-  _projectile: {fileID: 4088495348738799551, guid: 51c2bc5f679d5254d9a5cd6528f0ca28, type: 3}
-  _throwPosition: {fileID: 715306979}
 --- !u!114 &8976378405767163032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,3 +297,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startingState: {fileID: 11400000, guid: 62f879ad3aba5294788a4776dda2a2b5, type: 2}
+--- !u!114 &1402218300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9137578742152491320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a2a4befe7df3a42a861ddbdf9f95cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 30
+  _hitPoints: 10
+  _projectile: {fileID: 4088495348738799551, guid: 51c2bc5f679d5254d9a5cd6528f0ca28, type: 3}
+  _throwPosition: {fileID: 715306979}

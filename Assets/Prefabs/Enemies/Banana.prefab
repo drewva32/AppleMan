@@ -127,8 +127,8 @@ GameObject:
   - component: {fileID: 4311893176388928885}
   - component: {fileID: 4311893176388928842}
   - component: {fileID: 4311893176388928843}
-  - component: {fileID: 4311893176388928886}
   - component: {fileID: 1749796414}
+  - component: {fileID: 4014250373382018029}
   m_Layer: 6
   m_Name: Banana
   m_TagString: Untagged
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4834a55dba65d9146b2cb4a7e42ad536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _visionDistatnce: 4.9
+  _visionDistatnce: 5
   _speed: 2
   _surfaceChecker: {fileID: 4311893177245730974}
   _turnLayerMask:
@@ -198,8 +198,6 @@ MonoBehaviour:
   platformRayDistance: 0.4
   _wallCheckDistance: 0.1
   _facingDirection: 1
-  _useAttackState: 1
-  _player: {fileID: 0}
 --- !u!61 &4311893176388928843
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -226,22 +224,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.34850502, y: 0.4796499}
   m_EdgeRadius: 0
---- !u!114 &4311893176388928886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4311893176388928840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1227e4f3aa51d4848b8ec9c52b4016db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _maxHealth: 0
-  _projectile: {fileID: 4668354114623489999, guid: 66cef8c79e430ca48b3def2075dedc21, type: 3}
-  _throwPosition: {fileID: 4311893177127180703}
-  _projectileParent: {fileID: 0}
 --- !u!114 &1749796414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,6 +237,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startingState: {fileID: 11400000, guid: 62f879ad3aba5294788a4776dda2a2b5, type: 2}
+--- !u!114 &4014250373382018029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4311893176388928840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a2a4befe7df3a42a861ddbdf9f95cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hitPoints: 2
+  _projectile: {fileID: 4668354114623489999, guid: 66cef8c79e430ca48b3def2075dedc21, type: 3}
+  _throwPosition: {fileID: 4311893177127180703}
 --- !u!1 &4311893177127180700
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,7 +306,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4311893177245730975}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.149, y: 0.017, z: 0}
+  m_LocalPosition: {x: 0.255, y: 0.017, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4311893176388928887}

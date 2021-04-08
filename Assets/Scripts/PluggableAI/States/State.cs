@@ -12,6 +12,7 @@ public class State : ScriptableObject
     {
         controller.Animator.SetBool(_animBoolName,true);
         controller.SetStartTime(Time.time);
+        controller.Enemy.AllowDamage(true);
     }
 
     public void DoBasicActions(PluggableStateController controller)
