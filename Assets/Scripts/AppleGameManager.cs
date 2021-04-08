@@ -6,6 +6,10 @@ public class AppleGameManager : MonoBehaviour
     [SerializeField] private GameObject playerAndLevelsPrefab;
     [SerializeField] private int startingLives;
     [SerializeField] private PlayerData playerData;
+
+    [Header("UI")] [SerializeField] private GameObject MainMenuScreen;
+    [SerializeField] private GameObject gameOverScreen;
+    
     
     private static AppleGameManager _instance;
     public static AppleGameManager Instance => _instance;
@@ -16,7 +20,8 @@ public class AppleGameManager : MonoBehaviour
 
     public Transform CurrentPlayerTransform => _currentPlayerTransform;
     public Player CurrentPlayer => _currentPlayer;
-    
+
+    private float _gameTime;
     private int _coins;
     private int _kills;
     private int _lives;
@@ -31,9 +36,36 @@ public class AppleGameManager : MonoBehaviour
             Destroy(gameObject);
         else
             _instance = this;
-        
+
+        _currentPlayer = FindObjectOfType<Player>();
+        _currentPlayerTransform = _currentPlayer.transform;
         TryGetLevelPosition();
         _lives = startingLives;
+    }
+
+    private void Update()
+    {
+        _gameTime += Time.deltaTime;
+    }
+
+    private void Start()
+    {
+        //pause time if we have splash screen/main screen
+
+    }
+
+    public void StartGame()
+    {
+        Time.timeScale = 1;
+        AudioListener.pause = false;
+    }
+
+    public void MainMenu()
+    {
+        //pause time
+        //fade in music that plays regardless of timescale
+        AudioManager.Instance.MusicAudioController.FadeInThemeMusic();
+        MainMenuScreen.SetActive(true);
     }
 
     private void OnDestroy()
@@ -75,7 +107,7 @@ public class AppleGameManager : MonoBehaviour
         
     }
 
-    private void GameOver()
+    public void GameOver()
     {
         var childLevels = GetComponentInChildren<LevelsAndPlayer>();
         if (childLevels == null)
@@ -93,13 +125,27 @@ public class AppleGameManager : MonoBehaviour
         var newGame = Instantiate(playerAndLevelsPrefab, _levelPosition, Quaternion.identity);
         newGame.transform.position = _levelPosition;
         newGame.transform.parent = transform;
-        
+        OpenGameOverScreen();
+
         ResetGameState();
         ResetPlayer();
+        
+    }
+
+    private void OpenGameOverScreen()
+    {
+        if (gameOverScreen == null)
+            return;
+        Time.timeScale = 0;
+        AudioListener.pause = true;
+        gameOverScreen.SetActive(true);
+        var _gameOver = gameOverScreen.GetComponent<GameOverScreen>();
+        _gameOver.SetScoreText((int)_gameTime,_lives,_coins,_kills);
     }
 
     private void ResetGameState()
     {
+        _gameTime = 0;
         _lives = startingLives;
         _coins = 0;
         _kills = 0;
@@ -110,6 +156,12 @@ public class AppleGameManager : MonoBehaviour
         _currentPlayer = _currentGame.Player;
         _currentPlayerTransform = _currentPlayer.transform;
         OnPlayerCloned?.Invoke(_currentPlayer.PlayerHealthController);
+
+        if (gameOverScreen == null)
+            return;
+        var _gameOver = gameOverScreen.GetComponent<GameOverScreen>();
+        _gameOver.GetPlayerInput(CurrentPlayer.InputHandler);
+
     }
 
     private void ResetPlayer()

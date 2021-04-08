@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private CollectiblesAudioController healthPickupAudio;
     [SerializeField] private OneShotInteractableController springAudio;
     [SerializeField] private PlayerAudioController playerAudioController;
+    [SerializeField] private MusicAudioController musicAudioController;
     
 
     public CollectiblesAudioController CoinAudio => coinAudio;
@@ -17,6 +18,8 @@ public class AudioManager : MonoBehaviour
     public CollectiblesAudioController HealthPickupAudio => healthPickupAudio;
     public OneShotInteractableController SpringAudio => springAudio;
     public PlayerAudioController PlayerAudioController => playerAudioController;
+
+    public MusicAudioController MusicAudioController => musicAudioController;
 
     private static AudioManager _instance;
 
