@@ -1,18 +1,18 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AnimationHelper : MonoBehaviour
 {
-    private EnemyStateController _stateController;
     private EnemyBase enemy;
     private PluggableStateController _pluggableStateController;
+    private GameObject _parent;
 
     private void Awake()
     {
         _pluggableStateController = GetComponentInParent<PluggableStateController>();
         
         enemy = GetComponentInParent<EnemyBase>();
+        _parent = gameObject.transform.parent.gameObject;
     }
 
     public void AnimationTriggerFinish()
@@ -27,7 +27,12 @@ public class AnimationHelper : MonoBehaviour
 
     public void FinishDeath()
     {
-        Destroy(this.transform.parent.gameObject);
+        _parent.SetActive(false);
+    }
+
+    public void DeactivateGameObject()
+    {
+        _parent.SetActive(false);
     }
 
     public void DestroyGameObjct()

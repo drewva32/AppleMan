@@ -7,8 +7,9 @@ public class OnPlayerInMeleeRange_SO : StateDecision
 {
     public override bool Condition(PluggableStateController controller)
     {
+        bool canPunchPlayer = Physics2D.Raycast(controller.WalkingController.WallCheck.position, controller.WalkingController.vectorDirection, controller.WalkingController.Melee.MeleeDistance, controller.WalkingController.PlayerLayer);
         bool isPlayerClose = Physics2D.Raycast(controller.WalkingController.WallCheck.position,
             controller.WalkingController.vectorDirection, controller.WalkingController.Melee.MeleeDistance, controller.WalkingController.PlayerLayer);
-        return isPlayerClose;
+        return canPunchPlayer;
     }
 }

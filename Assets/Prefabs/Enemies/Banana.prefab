@@ -198,6 +198,7 @@ MonoBehaviour:
   platformRayDistance: 0.4
   _wallCheckDistance: 0.1
   _facingDirection: 1
+  _collider: {fileID: 4311893176388928843}
 --- !u!61 &4311893176388928843
 BoxCollider2D:
   m_ObjectHideFlags: 0

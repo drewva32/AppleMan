@@ -22,6 +22,7 @@ public class WalkingController : MonoBehaviour
 
 
     public Transform WallCheck => _surfaceChecker;
+    public Vector3 vectorDirection => _vectorFacingDirection;
     public float VisionDistance => _visionDistatnce;
     public LayerMask PlayerLayer => _playerLayerMask;
     public Rigidbody2D RB => _rb;
@@ -30,20 +31,19 @@ public class WalkingController : MonoBehaviour
     public EnemyRanged Ranged => _ranged;
     public EnemyProtect Protect => _protect;
     public float Speed => _speed;
+    public bool OnPlatform => _onPlatform;
 
-    private bool _timeToTurn = false;
-    private bool _onPlatform = true;
+    private bool _atWall;
+    private bool _atEdge;
+    private bool _onPlatform;
     private Rigidbody2D _rb;
     private Vector3 _vectorFacingDirection;
     private EnemyMelee _melee;
     private EnemyRanged _ranged;
     private EnemyProtect _protect;
+    private Collider2D _collider;
+    private Transform _player;
 
-    private Transform _player;  /// <summary>
-    // Replace this with the AppleMan.instance for better performance
-    /// </summary>
-
-    public Vector3 vectorDirection => _vectorFacingDirection;
 
     private void Awake()
     {
@@ -53,31 +53,38 @@ public class WalkingController : MonoBehaviour
 
     private void Start()
     {
-        _player = GameObject.FindGameObjectWithTag("Player").transform;
+        //_player = AppleGameManager.Instance.CurrentPlayerTransform;
         _ranged = GetComponent<EnemyRanged>();
         _melee = GetComponent<EnemyMelee>();
         _protect = GetComponent<EnemyProtect>();
+        _collider = this.GetComponent<Collider2D>();
     }
 
     public void Walk()
     {
-        if (_facingDirection == 1)
+        if(_onPlatform)
         {
-            _rb.velocity = new Vector2(_speed, _rb.velocity.y);
+            if (_facingDirection == 1)
+            {
+                _rb.velocity = new Vector2(_speed, _rb.velocity.y);
+            }
+            else
+            {
+                _rb.velocity = new Vector2(-_speed, _rb.velocity.y);
+            }
         }
-        else
-        {
-            _rb.velocity = new Vector2(-_speed, _rb.velocity.y);
-        }
+        
     }
 
     public void CheckDirection ()
     {
-        // Raycast to look for wall
-        _timeToTurn = Physics2D.Raycast(_surfaceChecker.position, _vectorFacingDirection, _wallCheckDistance, _turnLayerMask);
-        _onPlatform = Physics2D.Raycast(_surfaceChecker.position, Vector3.down, platformRayDistance, _turnLayerMask);
-        if(_timeToTurn || !_onPlatform)
-            Flip();
+        _atWall = Physics2D.Raycast(_surfaceChecker.position, _vectorFacingDirection, _wallCheckDistance, _turnLayerMask);
+        _atEdge = Physics2D.Raycast(_surfaceChecker.position, Vector3.down, platformRayDistance, _turnLayerMask);
+        _onPlatform = Physics2D.Raycast(_collider.bounds.center, Vector3.down ,_collider.bounds.size.y, _turnLayerMask);
+        if ((_atWall || !_atEdge) && _onPlatform)
+        {
+             Flip();
+        }
     }
 
     public void ChangeWalkSpeed(float newSpeed)

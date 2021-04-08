@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4834a55dba65d9146b2cb4a7e42ad536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _visionDistatnce: 2
+  _visionDistatnce: 2.5
   _speed: 2
   _surfaceChecker: {fileID: 1336312997976556538}
   _turnLayerMask:
@@ -82,6 +82,7 @@ MonoBehaviour:
   platformRayDistance: 0.61
   _wallCheckDistance: 0.2
   _facingDirection: -1
+  _collider: {fileID: 1510566026}
 --- !u!61 &1510566026
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -133,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ad06e0cb0ae3b4e8acea41649038ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 2
+  _hitPoints: 10
 --- !u!1 &3743366958020128149
 GameObject:
   m_ObjectHideFlags: 0

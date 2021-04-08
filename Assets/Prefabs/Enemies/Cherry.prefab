@@ -258,6 +258,7 @@ MonoBehaviour:
   platformRayDistance: 0.55
   _wallCheckDistance: 0.2
   _facingDirection: -1
+  _collider: {fileID: 7243448260961282091}
 --- !u!114 &1099398333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,6 +310,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d593cafe4c4ee248b675848221b5bb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 5
-  _meleeDistance: 0.35
+  _hitPoints: 5
+  _meleeDistance: 0.25
   _meleeVector: {fileID: 1102765542}
