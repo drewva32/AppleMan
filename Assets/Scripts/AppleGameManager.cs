@@ -134,6 +134,8 @@ public class AppleGameManager : MonoBehaviour
 
     private void OpenGameOverScreen()
     {
+        if (gameOverScreen == null)
+            return;
         Time.timeScale = 0;
         AudioListener.pause = true;
         gameOverScreen.SetActive(true);
@@ -154,7 +156,9 @@ public class AppleGameManager : MonoBehaviour
         _currentPlayer = _currentGame.Player;
         _currentPlayerTransform = _currentPlayer.transform;
         OnPlayerCloned?.Invoke(_currentPlayer.PlayerHealthController);
-        
+
+        if (gameOverScreen == null)
+            return;
         var _gameOver = gameOverScreen.GetComponent<GameOverScreen>();
         _gameOver.GetPlayerInput(CurrentPlayer.InputHandler);
 
