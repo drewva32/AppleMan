@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyBase : MonoBehaviour, IPlayerInteractions
+public class EnemyBase : MonoBehaviour, IPlayerInteractions, ITakeSpikeDamage 
 {
     public bool _canTakeDamage { get; private set; }
     public int CurrentHealth => _currentHealth;
@@ -56,5 +56,10 @@ public class EnemyBase : MonoBehaviour, IPlayerInteractions
     public void AllowDamage(bool caTakeDamage)
     {
         _canTakeDamage = caTakeDamage;
+    }
+
+    public void TakeSpikeDamage()
+    {
+        TakeDamage(1);
     }
 }
