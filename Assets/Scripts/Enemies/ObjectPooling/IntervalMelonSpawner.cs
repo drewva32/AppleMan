@@ -12,16 +12,16 @@ public class IntervalMelonSpawner : MonoBehaviour
     private ObjectPooler _objectPooler;
     private float _enabledTime;
 
-    private void Start()
-    {
-        _objectPooler = ObjectPooler.Instance;
-        
-    }
-
     public void OnEnable()
     {
+        _objectPooler = ObjectPooler.Instance;
         _enabledTime = Time.time;
-        Debug.Log("enabled");
+    }
+
+    public void OnDisable()
+    {
+        if(_objectPooler != null)
+            _objectPooler.DespawnObjects();
     }
 
     public void SpawnMelon()

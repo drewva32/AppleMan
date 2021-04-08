@@ -12,6 +12,8 @@ public class ObjectPooler : MonoBehaviour
     private static ObjectPooler _instance;
     public static ObjectPooler Instance => _instance;
 
+    private bool _hasActiveObjects;
+
     private void Awake()
     {
         if(_instance != null)
@@ -41,11 +43,23 @@ public class ObjectPooler : MonoBehaviour
         objectToSpawn.transform.position = position;
         objectToSpawn.transform.rotation = rotation;
 
+        _hasActiveObjects = true;
         var pooledObject = objectToSpawn.GetComponent<IPooledObject>();
         pooledObject?.OnObjectSpawn();
 
         objectPool.Enqueue(objectToSpawn);
 
         return objectToSpawn;
+    }
+
+    public void DespawnObjects()
+    {
+        if (!_hasActiveObjects)
+            return;
+        foreach (var obj in objectPool)
+        {
+            obj.SetActive(false);
+        }
+        _hasActiveObjects = false;
     }
 }

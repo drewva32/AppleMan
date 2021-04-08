@@ -14,9 +14,15 @@ public class MelonSpawner : MonoBehaviour
 
     private float _lastSpawnTime;
     private ObjectPooler _objectPooler;
-    private void Start()
+    private void OnEnable()
     {
         _objectPooler = ObjectPooler.Instance;
+    }
+
+    public void OnDisable()
+    {
+        if(_objectPooler != null)   
+            _objectPooler.DespawnObjects();
     }
 
     private Vector3 GetRandomPosition()
