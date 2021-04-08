@@ -15,7 +15,8 @@ public class LevelManager : MonoBehaviour
     private Transform playerTransform;
     private void Awake()
     {
-        player = FindObjectOfType<Player>();
+        if(player == null)
+            player = FindObjectOfType<Player>();
         playerTransform = player.transform;
         InitializeLevels();
     }
@@ -41,8 +42,9 @@ public class LevelManager : MonoBehaviour
             // if (i == 0)
             //     continue;
             _gameLevels[i].gameObject.SetActive(false);
-            LoadLevel(0);
         }
+        LoadLevel(0);
+        Debug.Log("reload levels");
     }
 
     private void CheckForCheckPoint(int index)

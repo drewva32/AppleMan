@@ -12,7 +12,7 @@ public class EnemyBase : MonoBehaviour, IPlayerInteractions, ITakeSpikeDamage
 
     
 
-    private void Start()
+    private void Awake()
     {
         _walkingController = GetComponent<WalkingController>();
     }
