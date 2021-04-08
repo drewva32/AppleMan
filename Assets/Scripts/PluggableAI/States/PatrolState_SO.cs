@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Create State/ PatrolState_SO", fileName = "PatrolState_SO", order = 0)]

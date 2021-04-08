@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Create Action/PatrolAction_SO", fileName = "PatrolAction_SO", order = 0)]
