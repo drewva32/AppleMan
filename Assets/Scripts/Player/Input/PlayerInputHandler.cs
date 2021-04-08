@@ -19,6 +19,7 @@ public class PlayerInputHandler : MonoBehaviour
     public bool DashInput { get; private set; }
     public bool DashInputStop { get; private set; }
     public bool PunchInput { get; private set; }
+    public bool AnyKeyPressedInput { get; private set; }
 
     private float jumpInputStartTime;
     private float dashInputStartTime;
@@ -110,6 +111,19 @@ public class PlayerInputHandler : MonoBehaviour
         }
     }
 
+    public void OnAnyKeyPressedInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            AnyKeyPressedInput = true;
+        }
+
+        if (context.canceled)
+        {
+            AnyKeyPressedInput = false;
+        }
+    }
+
     public void OnPunchInput(InputAction.CallbackContext context)
     {
         if (context.started)
@@ -125,6 +139,7 @@ public class PlayerInputHandler : MonoBehaviour
             DashInput = false;
         }
     }
+    
 
     
     

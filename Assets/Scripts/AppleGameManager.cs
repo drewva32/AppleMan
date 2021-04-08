@@ -6,6 +6,10 @@ public class AppleGameManager : MonoBehaviour
     [SerializeField] private GameObject playerAndLevelsPrefab;
     [SerializeField] private int startingLives;
     [SerializeField] private PlayerData playerData;
+
+    [Header("UI")] [SerializeField] private GameObject MainMenuScreen;
+    [SerializeField] private GameObject gameOverScreen;
+    
     
     private static AppleGameManager _instance;
     public static AppleGameManager Instance => _instance;
@@ -31,9 +35,31 @@ public class AppleGameManager : MonoBehaviour
             Destroy(gameObject);
         else
             _instance = this;
-        
+
+        _currentPlayer = FindObjectOfType<Player>();
+        _currentPlayerTransform = _currentPlayer.transform;
         TryGetLevelPosition();
         _lives = startingLives;
+    }
+
+    private void Start()
+    {
+        //pause time if we have splash screen/main screen
+
+    }
+
+    public void StartGame()
+    {
+        Time.timeScale = 1;
+        AudioListener.pause = false;
+    }
+
+    public void MainMenu()
+    {
+        //pause time
+        //fade in music that plays regardless of timescale
+        AudioManager.Instance.MusicAudioController.FadeInThemeMusic();
+        MainMenuScreen.SetActive(true);
     }
 
     private void OnDestroy()
@@ -96,6 +122,17 @@ public class AppleGameManager : MonoBehaviour
         
         ResetGameState();
         ResetPlayer();
+        
+        OpenGameOverScreen();
+    }
+
+    private void OpenGameOverScreen()
+    {
+        Time.timeScale = 0;
+        AudioListener.pause = true;
+        gameOverScreen.SetActive(true);
+        var _gameOver = gameOverScreen.GetComponent<GameOverScreen>();
+        _gameOver.GetPlayerInput(CurrentPlayer.InputHandler);
     }
 
     private void ResetGameState()
