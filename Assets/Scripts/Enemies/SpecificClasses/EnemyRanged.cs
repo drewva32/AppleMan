@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Grape : EnemyBase
+public class EnemyRanged : EnemyBase
 {
+    [SerializeField]
+    private int _hitPoints = 2;
     [SerializeField]
     private GameObject _projectile;
     [SerializeField]
@@ -13,6 +15,7 @@ public class Grape : EnemyBase
     private void Start()
     {
         _projectileParent = GameObject.Find("Projectiles").transform;
+        SetupStats(true, _hitPoints);
     }
 
     public override void LaunchProjectile()

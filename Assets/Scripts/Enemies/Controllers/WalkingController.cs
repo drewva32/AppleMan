@@ -6,15 +6,9 @@ public class WalkingController : MonoBehaviour
     [SerializeField]
     private float _visionDistatnce = 0;
     [SerializeField]
-    private float _protectStartDistance = 0.2f;
-    [SerializeField]
-    private float _meleeDistance = 0.5f;
-    [SerializeField]
     private float _speed = 2.0f;
     [SerializeField]
     private Transform _surfaceChecker;
-    [SerializeField]
-    private Transform _meleeVector;
     [SerializeField]
     private LayerMask _turnLayerMask;
     [SerializeField]
@@ -29,31 +23,40 @@ public class WalkingController : MonoBehaviour
 
     public Transform WallCheck => _surfaceChecker;
     public float VisionDistance => _visionDistatnce;
-    public float ProtectDistance => _protectStartDistance;
-    public float MeleeDistance => _meleeDistance;
-    public Transform MeleeChecker => _meleeVector;
     public LayerMask PlayerLayer => _playerLayerMask;
     public Rigidbody2D RB => _rb;
     public Transform Player => _player;
-    
+    public EnemyMelee Melee => _melee;
+    public EnemyRanged Ranged => _ranged;
+    public EnemyProtect Protect => _protect;
+    public float Speed => _speed;
+
     private bool _timeToTurn = false;
     private bool _onPlatform = true;
     private Rigidbody2D _rb;
-    private Vector3 vectorFacingDirection;
-    private Transform _player;
+    private Vector3 _vectorFacingDirection;
+    private EnemyMelee _melee;
+    private EnemyRanged _ranged;
+    private EnemyProtect _protect;
 
-    public Vector3 vectorDirection => vectorFacingDirection;
+    private Transform _player;  /// <summary>
+    // Replace this with the AppleMan.instance for better performance
+    /// </summary>
+
+    public Vector3 vectorDirection => _vectorFacingDirection;
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
-
-        vectorFacingDirection = new Vector3(_facingDirection, 0, 0);
+        _vectorFacingDirection = new Vector3(_facingDirection, 0, 0);
     }
 
     private void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player").transform;
+        _ranged = GetComponent<EnemyRanged>();
+        _melee = GetComponent<EnemyMelee>();
+        _protect = GetComponent<EnemyProtect>();
     }
 
     public void Walk()
@@ -71,10 +74,15 @@ public class WalkingController : MonoBehaviour
     public void CheckDirection ()
     {
         // Raycast to look for wall
-        _timeToTurn = Physics2D.Raycast(_surfaceChecker.position, vectorFacingDirection, _wallCheckDistance, _turnLayerMask);
+        _timeToTurn = Physics2D.Raycast(_surfaceChecker.position, _vectorFacingDirection, _wallCheckDistance, _turnLayerMask);
         _onPlatform = Physics2D.Raycast(_surfaceChecker.position, Vector3.down, platformRayDistance, _turnLayerMask);
         if(_timeToTurn || !_onPlatform)
             Flip();
+    }
+
+    public void ChangeWalkSpeed(float newSpeed)
+    {
+        _speed = newSpeed;
     }
 
     private void OnDrawGizmos()
@@ -88,18 +96,14 @@ public class WalkingController : MonoBehaviour
         // Draw ray to check for wall
         Gizmos.color = Color.black;
         Gizmos.DrawRay(_surfaceChecker.position, new Vector3(_facingDirection * _wallCheckDistance, 0, 0));
-        // Draw circle for Melee
-        Gizmos.color = Color.red;
-        if(_meleeVector != null)
-            Gizmos.DrawWireSphere(_meleeVector.position, _meleeDistance);
     }
 
     private void Flip()
     {
         // Switch the way the player is labelled as facing.
         _facingDirection *= -1;
-        vectorFacingDirection *= _facingDirection;
-        vectorFacingDirection = new Vector3(_facingDirection, 0, 0);
+        _vectorFacingDirection *= _facingDirection;
+        _vectorFacingDirection = new Vector3(_facingDirection, 0, 0);
         transform.Rotate(0.0f, 180.0f, 0.0f);
     }
 }

@@ -9,14 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15121a48b77e00b49a162d9fb80bcf98, type: 3}
-  m_Name: ProtectPartolState_SO
+  m_Script: {fileID: 11500000, guid: 80eac0512fd25c54b929ffc7a695a031, type: 3}
+  m_Name: CarrotRunState_SO
   m_EditorClassIdentifier: 
   _animBoolName: walk
   _actions:
   - {fileID: 11400000, guid: 766c9be01a22a6448866e6907bd66fc7, type: 2}
   _transitions:
   - _decision: {fileID: 11400000, guid: 97e80ade1457db04daa0704054ebdb49, type: 2}
-    transitionToState: {fileID: 11400000, guid: 210dbf05554a36b47a6350ad30d33273, type: 2}
-  - _decision: {fileID: 11400000, guid: 6275eefacf58bd54e8cd4ee08519a790, type: 2}
-    transitionToState: {fileID: 11400000, guid: 524edc0577298f148862f7d11994b186, type: 2}
+    transitionToState: {fileID: 11400000, guid: fe212dbf2381b9f46a17285196ccd51e, type: 2}
+  - _decision: {fileID: 11400000, guid: d59fd9d092d89ff458cb5afae373d618, type: 2}
+    transitionToState: {fileID: 11400000, guid: 28554443e3513bf4d84da7f6a6e67248, type: 2}
+  runSpeed: 3

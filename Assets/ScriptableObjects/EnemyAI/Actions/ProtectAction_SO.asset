@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c758e658fdf8174b80044f13bdd2cd6, type: 3}
-  m_Name: IsPlayerOutOfProtectionRange_SO
+  m_Script: {fileID: 11500000, guid: de7eb3c9fcaf55245b2fbb24f05857e9, type: 3}
+  m_Name: ProtectAction_SO
   m_EditorClassIdentifier: 

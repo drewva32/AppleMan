@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Create Action/MeleeAction_SO", fileName = "MeleeAction_SO", order = 0)]
@@ -14,7 +12,7 @@ public class MeleeAction_SO : StateAction
     public override void LogicUpdate(PluggableStateController controller)
     {
         // Check Punch radius
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(controller.WalkingController.MeleeChecker.position, controller.WalkingController.MeleeDistance, controller.WalkingController.PlayerLayer);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(controller.WalkingController.Melee.transform.position, controller.WalkingController.Melee.MeleeDistance, controller.WalkingController.PlayerLayer);
         for (int i = 0; i < colliders.Length; i++)
         {
             if(colliders[i].tag == "Player")

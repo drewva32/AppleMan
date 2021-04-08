@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15121a48b77e00b49a162d9fb80bcf98, type: 3}
-  m_Name: RangedAttackState_SO
+  m_Name: CarrotTakeHitState_SO
   m_EditorClassIdentifier: 
-  _animBoolName: attack
+  _animBoolName: takeHit
   _actions:
   - {fileID: 11400000, guid: 35019a911e5984c4fa1f68b8506407e0, type: 2}
   _transitions:
+  - _decision: {fileID: 11400000, guid: 44ffb5d9cf68034429cc11164265a45f, type: 2}
+    transitionToState: {fileID: 11400000, guid: 56769bc5d3ad42b42add53ae56353505, type: 2}
   - _decision: {fileID: 11400000, guid: 3b394fb416830214794314fa24d5e4a2, type: 2}
-    transitionToState: {fileID: 11400000, guid: 62f879ad3aba5294788a4776dda2a2b5, type: 2}
+    transitionToState: {fileID: 11400000, guid: 28554443e3513bf4d84da7f6a6e67248, type: 2}
