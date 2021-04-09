@@ -182,8 +182,9 @@ public class Player : MonoBehaviour
         {
             foreach (Collider2D col in colliders)
             {
+                var directionToPlayer = (transform.position - col.transform.position).normalized;
                 var punchable = col.GetComponent<IPlayerInteractions>();
-                punchable?.TakePunch(playerData.punchDamage);
+                punchable?.TakePlayerHit(playerData.punchDamage,directionToPlayer,15);
             }
         }
     }
@@ -198,7 +199,7 @@ public class Player : MonoBehaviour
             {
                 var directionToPlayer = (transform.position - collider.transform.position).normalized;
                 var slideHit = collider.GetComponent<IPlayerInteractions>();
-                slideHit?.TakeSlide(playerData.groundSlideDamage, directionToPlayer);
+                slideHit?.TakePlayerHit(playerData.groundSlideDamage, directionToPlayer,100);
             }
         }
     }

@@ -640,7 +640,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &346089216
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4094,11 +4094,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5261514312619976474, guid: 3b304d58ef76d0348b6d25517d1c4f9c, type: 3}
       propertyPath: m_ColliderPaths.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5261514312619976478, guid: 3b304d58ef76d0348b6d25517d1c4f9c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5261514312892883937, guid: 3b304d58ef76d0348b6d25517d1c4f9c, type: 3}
       propertyPath: m_IsActive
@@ -4122,11 +4122,11 @@ PrefabInstance:
       objectReference: {fileID: 1943316145693439104}
     - target: {fileID: 5261514313092545356, guid: 3b304d58ef76d0348b6d25517d1c4f9c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5261514313092545359, guid: 3b304d58ef76d0348b6d25517d1c4f9c, type: 3}
       propertyPath: m_ColliderPaths.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5261514313098257875, guid: 3b304d58ef76d0348b6d25517d1c4f9c, type: 3}
       propertyPath: m_IsActive
@@ -4162,11 +4162,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5261514313573259040, guid: 3b304d58ef76d0348b6d25517d1c4f9c, type: 3}
       propertyPath: m_ColliderPaths.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5261514313573259045, guid: 3b304d58ef76d0348b6d25517d1c4f9c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5261514313758737954, guid: 3b304d58ef76d0348b6d25517d1c4f9c, type: 3}
       propertyPath: m_IsActive
@@ -4198,11 +4198,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5261514313870755924, guid: 3b304d58ef76d0348b6d25517d1c4f9c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5261514313870755927, guid: 3b304d58ef76d0348b6d25517d1c4f9c, type: 3}
       propertyPath: m_ColliderPaths.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5261514313914377473, guid: 3b304d58ef76d0348b6d25517d1c4f9c, type: 3}
       propertyPath: m_ColliderPaths.Array.size
@@ -4214,11 +4214,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5261514314051933414, guid: 3b304d58ef76d0348b6d25517d1c4f9c, type: 3}
       propertyPath: m_ColliderPaths.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5261514314051933435, guid: 3b304d58ef76d0348b6d25517d1c4f9c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5261514314094371578, guid: 3b304d58ef76d0348b6d25517d1c4f9c, type: 3}
       propertyPath: m_ColliderPaths.Array.size
