@@ -18,11 +18,11 @@ public class LevelManager : MonoBehaviour
         if(player == null)
             player = FindObjectOfType<Player>();
         playerTransform = player.transform;
-        InitializeLevels();
     }
 
     private void Start()
     {
+        InitializeLevels();
         player.PlayerHealthController.OnDie += LoadAtLastCheckPoint;
     }
 
