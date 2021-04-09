@@ -39,6 +39,8 @@ public class PlayerGroundSlideState : PlayerAbilityState
             player.Flip();
             jumpState.DecreaseAmountOfJumpsLeft();
         }
+
+        player.PlayerHealthController.CanTakeDamage = false;
     }
 
     public override void AnimationTrigger()
@@ -47,10 +49,12 @@ public class PlayerGroundSlideState : PlayerAbilityState
         player.Kick();
     }
 
+
     public override void Exit()
     {
         base.Exit();
         player.SetColliderHeight(false);
+        player.PlayerHealthController.CanTakeDamage = true;
     }
 
     public override void LogicUpdate()

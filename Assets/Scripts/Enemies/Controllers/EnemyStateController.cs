@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyStateController : MonoBehaviour, IPlayerInteractions
+public class EnemyStateController : MonoBehaviour
 {
     public EnemyAttackState EnemyAttackState { get; private set; }
     public EnemyTakeHitState EnemyTakeHitState { get; private set; }

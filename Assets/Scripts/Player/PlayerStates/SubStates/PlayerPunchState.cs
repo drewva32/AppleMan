@@ -45,7 +45,6 @@ public class PlayerPunchState : PlayerAbilityState
     {
         base.LogicUpdate();
 
-        _xInput = player.InputHandler.NormInputX;
         
         if (Time.time >= startTime + playerData.punchTime)
         {
@@ -58,6 +57,7 @@ public class PlayerPunchState : PlayerAbilityState
         base.PhysicsUpdate();
         // if(Math.Abs(_xInput - player.FacingDirection) < 0.15)
         //     player.SetVelocityX(playerData.movementVelocity * player.FacingDirection);
+        _xInput = player.InputHandler.NormInputX;
         player.CheckIfShouldFlip(_xInput);
         player.SetVelocityX(playerData.movementVelocity * _xInput);
         

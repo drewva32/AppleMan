@@ -44,7 +44,6 @@ public class LevelManager : MonoBehaviour
             _gameLevels[i].gameObject.SetActive(false);
         }
         LoadLevel(0);
-        Debug.Log("reload levels");
     }
 
     private void CheckForCheckPoint(int index)
@@ -52,7 +51,9 @@ public class LevelManager : MonoBehaviour
         var checkpoint = _gameLevels[index].Checkpoint;
         if (checkpoint != null)
         {
+            Debug.Log("VAR");
             _checkpoints.Add(checkpoint);
+            checkpoint.ReceiveLevelIndex(index);
             //could give checkpoint its index here instead of having the game level do that in start
         }
     }
@@ -102,9 +103,9 @@ public class LevelManager : MonoBehaviour
 
     public int GetLastCheckpointLevelIndex()
     {
+        Debug.Log("checkpoint index" + _checkpoints.Count);
         if (_checkpoints.Count > 0)
             return _checkpoints.Last(t => t.Passed).LevelIndex;
-        else
-            return 0;
+        return 0;
     }
 }

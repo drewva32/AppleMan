@@ -33,12 +33,8 @@ public class BreakableBox : MonoBehaviour , IPlayerInteractions
         gameObject.SetActive(false);
     }
 
-    public void TakePunch(int damageAmount)
-    {
-        Break();
-    }
 
-    public void TakeSlide(int damageAmount, Vector3 directionToPlayer)
+    public void TakePlayerHit(int damageAmount, Vector3 directionToPlayer, float amountOfForce)
     {
         Break();
     }

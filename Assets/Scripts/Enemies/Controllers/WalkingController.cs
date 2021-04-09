@@ -32,6 +32,7 @@ public class WalkingController : MonoBehaviour
     public EnemyProtect Protect => _protect;
     public float Speed => _speed;
     public bool OnPlatform => _onPlatform;
+    public Collider2D Collider => _collider;
 
     private bool _atWall;
     private bool _atEdge;
@@ -112,5 +113,10 @@ public class WalkingController : MonoBehaviour
         _vectorFacingDirection *= _facingDirection;
         _vectorFacingDirection = new Vector3(_facingDirection, 0, 0);
         transform.Rotate(0.0f, 180.0f, 0.0f);
+    }
+
+    public void StopVelocity()
+    {
+        _rb.velocity = Vector2.zero;
     }
 }
