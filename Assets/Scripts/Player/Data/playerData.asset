@@ -36,7 +36,7 @@ MonoBehaviour:
   punchCoolDown: 0.3
   punchTime: 0.35
   punchDamage: 4
-  punchHitRadius: 0.5
+  punchHitRadius: 0.65
   punchableLayers:
     serializedVersion: 2
     m_Bits: 320
@@ -44,7 +44,7 @@ MonoBehaviour:
   slideCooldown: 0.35
   groundSlideDamage: 1
   groundSlideVelocity: 10
-  slideHitRadius: 0.5
+  slideHitRadius: 0.65
   slideHitLayers:
     serializedVersion: 2
     m_Bits: 320
