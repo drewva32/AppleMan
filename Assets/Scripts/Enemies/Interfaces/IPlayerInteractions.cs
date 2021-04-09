@@ -4,6 +4,5 @@ using UnityEngine;
 
 public interface IPlayerInteractions
 {
-    void TakePunch(int damageAmount);
-    void TakeSlide(int damageAmount, Vector3 directionToPlayer);
+    void TakePlayerHit(int damageAmount, Vector3 directionToPlayer, float amountOfForce);
 }

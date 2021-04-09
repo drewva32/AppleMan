@@ -30,17 +30,6 @@ public class EnemyBase : MonoBehaviour, IPlayerInteractions, ITakeSpikeDamage
     public virtual void LaunchProjectile()
     { }
 
-    public void TakePunch(int damageAmount)
-    {
-        TakeDamage(damageAmount);
-    }
-
-    public void TakeSlide(int damageAmount, Vector3 directionToPlayer)
-    {
-        TakeDamage(damageAmount);
-        _walkingController.RB.AddForce(new Vector2(-directionToPlayer.x * 100, 0));
-    }
-
     public void ResetHasTakenDamage()
     {
         _hasTakenDamage = false;
@@ -61,5 +50,11 @@ public class EnemyBase : MonoBehaviour, IPlayerInteractions, ITakeSpikeDamage
     public void TakeSpikeDamage()
     {
         TakeDamage(1);
+    }
+
+    public void TakePlayerHit(int damageAmount, Vector3 directionToPlayer, float amountOfForce)
+    {
+        TakeDamage(damageAmount);
+        _walkingController.RB.AddForce(new Vector2(-directionToPlayer.x * amountOfForce, 0));
     }
 }
