@@ -176,24 +176,30 @@ public class Player : MonoBehaviour
 
     public void Punch()
     {
-        Collider2D collider = Physics2D
-            .OverlapCircle(punchHitCheck.position, playerData.punchHitRadius, playerData.punchableLayers);
-        if (collider)
+        Collider2D[] colliders = Physics2D
+            .OverlapCircleAll(punchHitCheck.position, playerData.punchHitRadius, playerData.punchableLayers);
+        if (colliders.Length > 0)
         {
-            var punchable = collider.GetComponent<IPlayerInteractions>();
-            punchable?.TakePunch(playerData.punchDamage);
+            foreach (Collider2D col in colliders)
+            {
+                var punchable = col.GetComponent<IPlayerInteractions>();
+                punchable?.TakePunch(playerData.punchDamage);
+            }
         }
     }
 
     public void Kick()
     {
-        Collider2D collider = Physics2D
-            .OverlapCircle(groundSlideHitCheck.position, playerData.slideHitRadius, playerData.slideHitLayers);
-        if (collider)
+        Collider2D[] colliders = Physics2D
+            .OverlapCircleAll(groundSlideHitCheck.position, playerData.slideHitRadius, playerData.slideHitLayers);
+        if (colliders.Length > 0)
         {
-            var directionToPlayer = (transform.position - collider.transform.position).normalized;
-            var slideHit = collider.GetComponent<IPlayerInteractions>();
-            slideHit?.TakeSlide(playerData.groundSlideDamage, directionToPlayer);
+            foreach (Collider2D collider in colliders)
+            {
+                var directionToPlayer = (transform.position - collider.transform.position).normalized;
+                var slideHit = collider.GetComponent<IPlayerInteractions>();
+                slideHit?.TakeSlide(playerData.groundSlideDamage, directionToPlayer);
+            }
         }
     }
 

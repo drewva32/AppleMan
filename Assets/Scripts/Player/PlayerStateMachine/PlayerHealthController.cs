@@ -12,6 +12,8 @@ public class PlayerHealthController : MonoBehaviour, ITakeSpikeDamage
     public bool TookDamage { get; private set; }
     public int MaxHealth { get; private set; }
     public int CurrentHealth { get => _currentHealth; set => _currentHealth = value; }
+
+    public bool CanTakeDamage { get; set; }
     
     private int _currentHealth;
     private float _lastTimePlayerTookDamage;
@@ -23,13 +25,14 @@ public class PlayerHealthController : MonoBehaviour, ITakeSpikeDamage
         MaxHealth = 5;
         _currentHealth = MaxHealth;
         _lastTimePlayerTookDamage = 0;
+        CanTakeDamage = true;
     }
 
     public void ResetTookDamage() => TookDamage = false;
 
     public void TakeDamage()
     {
-        if (Time.time < _lastTimePlayerTookDamage + takeDamageCooldownTime)
+        if (Time.time < _lastTimePlayerTookDamage + takeDamageCooldownTime || !CanTakeDamage)
             return;
         Debug.Log("took dammage");
 
