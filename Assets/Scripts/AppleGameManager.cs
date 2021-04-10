@@ -20,6 +20,7 @@ public class AppleGameManager : MonoBehaviour
 
     public Transform CurrentPlayerTransform => _currentPlayerTransform;
     public Player CurrentPlayer => _currentPlayer;
+    public LevelsAndPlayer LevelsAndPlayer => _currentGame;
 
     private float _gameTime;
     private int _coins;
@@ -29,6 +30,7 @@ public class AppleGameManager : MonoBehaviour
     private Vector3 _levelPosition;
     private Player _currentPlayer;
     private LevelsAndPlayer _currentGame;
+    private LevelManager _currentLevelManager;
 
     private void Awake()
     {
@@ -37,10 +39,21 @@ public class AppleGameManager : MonoBehaviour
         else
             _instance = this;
 
+        _currentGame = GetComponentInChildren<LevelsAndPlayer>();
         _currentPlayer = FindObjectOfType<Player>();
         _currentPlayerTransform = _currentPlayer.transform;
         TryGetLevelPosition();
         _lives = startingLives;
+    }
+
+
+    private void Start()
+    {
+        if (_currentGame != null)
+        {
+            _currentPlayer = _currentGame.Player;
+            _currentLevelManager = _currentGame.LevelManager;
+        }
     }
 
     private void Update()
@@ -48,16 +61,12 @@ public class AppleGameManager : MonoBehaviour
         _gameTime += Time.deltaTime;
     }
 
-    private void Start()
-    {
-        //pause time if we have splash screen/main screen
-
-    }
-
     public void StartGame()
     {
         Time.timeScale = 1;
         AudioListener.pause = false;
+        
+        _currentLevelManager.LoadLevel(0);
     }
 
     public void MainMenu()
@@ -155,6 +164,7 @@ public class AppleGameManager : MonoBehaviour
         _currentGame = GetComponentInChildren<LevelsAndPlayer>();
         _currentPlayer = _currentGame.Player;
         _currentPlayerTransform = _currentPlayer.transform;
+        _currentLevelManager = _currentGame.LevelManager;
         OnPlayerCloned?.Invoke(_currentPlayer.PlayerHealthController);
 
         if (gameOverScreen == null)

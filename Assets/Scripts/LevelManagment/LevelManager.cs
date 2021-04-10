@@ -43,7 +43,9 @@ public class LevelManager : MonoBehaviour
             //     continue;
             _gameLevels[i].gameObject.SetActive(false);
         }
-        LoadLevel(0);
+
+        if (AppleGameManager.Instance.LevelsAndPlayer == null)
+            LoadLevel(0);
     }
 
     private void CheckForCheckPoint(int index)
