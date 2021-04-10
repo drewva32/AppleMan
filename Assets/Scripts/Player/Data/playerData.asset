@@ -36,7 +36,7 @@ MonoBehaviour:
   punchCoolDown: 0.3
   punchTime: 0.35
   punchDamage: 4
-  punchHitRadius: 0.65
+  punchHitRadius: 0.8
   punchableLayers:
     serializedVersion: 2
     m_Bits: 320
