@@ -54,7 +54,7 @@ public class EnemyBase : MonoBehaviour, IPlayerInteractions, ITakeSpikeDamage
 
     public void TakePlayerHit(int damageAmount, Vector3 directionToPlayer, float amountOfForce)
     {
-        _walkingController.StopVelocity();
+        _walkingController.SetVelocity(Vector2.zero);
         TakeDamage(damageAmount);
         _walkingController.RB.AddForce(new Vector2(-directionToPlayer.x * amountOfForce, 0));
     }

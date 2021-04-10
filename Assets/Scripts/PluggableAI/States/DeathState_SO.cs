@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Create State/DeathState_SO", fileName = "DeathState_SO", order = 0)]

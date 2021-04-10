@@ -184,7 +184,7 @@ public class Player : MonoBehaviour
             {
                 var directionToPlayer = (transform.position - col.transform.position).normalized;
                 var punchable = col.GetComponent<IPlayerInteractions>();
-                punchable?.TakePlayerHit(playerData.punchDamage,directionToPlayer,15);
+                punchable?.TakePlayerHit(playerData.punchDamage,directionToPlayer,25);
             }
         }
     }
