@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15121a48b77e00b49a162d9fb80bcf98, type: 3}
+  m_Name: TestMeleeChargeAttackState_SO
+  m_EditorClassIdentifier: 
+  _animBoolName: attack
+  _actions:
+  - {fileID: 11400000, guid: cc89e30f8ed499945909f535b82c382c, type: 2}
+  _transitions:
+  - _decision: {fileID: 11400000, guid: 97e80ade1457db04daa0704054ebdb49, type: 2}
+    transitionToState: {fileID: 11400000, guid: 210dbf05554a36b47a6350ad30d33273, type: 2}
+  - _decision: {fileID: 11400000, guid: 3b394fb416830214794314fa24d5e4a2, type: 2}
+    transitionToState: {fileID: 11400000, guid: fb105f470c276004eb69fb8eee3b8dbf, type: 2}

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Create Decision/IsDeadDecision_SO", fileName = "IsDeadDecision_SO", order = 0)]

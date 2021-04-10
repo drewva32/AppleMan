@@ -23,6 +23,7 @@ public class WalkingController : MonoBehaviour
 
     public Transform WallCheck => _surfaceChecker;
     public Vector3 vectorDirection => _vectorFacingDirection;
+    public Vector3 ChargeLocation => _chargeStateLocation;
     public float VisionDistance => _visionDistatnce;
     public LayerMask PlayerLayer => _playerLayerMask;
     public Rigidbody2D RB => _rb;
@@ -39,6 +40,7 @@ public class WalkingController : MonoBehaviour
     private bool _onPlatform;
     private Rigidbody2D _rb;
     private Vector3 _vectorFacingDirection;
+    private Vector3 _chargeStateLocation;
     private EnemyMelee _melee;
     private EnemyRanged _ranged;
     private EnemyProtect _protect;
@@ -67,11 +69,13 @@ public class WalkingController : MonoBehaviour
         {
             if (_facingDirection == 1)
             {
-                _rb.velocity = new Vector2(_speed, _rb.velocity.y);
+                SetVelocity(new Vector2(_speed, _rb.velocity.y));
+                //_rb.velocity = new Vector2(_speed, _rb.velocity.y);
             }
             else
             {
-                _rb.velocity = new Vector2(-_speed, _rb.velocity.y);
+                SetVelocity(new Vector2(-_speed, _rb.velocity.y));
+                //_rb.velocity = new Vector2(-_speed, _rb.velocity.y);
             }
         }
         
@@ -108,15 +112,20 @@ public class WalkingController : MonoBehaviour
 
     private void Flip()
     {
-        // Switch the way the player is labelled as facing.
         _facingDirection *= -1;
         _vectorFacingDirection *= _facingDirection;
         _vectorFacingDirection = new Vector3(_facingDirection, 0, 0);
         transform.Rotate(0.0f, 180.0f, 0.0f);
     }
 
-    public void StopVelocity()
+    public void SetVelocity(Vector2 newVelocity)
     {
-        _rb.velocity = Vector2.zero;
+        _rb.velocity = newVelocity;
+    }
+
+    public Vector3 StoreLocation()
+    {
+        _chargeStateLocation = this.transform.position;
+        return ChargeLocation;
     }
 }
