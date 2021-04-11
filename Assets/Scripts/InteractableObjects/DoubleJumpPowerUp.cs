@@ -34,7 +34,8 @@ public class DoubleJumpPowerUp : MonoBehaviour, IHaveAnimationEndEvent
         var player = other.GetComponent<Player>();
         if (player && !_collected)
         {
-            transitionText.gameObject.SetActive(true);
+            if(transitionText != null)
+                transitionText.gameObject.SetActive(true);
             _collected = true;
             playerData.amountOfJumps = 2;
             _animator.SetTrigger(Pickup);
