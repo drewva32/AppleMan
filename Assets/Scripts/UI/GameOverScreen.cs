@@ -77,4 +77,9 @@ public class GameOverScreen : MonoBehaviour
             AppleGameManager.Instance.MainMenu();
         }
     }
+
+    public string GetRating(int Score)
+    {
+        
+    }
 }
