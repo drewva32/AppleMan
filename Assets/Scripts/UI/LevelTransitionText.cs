@@ -9,6 +9,7 @@ public class LevelTransitionText : MonoBehaviour
     private Animator _animator;
     private bool _init;
     private bool _hasTransitioned;
+    private static readonly int Transition1 = Animator.StringToHash("transition");
 
     private void Awake()
     {
@@ -18,7 +19,7 @@ public class LevelTransitionText : MonoBehaviour
     public void Transition(string text)
     {
         tmpText.text = text;
-        _animator.SetTrigger("transition");
+        _animator.SetTrigger(Transition1);
     }
 
     private void OnEnable()
