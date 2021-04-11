@@ -32,6 +32,11 @@ public class OneUP : MonoBehaviour,IHaveAnimationEndEvent
         _isPickedUp = false;
         gameObject.SetActive(true);
     }
+    private void OnEnable()
+    {
+        if(_isPickedUp)
+            gameObject.SetActive(false);
+    }
     public void OnAnimationEnd()
     {
         gameObject.SetActive(false);

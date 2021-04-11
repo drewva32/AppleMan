@@ -7,6 +7,7 @@ public class BreakableBox : MonoBehaviour , IPlayerInteractions
     private Animator _animator;
     private Collider2D _collider;
     private static readonly int Property = Animator.StringToHash("break");
+    private bool _isBroken;
 
     private void Awake()
     {
@@ -17,6 +18,10 @@ public class BreakableBox : MonoBehaviour , IPlayerInteractions
     public void OnEnable()
     {
         _collider.enabled = true;
+        if (_isBroken)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     public void Break()
@@ -24,6 +29,7 @@ public class BreakableBox : MonoBehaviour , IPlayerInteractions
         _animator.SetTrigger(Property);
         _collider.enabled = false;
         StartCoroutine(DisableAfterBreaking());
+        _isBroken = true;
     }
 
     private IEnumerator DisableAfterBreaking()
@@ -32,6 +38,7 @@ public class BreakableBox : MonoBehaviour , IPlayerInteractions
         yield return new WaitForSeconds(0.66f);
         gameObject.SetActive(false);
     }
+    
 
 
     public void TakePlayerHit(int damageAmount, Vector3 directionToPlayer, float amountOfForce)
