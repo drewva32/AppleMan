@@ -64,7 +64,7 @@ public class PlayerHealthController : MonoBehaviour, ITakeSpikeDamage
         _spriteInvulnerableFlash.FlashSprite();
     }
 
-    private void Die()
+    public void Die()
     {
         Debug.Log("mamma mia!");
         OnDie?.Invoke();
