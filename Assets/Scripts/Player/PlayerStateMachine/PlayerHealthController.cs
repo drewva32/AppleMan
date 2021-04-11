@@ -68,8 +68,11 @@ public class PlayerHealthController : MonoBehaviour, ITakeSpikeDamage
     {
         Debug.Log("mamma mia!");
         OnDie?.Invoke();
-        if(AppleGameManager.Instance!=null)
+        if (AppleGameManager.Instance != null)
+        {
             AppleGameManager.Instance.ChangeLives(false);
+            AppleGameManager.Instance.lifeID++;
+        }
         CurrentHealth = 5;
         OnHealthChanged?.Invoke(_currentHealth);
     }

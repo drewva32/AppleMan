@@ -21,6 +21,7 @@ public class AppleGameManager : MonoBehaviour
     public Transform CurrentPlayerTransform => _currentPlayerTransform;
     public Player CurrentPlayer => _currentPlayer;
     public LevelsAndPlayer LevelsAndPlayer => _currentGame;
+    public int lifeID { get; set; }
 
     private float _gameTime;
     private int _coins;

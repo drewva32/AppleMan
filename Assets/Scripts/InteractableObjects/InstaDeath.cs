@@ -10,6 +10,7 @@ public class InstaDeath : MonoBehaviour
         var player = other.GetComponent<PlayerHealthController>();
         if (player)
         {
+            player.TakeDamage();
             player.Die();
         }
     }

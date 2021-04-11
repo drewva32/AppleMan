@@ -31,6 +31,11 @@ public class Coin : MonoBehaviour, IHaveAnimationEndEvent
             _isPickedUp = true;
         }
     }
+    private void OnEnable()
+    {
+        if(_isPickedUp)
+            gameObject.SetActive(false);
+    }
 
     //called by animation event.
     public void OnAnimationEnd()
