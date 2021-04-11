@@ -29,15 +29,17 @@ public class GameOverScreen : MonoBehaviour
         int score = CalculateScore(time,lives,coins,enemies);
         finalScoreText.text = score.ToString("N0");
 
-        rankAndDescriptionText.text = "CrabApple - Is That All YOU Got Bro?!";
+        rankAndDescriptionText.text = GetRating(score);
     }
 
     private int CalculateScore(int time, int lives, int coins, int enemies)
     {
-        int finalScore = -time;
+        int finalScore = 0;
+        if (lives > 0)
+            finalScore = -time * 3;
         finalScore += (lives * 1000);
         finalScore += (coins * 6);
-        finalScore += (enemies * 200);
+        finalScore += (enemies * 90);
         return finalScore;
     }
 
@@ -78,8 +80,19 @@ public class GameOverScreen : MonoBehaviour
         }
     }
 
-    public string GetRating(int Score)
+    public string GetRating(int score)
     {
-        return "hi";
+        if (score > 8000)
+            return "Apple of Our Eye - The fruits of your labor paid off!";
+        else if (score > 6000)
+            return "The big apple - Almost to the top!";
+        else if (score > 2000)
+            return "Honeycrisp - How ya like them apples?!";
+        else if (score > 2000)
+            return "Bruised but not Broken - perhaps we could put you in a pie?";
+        else if (score > 1000)
+            return "Applesauce - Try to be more crisp next time!";
+        else if (true)
+            return "Crabapple - Try to be more crisp next time!";
     }
 }
