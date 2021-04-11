@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9144331248652658292}
   - component: {fileID: 9144331248652658293}
   m_Layer: 0
-  m_Name: LevelTransitionText (1)
+  m_Name: LevelTransitionText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,5 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b950d3e7d2ac2747a359c21113a8cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionText: HE IS THE LIGHT AND THE TRUTH
+  transitionText: 'LEVEL 1
+
+    BARREL ZONE'
   tmpText: {fileID: 0}
