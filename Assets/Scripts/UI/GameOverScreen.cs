@@ -80,6 +80,6 @@ public class GameOverScreen : MonoBehaviour
 
     public string GetRating(int Score)
     {
-        
+        return "hi";
     }
 }
