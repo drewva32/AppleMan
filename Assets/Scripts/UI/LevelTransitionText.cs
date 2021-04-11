@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class LevelTransitionText : MonoBehaviour
 {
-    [SerializeField] private string transitionText;
+    [SerializeField][Multiline] private string transitionText;
     [SerializeField] private TextMeshProUGUI tmpText;
     
     private Animator _animator;
