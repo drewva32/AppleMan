@@ -25,7 +25,7 @@ public class PlayerTakeDamageState : PlayerState
 
     public override void Enter()
     {
-        Debug.Log("entered damage state");
+        // Debug.Log("entered damage state");
         base.Enter();
         player.PlayerHealthController.ResetTookDamage();
         

@@ -7,6 +7,7 @@ public class DeathState_SO : State
     {
         base.OnEnter(controller);
         controller.WalkingController.Collider.enabled = false;
+        AppleGameManager.Instance.AddKill();
     }
 
     public override void OnExit(PluggableStateController controller)

@@ -10,5 +10,6 @@ public enum EMusicType
     PlatformerThemeFive,
     PlatformerThemeEleven,
     BattleThemeOne,
-    BattleThemeThree
+    BattleThemeThree,
+    BattleThemeFour
 }

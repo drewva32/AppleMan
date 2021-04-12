@@ -82,13 +82,13 @@ public class GameOverScreen : MonoBehaviour
 
     public string GetRating(int score)
     {
-        if (score > 8000)
+        if (score > 14000)
             return "Apple of Our Eye - The fruits of your labor paid off!";
+        else if (score > 10000)
+            return "The Big Apple - Almost to the top!";
         else if (score > 6000)
-            return "The big apple - Almost to the top!";
-        else if (score > 2000)
             return "Honeycrisp - How ya like them apples?!";
-        else if (score > 2000)
+        else if (score > 3000)
             return "Bruised but not Broken - perhaps we could put you in a pie?";
         else if (score > 1000)
             return "Applesauce - Try to be more crisp next time!";

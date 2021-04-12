@@ -34,7 +34,6 @@ public class PlayerHealthController : MonoBehaviour, ITakeSpikeDamage
     {
         if (Time.time < _lastTimePlayerTookDamage + takeDamageCooldownTime || !CanTakeDamage)
             return;
-        Debug.Log("took dammage");
 
         CurrentHealth--;
         OnHealthChanged?.Invoke(_currentHealth);
@@ -81,6 +80,12 @@ public class PlayerHealthController : MonoBehaviour, ITakeSpikeDamage
     public void TakeSpikeDamage()
     {
         TakeDamage();
+    }
+
+    public void ResetHealth()
+    {
+        CurrentHealth = 5;
+        OnHealthChanged?.Invoke(_currentHealth);
     }
     
 }

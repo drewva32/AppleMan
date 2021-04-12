@@ -14,6 +14,8 @@ public class MusicAudioController : MonoBehaviour
     [SerializeField] private AudioClip platformerThemeFive;
     [SerializeField] private AudioClip battleThemeOne;
     [SerializeField] private AudioClip battleThemeThree;
+    [SerializeField] private AudioClip battleThemeFour;
+    
 
     private AudioSource _audioSource;
     
@@ -34,6 +36,7 @@ public class MusicAudioController : MonoBehaviour
         musicDictionary.Add(EMusicType.PlatformerThemeOne, FadeToPlatformerThemeOne);
         musicDictionary.Add(EMusicType.ShortLoopSix,FadeToShortLoopSix);
         musicDictionary.Add(EMusicType.ShortLoopThree,FadeToShortLoopThree);
+        musicDictionary.Add(EMusicType.BattleThemeFour,FadeToBattleThemeFour);
     }
 
     public void FadeInThemeMusic()
@@ -49,10 +52,13 @@ public class MusicAudioController : MonoBehaviour
     public void FadeToPlatformerThemeEleven() => FadeOutThenIn(platformerThemeEleven);
     public void FadeToBattleThemeOne() => FadeOutThenIn(battleThemeOne);
     public void FadeToBattleThemeThree() => FadeOutThenIn(battleThemeThree);
+    public void FadeToBattleThemeFour() => FadeOutThenIn(battleThemeFour);
 
 
     private void FadeOutThenIn(AudioClip fadeToClip)
     {
+        if (_audioSource.clip == fadeToClip)
+            return;
         if (_fadeOutThenInRoutine != null)
             StopCoroutine(_fadeOutThenInRoutine);
         

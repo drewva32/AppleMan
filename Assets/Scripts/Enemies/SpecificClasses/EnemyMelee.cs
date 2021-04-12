@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class EnemyMelee : EnemyBase
@@ -14,10 +15,10 @@ public class EnemyMelee : EnemyBase
     public float MeleeDistance => _meleeDistance;
     public Transform MeleeChecker => _meleeVector;
     public bool IsChargeComplete => _chargeComplete;
+
     public float DashSpeed => _dashSpeed;
 
     private bool _chargeComplete = false;
-
 
     private void Start()
     {
@@ -36,4 +37,5 @@ public class EnemyMelee : EnemyBase
     {
         _chargeComplete = isChargeComplete;
     }
+
 }

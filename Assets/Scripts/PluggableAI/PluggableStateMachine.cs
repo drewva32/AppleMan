@@ -13,7 +13,7 @@ public class PluggableStateMachine
     public void Init(State startingState)
     {
         CurrentState = startingState;
-        Debug.Log("starting state" + CurrentState);
+        // Debug.Log("starting state" + CurrentState);
         CurrentState.OnEnter(_pluggableStateController);
     }
 
@@ -23,6 +23,6 @@ public class PluggableStateMachine
      
         newState.OnEnter(_pluggableStateController);
         CurrentState = newState;
-        Debug.Log("Entered " + CurrentState);
+        // Debug.Log("Entered " + CurrentState);
     }
 }
