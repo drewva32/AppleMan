@@ -309,7 +309,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a2a4befe7df3a42a861ddbdf9f95cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 30
-  _hitPoints: 10
+  _hitPoints: 7
   _projectile: {fileID: 4088495348738799551, guid: 51c2bc5f679d5254d9a5cd6528f0ca28, type: 3}
   _throwPosition: {fileID: 715306979}

@@ -171,10 +171,11 @@ public class AppleGameManager : MonoBehaviour
 
         _currentGame = GetComponentInChildren<LevelsAndPlayer>();
         _currentPlayer = _currentGame.Player;
-        _currentPlayer.PlayerHealthController.ResetHealth();
         _currentPlayerTransform = _currentPlayer.transform;
         _currentLevelManager = _currentGame.LevelManager;
         OnPlayerCloned?.Invoke(_currentPlayer.PlayerHealthController);
+        _currentPlayer.PlayerHealthController.ResetHealth();
+        
 
         if (gameOverScreen == null)
             return;
