@@ -21,6 +21,7 @@ public class WalkingController : MonoBehaviour
     private int _facingDirection = 1;
 
 
+    public int FacingDirection => _facingDirection;
     public Transform WallCheck => _surfaceChecker;
     public Vector3 vectorDirection => _vectorFacingDirection;
     public Vector3 ChargeLocation => _chargeStateLocation;
@@ -110,7 +111,7 @@ public class WalkingController : MonoBehaviour
         Gizmos.DrawRay(_surfaceChecker.position, new Vector3(_facingDirection * _wallCheckDistance, 0, 0));
     }
 
-    private void Flip()
+    public void Flip()
     {
         _facingDirection *= -1;
         _vectorFacingDirection *= _facingDirection;
