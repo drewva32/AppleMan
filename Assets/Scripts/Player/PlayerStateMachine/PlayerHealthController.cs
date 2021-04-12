@@ -81,5 +81,11 @@ public class PlayerHealthController : MonoBehaviour, ITakeSpikeDamage
     {
         TakeDamage();
     }
+
+    public void ResetHealth()
+    {
+        CurrentHealth = 5;
+        OnHealthChanged?.Invoke(_currentHealth);
+    }
     
 }
