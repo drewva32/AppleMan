@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 
 public class AppleGameManager : MonoBehaviour
@@ -6,6 +7,7 @@ public class AppleGameManager : MonoBehaviour
     [SerializeField] private GameObject playerAndLevelsPrefab;
     [SerializeField] private int startingLives;
     [SerializeField] private PlayerData playerData;
+    [SerializeField] private TextMeshProUGUI transitionText;
 
     [Header("UI")] [SerializeField] private GameObject MainMenuScreen;
     [SerializeField] private GameObject gameOverScreen;
@@ -19,6 +21,9 @@ public class AppleGameManager : MonoBehaviour
     public event Action<PlayerHealthController> OnPlayerCloned;
 
     public Transform CurrentPlayerTransform => _currentPlayerTransform;
+
+    public TextMeshProUGUI TransitionText => transitionText;
+
     public Player CurrentPlayer => _currentPlayer;
     public LevelsAndPlayer LevelsAndPlayer => _currentGame;
     public int lifeID { get; set; }
