@@ -12,7 +12,8 @@ public class AnimationHelper : MonoBehaviour
         _pluggableStateController = GetComponentInParent<PluggableStateController>();
         
         enemy = GetComponentInParent<EnemyBase>();
-        _parent = gameObject.transform.parent.gameObject;
+        if(enemy != null)
+            _parent = gameObject.transform.parent.gameObject;
     }
 
     public void AnimationTriggerFinish()

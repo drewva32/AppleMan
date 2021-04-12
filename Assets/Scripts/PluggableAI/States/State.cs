@@ -1,16 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class State : ScriptableObject
 {
-    [SerializeField] private string _animBoolName;
+    [SerializeField] public string _animBoolName;
     [SerializeField] private StateAction[] _actions;
     [SerializeField] private Transition[] _transitions;
     
     public virtual void OnEnter(PluggableStateController controller)
     {
         controller.Animator.SetBool(_animBoolName,true);
+        Debug.Log(_animBoolName);
         controller.SetStartTime(Time.time);
         controller.Enemy.AllowDamage(true);
     }
