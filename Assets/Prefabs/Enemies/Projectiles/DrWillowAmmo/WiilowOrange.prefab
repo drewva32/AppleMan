@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8380529558157051460}
   - component: {fileID: 6844164740567887234}
-  - component: {fileID: 5287653427743479113}
   - component: {fileID: 997046769848564477}
   - component: {fileID: 7450607985400818391}
+  - component: {fileID: -4078956483270620851}
   m_Layer: 6
-  m_Name: OrangeProjectile
+  m_Name: WiilowOrange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,21 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5287653427743479113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8026486183223346248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1acc4d261aa47d341b92d19e6b4364f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 1
-  _lifeTimer: 20
-  explosionEffect: {fileID: 4921923851486080393, guid: 53f171186e6ba2b4fac123c03dfee4ba, type: 3}
 --- !u!50 &997046769848564477
 Rigidbody2D:
   serializedVersion: 4
@@ -137,3 +122,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.0011566877}
   serializedVersion: 2
   m_Radius: 0.090070285
+--- !u!114 &-4078956483270620851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8026486183223346248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840001086ccf4ea429de5d39cb5e72a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 5
+  _lifeTimer: 2
+  explosionEffect: {fileID: 4921923851486080393, guid: 53f171186e6ba2b4fac123c03dfee4ba, type: 3}

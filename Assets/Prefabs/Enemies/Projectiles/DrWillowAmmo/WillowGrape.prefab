@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 7617418478181092394}
   - component: {fileID: 1410232818169331396}
   - component: {fileID: 4199235827017260444}
-  - component: {fileID: 719184259}
   - component: {fileID: 9111164687248328469}
+  - component: {fileID: -6229232358752991166}
   m_Layer: 6
-  m_Name: Grape_Projectile
+  m_Name: WillowGrape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,21 +106,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &719184259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4088495348738799551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1acc4d261aa47d341b92d19e6b4364f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 5
-  _lifeTimer: 3
-  explosionEffect: {fileID: 4921923851486080393, guid: c9fc1e7508b93154dac356c25dd401fb, type: 3}
 --- !u!58 &9111164687248328469
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -137,3 +122,18 @@ CircleCollider2D:
   m_Offset: {x: 0.009821892, y: -0.007366419}
   serializedVersion: 2
   m_Radius: 0.078969
+--- !u!114 &-6229232358752991166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4088495348738799551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840001086ccf4ea429de5d39cb5e72a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 5
+  _lifeTimer: 2
+  explosionEffect: {fileID: 4921923851486080393, guid: c9fc1e7508b93154dac356c25dd401fb, type: 3}

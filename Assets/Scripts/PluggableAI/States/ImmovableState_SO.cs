@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Create State/ ImmovableState_SO", fileName = "ImmovableState_SO", order = 0)]
+[CreateAssetMenu(menuName = "Create State/ImmovableState_SO", fileName = "ImmovableState_SO", order = 0)]
 public class ImmovableState_SO : State
 {
     public override void OnEnter(PluggableStateController controller)

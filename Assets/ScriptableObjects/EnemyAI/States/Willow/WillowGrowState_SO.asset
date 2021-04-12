@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15121a48b77e00b49a162d9fb80bcf98, type: 3}
   m_Name: WillowGrowState_SO
   m_EditorClassIdentifier: 
-  _animBoolName: 
+  _animBoolName: grow
   _actions:
   - {fileID: 11400000, guid: 35019a911e5984c4fa1f68b8506407e0, type: 2}
   _transitions:

@@ -24,8 +24,8 @@ public class WillowProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 directionToPlayer = _player.position - this.transform.position;
-        _rb.velocity = transform.right * directionToPlayer * _speed;
+        Vector2 directionToPlayer = _player.position - transform.position;
+        _rb.velocity = new Vector2(directionToPlayer.x * _speed, directionToPlayer.y);
     }
 
     void OnCollisionEnter2D(Collision2D other)

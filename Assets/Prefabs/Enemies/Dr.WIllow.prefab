@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2454146719289710353}
   - component: {fileID: 1698505280769362483}
   - component: {fileID: 1167125607672952582}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dr.Willow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,9 @@ GameObject:
   - component: {fileID: 6044273813554197210}
   - component: {fileID: 7100918039723241777}
   - component: {fileID: 7492613926743155628}
-  m_Layer: 4
+  - component: {fileID: 3262853295909063114}
+  - component: {fileID: 3262853295909063115}
+  m_Layer: 6
   m_Name: Dr.WIllow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +208,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 200
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -227,7 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4834a55dba65d9146b2cb4a7e42ad536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _visionDistatnce: 2.34
+  _visionDistatnce: 14.38
   _speed: 2
   _surfaceChecker: {fileID: 2775160238423734745}
   _turnLayerMask:
@@ -235,10 +237,40 @@ MonoBehaviour:
     m_Bits: 384
   _playerLayerMask:
     serializedVersion: 2
-    m_Bits: 16
+    m_Bits: 8
   platformRayDistance: 0.68
   _wallCheckDistance: 0.2
   _facingDirection: 1
+--- !u!114 &3262853295909063114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3262853297432395871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98c73d043d9a44649b78b59eb3de0118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hitPoints: 30
+  _projectiles:
+  - {fileID: 4088495348738799551, guid: cb07600fb6bf074428291127267a549d, type: 3}
+  - {fileID: 8026486183223346248, guid: 01f2e1da6fd6038468c3cb3e7522ddc9, type: 3}
+  _throwPosition: {fileID: 5463146361037413646}
+--- !u!114 &3262853295909063115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3262853297432395871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de5b584cbb5f607458094d2b28268208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startingState: {fileID: 11400000, guid: 01df34b75c4f64c489e7880d0800dddd, type: 2}
 --- !u!1 &8133608804345896352
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,7 +280,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2775160238423734745}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: SurfaceChecker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5463146361037413646}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: ProjectileStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
