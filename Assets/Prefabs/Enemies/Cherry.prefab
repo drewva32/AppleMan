@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8995742118099385093}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.344, y: 0.188, z: 0}
+  m_LocalPosition: {x: -0.344, y: -0.144, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8995742120084119226}
@@ -255,10 +255,9 @@ MonoBehaviour:
   _playerLayerMask:
     serializedVersion: 2
     m_Bits: 8
-  platformRayDistance: 0.55
-  _wallCheckDistance: 0.2
+  platformRayDistance: 0.53
+  _wallCheckDistance: 0.7
   _facingDirection: -1
-  _collider: {fileID: 7243448260961282091}
 --- !u!114 &1099398333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,7 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de5b584cbb5f607458094d2b28268208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startingState: {fileID: 11400000, guid: e8368a797cc56f945a7fe47658ec7194, type: 2}
+  _startingState: {fileID: 11400000, guid: fb105f470c276004eb69fb8eee3b8dbf, type: 2}
 --- !u!61 &7243448260961282091
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -311,5 +310,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hitPoints: 5
-  _meleeDistance: 0.25
+  _meleeDistance: 0.51
+  _dashSpeed: 7
   _meleeVector: {fileID: 1102765542}

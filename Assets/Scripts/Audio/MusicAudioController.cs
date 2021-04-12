@@ -53,6 +53,8 @@ public class MusicAudioController : MonoBehaviour
 
     private void FadeOutThenIn(AudioClip fadeToClip)
     {
+        if (_audioSource.clip == fadeToClip)
+            return;
         if (_fadeOutThenInRoutine != null)
             StopCoroutine(_fadeOutThenInRoutine);
         

@@ -127,6 +127,7 @@ public class AppleGameManager : MonoBehaviour
         var childLevels = GetComponentInChildren<LevelsAndPlayer>();
         if (childLevels == null)
             return;
+        OpenGameOverScreen();
         var child = childLevels.gameObject;
         //reset the game.
         //show game over
@@ -136,11 +137,12 @@ public class AppleGameManager : MonoBehaviour
         
         child.transform.parent = null;
         Destroy(child);
+        playerData.amountOfJumps = 1;
         Debug.Log("Game over");
         var newGame = Instantiate(playerAndLevelsPrefab, _levelPosition, Quaternion.identity);
         newGame.transform.position = _levelPosition;
         newGame.transform.parent = transform;
-        OpenGameOverScreen();
+        
 
         ResetGameState();
         ResetPlayer();
