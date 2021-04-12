@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WiilowThrow
+  serializedVersion: 6
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_EulerCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_PPtrCurves:
+  - curve:
+    - time: 0
+      value: {fileID: 3044784488784959485, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - time: 0.083333336
+      value: {fileID: -6871741262535040213, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - time: 0.16666667
+      value: {fileID: 7182329962806198888, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - time: 0.25
+      value: {fileID: 3398693736188226400, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - time: 0.33333334
+      value: {fileID: 4452722795838185244, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - time: 0.41666666
+      value: {fileID: 5820978877767326618, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - time: 0.5
+      value: {fileID: 7182329962806198888, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - time: 0.5833333
+      value: {fileID: 3398693736188226400, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - time: 0.6666667
+      value: {fileID: 4452722795838185244, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - time: 0.75
+      value: {fileID: 5820978877767326618, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - time: 0.8333333
+      value: {fileID: 4584105198731003468, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - time: 0.9166667
+      value: {fileID: 2734403281140423875, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - time: 1
+      value: {fileID: 234562528836919188, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - time: 1.0833334
+      value: {fileID: -3306234830449775904, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - time: 1.1666666
+      value: {fileID: -4871970690294766675, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - time: 1.25
+      value: {fileID: 3032702741649400120, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - time: 1.3333334
+      value: {fileID: -3980766519301747450, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - time: 1.4166666
+      value: {fileID: -1620509289046552742, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - time: 1.5
+      value: {fileID: -452620054192299910, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - time: 1.5833334
+      value: {fileID: -3781512695389332184, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - time: 1.6666666
+      value: {fileID: 5546791273011461630, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    attribute: m_Sprite
+    path: 
+    classID: 212
+    script: {fileID: 0}
+  m_SampleRate: 12
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    pptrCurveMapping:
+    - {fileID: 3044784488784959485, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - {fileID: -6871741262535040213, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - {fileID: 7182329962806198888, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - {fileID: 3398693736188226400, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - {fileID: 4452722795838185244, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - {fileID: 5820978877767326618, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - {fileID: 7182329962806198888, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - {fileID: 3398693736188226400, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - {fileID: 4452722795838185244, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - {fileID: 5820978877767326618, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - {fileID: 4584105198731003468, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - {fileID: 2734403281140423875, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - {fileID: 234562528836919188, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - {fileID: -3306234830449775904, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - {fileID: -4871970690294766675, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - {fileID: 3032702741649400120, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - {fileID: -3980766519301747450, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - {fileID: -1620509289046552742, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - {fileID: -452620054192299910, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - {fileID: -3781512695389332184, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+    - {fileID: 5546791273011461630, guid: d4ce2f07b6f436a49ab6f6f476277462, type: 3}
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 1.75
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 1
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_Events:
+  - time: 1.25
+    functionName: LaunchProjectile
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.6666666
+    functionName: AnimationTriggerFinish
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
