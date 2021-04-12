@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MusicAudioController : MonoBehaviour
@@ -14,6 +16,8 @@ public class MusicAudioController : MonoBehaviour
     [SerializeField] private AudioClip battleThemeThree;
 
     private AudioSource _audioSource;
+    
+    public Dictionary<EMusicType, Action> musicDictionary = new Dictionary<EMusicType, Action>();
 
     private Coroutine _fadeInRoutine;
     private Coroutine _fadeOutThenInRoutine;
@@ -22,6 +26,14 @@ public class MusicAudioController : MonoBehaviour
     {
         _audioSource = GetComponent<AudioSource>();
         _audioSource.ignoreListenerPause = true;
+        
+        musicDictionary.Add(EMusicType.BattleThemeOne, FadeToBattleThemeOne);
+        musicDictionary.Add(EMusicType.BattleThemeThree, FadeToBattleThemeThree);
+        musicDictionary.Add(EMusicType.PlatformerThemeEleven, FadeToPlatformerThemeEleven);
+        musicDictionary.Add(EMusicType.PlatformerThemeFive, FadeToPlatformerThemeFive);
+        musicDictionary.Add(EMusicType.PlatformerThemeOne, FadeToPlatformerThemeOne);
+        musicDictionary.Add(EMusicType.ShortLoopSix,FadeToShortLoopSix);
+        musicDictionary.Add(EMusicType.ShortLoopThree,FadeToShortLoopThree);
     }
 
     public void FadeInThemeMusic()
