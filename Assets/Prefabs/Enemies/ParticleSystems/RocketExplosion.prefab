@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7114566230810317635}
   - component: {fileID: 7114566230810317636}
   - component: {fileID: 7114566230810317637}
-  - component: {fileID: 7114566230810317634}
+  - component: {fileID: -6955923729302453722}
   m_Layer: 0
   m_Name: RocketExplosion
   m_TagString: Untagged
@@ -103,7 +103,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7114566230810317634
+--- !u!114 &-6955923729302453722
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class State : ScriptableObject
 {
-    [SerializeField] private string _animBoolName;
+    [SerializeField] public string _animBoolName;
     [SerializeField] private StateAction[] _actions;
     [SerializeField] private Transition[] _transitions;
     
