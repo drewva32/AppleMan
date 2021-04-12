@@ -3,13 +3,15 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Create Action/OrangeFocusAction_SO", fileName = "OrangeFocusAction_SO", order = 0)]
 public class OrangeFocusAction_SO : StateAction
 {
+    private float timer = 0;
     public override void FixedLogicUpdate(PluggableStateController controller)
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public override void LogicUpdate(PluggableStateController controller)
     {
-        throw new System.NotImplementedException();
+        if (timer < 0.5f)
+            controller.GetComponent<OrangeBoss>().FocusAttack();
     }
 }

@@ -9,7 +9,6 @@ public class State : ScriptableObject
     public virtual void OnEnter(PluggableStateController controller)
     {
         controller.Animator.SetBool(_animBoolName,true);
-        Debug.Log(_animBoolName);
         controller.SetStartTime(Time.time);
         controller.Enemy.AllowDamage(true);
     }

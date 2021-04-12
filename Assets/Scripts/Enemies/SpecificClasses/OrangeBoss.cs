@@ -35,11 +35,13 @@ public class OrangeBoss : EnemyBase
     public string AttackDecicison ()
     {
         string testAttack;
-        float randAttack = Random.Range(1, 3);
+        float randAttack = Random.Range(1, 4);
         if (randAttack <= 1f)
             testAttack = "charge";
-        else if (randAttack > 1f && randAttack <= 2)
+        else if (randAttack > 1f && randAttack <= 2f)
             testAttack = "focus";
+        else if (randAttack > 2f && randAttack <= 3f)
+            testAttack = "jump";
         else
             testAttack = "slam";
 
@@ -54,8 +56,23 @@ public class OrangeBoss : EnemyBase
     public void FocusAttack()
     {
         int randAmount = Random.Range(5, 10);
+        float randX;
+        float randRotation;
 
-        StartCoroutine(DropOranges(randAmount));
+        randRotation = Random.Range(-135, -35);
+        randX = Random.Range(leftBounds.position.x, rightBounds.position.x);
+        GameObject orangeBomb = Instantiate(orangeRain, new Vector3(randX, rightBounds.position.y, 0), Quaternion.Euler(0, 0, randRotation));
+        orangeBomb.transform.parent = _projectileParent;
+
+        //for (int i = 0; i < randAmount; i++)
+        //{
+        //    randRotation = Random.Range(-135, -35);
+        //    randX = Random.Range(leftBounds.position.x, rightBounds.position.x);
+        //    GameObject orangeBomb = Instantiate(orangeRain, new Vector3(randX, rightBounds.position.y, 0), Quaternion.Euler(0, 0, randRotation));
+        //    orangeBomb.transform.parent = _projectileParent;
+        //}
+
+        //StartCoroutine(DropOranges(randAmount));
     }
 
     public void ChargeAttack()
@@ -66,7 +83,6 @@ public class OrangeBoss : EnemyBase
     public void SlamAttack()
     {
         _wc.SetVelocity(new Vector2(0.5f * _wc.vectorDirection.x, _jumpPower));
-        //_wc.SetVelocity(Vector2.up * _wc.vectorDirection * _jumpPower);
     }
 
     public void MakeDecision(float waitTime)
@@ -85,13 +101,15 @@ public class OrangeBoss : EnemyBase
     {
         float randX;
         float randRotation;
-        for (int i = 0; i < orangeCount; i++)
+        float timer = 0;
+        while (timer < 1)
         {
             randRotation = Random.Range(-135, -35);
             randX = Random.Range(leftBounds.position.x, rightBounds.position.x);
             GameObject orangeBomb = Instantiate(orangeRain, new Vector3(randX, rightBounds.position.y, 0), Quaternion.Euler(0, 0, randRotation));
             orangeBomb.transform.parent = _projectileParent;
             yield return new WaitForSeconds(0.1f);
+            timer += 0.1f;
         }
     }
 

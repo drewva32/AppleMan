@@ -8,7 +8,7 @@ public class BossBattleState_SO : State
     public override void OnEnter(PluggableStateController controller)
     {
         base.OnEnter(controller);
-        //controller.GetComponent<OrangeBoss>().MakeDecision(Random.Range(0.2f, 1f));
+        controller.GetComponent<OrangeBoss>().MakeDecision(Random.Range(0.2f, 1f));
     }
 
     public override void OnExit(PluggableStateController controller)
