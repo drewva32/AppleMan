@@ -4,7 +4,7 @@ using UnityEngine;
 public class LevelTransitionText : MonoBehaviour
 {
     [SerializeField][Multiline] private string transitionText;
-    [SerializeField] private TextMeshProUGUI tmpText;
+    private TextMeshProUGUI _tmpText;
     
     private Animator _animator;
     private bool _init;
@@ -13,12 +13,13 @@ public class LevelTransitionText : MonoBehaviour
 
     private void Awake()
     {
-        _animator = tmpText.GetComponent<Animator>();
+        _tmpText = AppleGameManager.Instance.TransitionText;
+        _animator = _tmpText.GetComponent<Animator>();
     }
 
     public void Transition(string text)
     {
-        tmpText.text = text;
+        _tmpText.text = text;
         _animator.SetTrigger(Transition1);
     }
 
